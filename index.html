@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dilino</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+  <div class="container-header">
+
+    <!-- ESQUERDA -->
+    <div class="header-left">
+      <img src="img/logoTipo.png" class="logo" alt="Dilino">
+    </div>
+
+    <!-- CENTRO -->
+    <div class="header-center">
+      <nav aria-label="Menu principal">
+        <ul class="menu">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="galeria.html">Galeria</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    </div>
+  </header>
+
+  <div class="home-left-box">
+    <h1 class="homeh1">DESIGN<br>SOFISTICADO</h1>
+    <h2 class="homeh2">Transformando seu espaço<br>em uma obra de arte</h2>
+    <div class="home-leftbox-buttons">
+      <div class="home-leftbox-button">
+        <a href="#galeria" class="btn-contato1">Galeria</a>
+      </div>
+      <div class="home-leftbox-button">
+        <a href="#contato" class="btn-contato2">Contato</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="home-right-box">
+    <img src="img/sofahome.png" alt="sofá" class="homesofa">
+  </div>
+
+   <section class="materiais">
+      <div class="materiais-top">
+        <h1 class="materiaish1">MATERIAIS<br>PREMIUM</h1>
+        <h2 class="materiaish2">Acesse a nossa galeria completa</h2>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <img src="img/cadeiras.png">
+          <span>CADEIRAS E POLTRONAS →</span>
+        </div>
+
+        <div class="card">
+          <img src="img/lustre.jpg">
+          <span>LUZES →</span>
+        </div>
+
+        <div class="card">
+          <img src="img/estruturatripla.jpg">
+          <span>ESTANTES →</span>
+        </div>
+      </div>
+
+      <section class="compra">
+  <div class="compra-top">
+    <h1 class="comprah1">NOSSOS PROCESSOS DE COMPRA</h1>
+  </div>
+
+  <div class="compra-steps">
+    <div class="step">
+      <div class="step-number">01</div>
+      <div class="step-title">ESCOLHA SEU DESIGN</div>
+      <p>Explore nossa galeria e selecione a peça que mais combina com o seu espaço.</p>
+    </div>
+
+    <div class="step">
+      <div class="step-number">02</div>
+      <div class="step-title">ACESSE "CONTATO"</div>
+      <p>Clique na aba de contato no menu superior do site ou desça a tela, para falar diretamente com a nossa equipe.</p>
+    </div>
+
+    <div class="step">
+      <div class="step-number">03</div>
+      <div class="step-title">ENVIE SEU MODELO FAVORITO</div>
+      <p>Clique na aba de contato no menu superior do site para falar diretamente com a nossa equipe.</p>
+    </div>
+  </div>
+
+  <section class="ctt-section">
+  <div class="ctt-container">
+    
+    <div class="ctt-header">
+      <h1>CONTATOS</h1>
+      <p>Temos uma equipe completa pronta para te atender</p>
+    </div>
+
+    <div class="ctt-grid">
+      
+      <div class="ctt-card">
+        <div class="ctt-info">
+          <p class="ctt-label">Telefone/Whatsapp</p> <img class="ctt-icon" src="img/whatsapp.png" alt="Whatsapp">
+          <h3>11 9999-999</h3>
+
+          <p class="ctt-label">Instagram</p>
+          <h3>@dilino.studio</h3>
+
+          <p class="ctt-label">Email</p>
+          <h3>comercial@dilinostudio.com</h3>
+        </div>
+      </div>
+
+      <div class="ctt-card">
+        <h2>ATENDIMENTO EM MINUTOS</h2>
+        <p>
+          Precisa de um atendimento rápido? Aqui, sua resposta chega em questão
+          de minutos...
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+</section>
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- ESQUERDA -->
+    <div class="footer-left">
+      <img src="img/logoTipo.png" class="logo" alt="Dilino" style="width: 300px;">
+      <p>Transformando seu espaço<br>em uma verdadeira obra de arte</p>
+    </div>
+
+    <!-- SOCIAL -->
+    <div class="footer-column">
+      <h4>SOCIAL</h4>
+      <a href="#">INSTAGRAM</a>
+    </div>
+
+    <!-- LEGAL -->
+    <div class="footer-column">
+      <h4>LEGAL</h4>
+      <a href="#">PRIVACIDADE</a>
+      <a href="#">TERMOS</a>
+    </div>
+
+    <!-- EMAIL -->
+    <div class="footer-column">
+      <h4>ATUALIZAÇÕES<br>PELO EMAIL</h4>
+      <div class="email-box">
+  <input type="email" id="footer-email" placeholder="SEU EMAIL" onkeypress="verificarEnter(event)">
+  <span style="cursor: pointer;" onclick="enviarFake()">→</span>
+</div>
+
+<p id="msg-sucesso" style="display:none; color: #aaa; font-size: 12px; margin-top: 5px;">
+  Você receberá atualizações em breve!
+</p>
+
+<script>
+  // Função para detectar a tecla Enter
+  function verificarEnter(event) {
+    if (event.key === "Enter") {
+      enviarFake();
+    }
+  }
+
+  function enviarFake() {
+    const emailInput = document.getElementById('footer-email');
+    const msgSucesso = document.getElementById('msg-sucesso');
+    const email = emailInput.value;
+
+    if(email.includes('@') && email.length > 5) {
+      emailInput.value = ""; // Limpa o campo
+      msgSucesso.style.display = "block"; // Mostra mensagem
+      
+      // Esconde a mensagem depois de 3 segundos
+      setTimeout(() => {
+        msgSucesso.style.display = "none";
+      }, 3000);
+    } else {
+      alert("Por favor, insira um e-mail válido.");
+    }
+  }
+</script>
+    </div>
+
+  </div>
+
+  <div class="footer-line"></div>
+
+  <div class="footer-bottom">
+    <p>@2026 DILINO STUDIO SERRALHERIA INDUSTRIAL E ARTISTICA</p>
+  </div>
+</footer>
+    
+  
+</body>
+</html>
