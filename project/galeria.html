@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galeria — Dilino Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ══ HEADER ══ -->
+  <header>
+    <div class="container">
+      <a href="index.html" class="logo-wrap">
+        <img src="uploads/onyx_alabaster_dark_logo.png" class="logo-mark" alt="Dilino" />
+        <div>
+          <span class="logo-name">Dilino</span>
+          <span class="logo-sub">Studio</span>
+        </div>
+      </a>
+      <nav>
+        <a href="index.html">Início</a>
+        <a href="galeria.html" class="active">Galeria</a>
+        <a href="index.html#sobre">Sobre</a>
+        <a href="index.html#contato">Contato</a>
+      </nav>
+      <div class="header-btn">
+        <a href="https://wa.me/5511926457142" target="_blank" class="btn btn-wa">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.116.554 4.103 1.523 5.824L.057 23.7a.75.75 0 0 0 .917.93l6.04-1.582A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.693 9.693 0 0 1-4.934-1.351l-.353-.212-3.661.96.977-3.565-.232-.369A9.698 9.698 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25c5.384 0 9.75 4.365 9.75 9.75S17.384 21.75 12 21.75z"/></svg>
+          Fale Conosco
+        </a>
+      </div>
+      <button class="hamburger" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mob">
+    <button class="mobile-close" id="mob-close">✕</button>
+    <a href="index.html" class="mob-link">Início</a>
+    <a href="galeria.html" class="mob-link">Galeria</a>
+    <a href="index.html#sobre" class="mob-link">Sobre</a>
+    <a href="index.html#contato" class="mob-link">Contato</a>
+    <a href="https://wa.me/5511926457142" target="_blank" class="btn btn-wa mobile-wa">Fale Conosco</a>
+  </div>
+
+  <!-- ══ PAGE HERO ══ -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero-inner fade-up">
+        <div>
+          <div class="page-label">Portfólio completo</div>
+          <h1>Galeria<br>de peças.</h1>
+        </div>
+        <div class="page-hero-right">
+          <p>Cada peça conta uma história diferente. Explore o que já fabricamos — e imagine o que podemos criar juntos.</p>
+          <div class="piece-count" id="piece-count"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ══ GALLERY ══ -->
+  <section class="gallery-section">
+    <div class="container">
+
+      <nav class="cat-nav fade-up">
+        <a href="#cat-assentos">Poltronas & Assentos</a>
+        <a href="#cat-mesas">Mesas</a>
+        <a href="#cat-escrivaninhas">Escrivaninhas</a>
+        <a href="#cat-estantes">Estantes & Prateleiras</a>
+        <a href="#cat-cozinha">Cozinha</a>
+        <a href="#cat-banheiro">Banheiro & Lavanderia</a>
+        <a href="#cat-araras">Araras & Closet</a>
+        <a href="#cat-iluminacao">Iluminação & Suportes</a>
+      </nav>
+
+      <div class="cat-block fade-up" id="cat-assentos">
+        <div class="cat-head">
+          <h2><span class="cat-num">01</span>Poltronas & Assentos</h2>
+          <span class="cat-count">1 peça</span>
+        </div>
+        <div class="masonry">
+        <div class="masonry-item" data-title="Poltrona Garden — Poltrona Industrial" data-src="uploads/91a540b6-99ea-4c65-8220-5eb31f9888cb.png">
+          <img src="uploads/91a540b6-99ea-4c65-8220-5eb31f9888cb.png" alt="Poltrona Garden" loading="lazy" />
+          <div class="masonry-overlay"><div class="m-title">Poltrona Garden</div><div class="m-cat">Poltrona Industrial</div></div>
+        </div>
+        </div>
+      </div>
+
+      <div class="cat-block fade-up" id="cat-mesas">
+        <div class="cat-head">
+          <h2><span class="cat-num">02</span>Mesas</h2>
+          <span class="cat-count">5 peças</span>
+        </div>
+        <div class="masonry">
+        <div class="masonry-item" data-title="Mesa Carrara — Mesa de Centro" data-src="uploads/yupp-generated-image-821840.jpg">
+          <img src="uploads/yupp-generated-image-821840.jpg" alt="Mesa Carrara" loading="lazy" />
+          <div class="masonry-overlay"><div class="m-title">Mesa Carrara</div><div class="m-cat">Mesa de Centro</div></div>
+        </div>
+
+        <div class="masonry-item" data-title="Mesa Duo — Mesa de Centro" data-src="uploads/yupp-generated-image-427660.jpg">
+          <img src="uploads/yupp-generated-image-427660.jpg" alt="Mesa Duo" loading="lazy" />
+          <div class="masonry-overlay"><div class="m-title">Mesa Duo</div><div class="m-cat">Mesa de Centro</div></div>
+        </div>
+
+        <div class="masonry-item" data-title="Mesa Vitrê — Mesa de Centro" data-src="uploads/mesa-vitre.jpg">
+          <img src="uploads/mesa-vitre.jpg" alt="Mesa Vitrê" loading="lazy" />
+          <div class="masonry-overlay"><div class="m-title">Mesa Vitrê</div><div class="m-cat">Mesa de Centro</div></div>
+        </div>
+
+        <div class="masonry-item" data-title="Mesa Lenho — Mesa de Jantar" data-src="uploads/mesa-lenho.jpg">
+          <img src="uploads/mesa-lenho.jpg" alt="Mesa Lenho" loading="lazy" />
+          <div class="masonry-overlay"><div class="m-title">Mesa Lenho</div><div class="m-cat">Mesa de Jantar</div></div>
+        </div>
+
+        <div class="masonry-item" data-title="Mesa Nômade — Mesa de Apoio" data-src="uploads/mesa-nomade.jpg">
+          <img src="uploads/mesa-nomade.jpg" alt="Mesa Nômade" loading="lazy" />
+          <div class="masonry-overlay"><div class="m-title">Mesa Nômade</div><div class="m-cat">Mesa de Apoio</div></div>
+        </div>
+
+        </div>
+      </div>
+
+      <div class="cat-block fade-up" id="cat-escrivaninhas">
+        <div class="cat-head">
+          <h2><span class="cat-num">03</span>Escrivaninhas</h2>
+          <span class="cat-count">5 peças</span>
+        </div>
+        <div class="masonry">
+        <div class="masonry-item" data-title="Escrivaninha Office — Escrivaninha com Nichos" data-src="uploads/yupp-generated-image-308430.jpg">
+          <img src="uploads/yupp-generated-image-308430.jpg" alt="Escrivaninha Office" loading="lazy" />
+          <div class="masonry-overlay"><div class="m-title">Escrivaninha Office</div><div class="m-cat">Escrivaninha com Nichos</div></div>
+        </div>
+
+        <div class="masonry-item" data-title="Escrivaninha Nórdica — Escrivaninha com Nichos" data-src="uploads/yupp-generated-image-846476.jpg">
+          <img src="uploads/yupp-generated-image-846476.jpg" alt="Escrivaninha Nórdica" loading="lazy" />
+          <div class="masonry-overlay"><div class="m-title">Escrivaninha Nórdica</div><div class="m-cat">Escrivaninha com Nichos</div></div>
+        </div>
+
+        <div class="masonry-item" data-title="Escrivaninha Loft — Escrivaninha com Nichos" data-src="uploads/yupp-generated-image-941376.png">
+          <img src="uploads/yupp-generated-image-941376.png" alt="Escrivaninha Loft" loading="lazy" />
+          <div class="masonry-overlay"><div class="m-title">Escrivaninha Loft</div><div class="m-cat">Escrivaninha com Nichos</div></div>
+        </div>
+
+        <div class="masonry-item" data-title="Escrivaninha Pura — Escrivaninha" data-src="uploads/yupp-generated-image-401727.jpg">
+          <img src="uploads/yupp-generated-image-401727.jpg" alt="Escrivaninha Pura" loading="lazy" />
+          <div class="masonry-overlay"><div class="m-title">Escrivaninha Pura</div><div class="m-cat">Escrivaninha</div></div>
+        </div>
+
+        <div class="masonry-item" data-title="Escrivaninha Home — Escrivaninha com Nichos" data-src="uploads/yupp-generated-image-308430b.jpg">
+          <img src="uploads/yupp-generated-image-308430b.jpg" alt="Escrivaninha Home" loading="lazy" />
+          <div class="masonry-overlay"><div class="m-title">Escrivaninha Home</div><div class="m-cat">Escrivaninha com Nichos</div></div>
+        </div>
+        </div>
+      </div>
+
+      <div class="cat-block fade-up" id="cat-estantes">
+        <div class="cat-head">
+          <h2><span class="cat-num">04</span>Estantes & Prateleiras</h2>
+          <span class="cat-count">12 peças</span>
+        </div>
+        <div class="masonry">
+        <div class="masonry-item" data-title="Estante Nórdica — Estante de Livros" data-src="uploads/yupp-generated-image-233858.jpg">
+          <img src="uploads/yupp-generated-image-233858.jpg" alt="Estante Nórdica" loading="lazy" />
+          <div class="masonry-overlay"><div class="m-title">Estante Nórdica</div><div class="m-cat">Estante de Livros</div></div>
+        </div>
+
+        <div class="masonry-item" data-title="Aparador Ripado — Aparador" data-src="uploads/yupp-generated-image-158670.jpg">
+          <img src="uploads/yupp-generated-image-158670.jpg" alt="Aparador Ripado" loading="lazy" />
+          <div class="masonry-overlay"><div class="m-title">Aparador Ripado</div><div class="m-cat">Aparador</div></div>
+        </div>
+
+        <div class="masonry-item" data-title="Aparador Hall — Aparador / Sapateira" data-src="uploads/yupp-generated-image-145705.png">
+          <img src="uploads/yupp-generated-image-145705.png" alt="Aparador Hall" loading="lazy" />
+          <div class="masonry-overlay"><div class="m-title">Aparador Hall</div><div class="m-cat">Aparador / Sapateira</div></div>
+        </div>
+
+        <div class="masonry-item" data-title="Prateleira Grid — Prateleira de Parede" data-src="uploads/yupp-generated-image-119986.png">
+          <img src="uploads/yupp-generated-image-119986.png" alt="Prateleira Grid" loading="lazy" />
+          <div class="masonry-overlay"><div class="m-title">Prateleira Grid</div><div class="m-cat">Prateleira de Parede</div></div>
+        </div>
+
+        <div class="masonry-item" data-title="Prateleira Módulo — Prateleira de Parede" data-src="uploads/yupp-generated-image-349450.jpg">
+          <img src="uploads/yupp-generated-image-349450.jpg" alt="Prateleira Módulo" loading="lazy" />
+          <div class="masonry-overlay"><div class="m-title">Prateleira Módulo</div><div class="m-cat">Prateleira de Parede</div></div>
+        </div>
+
+        <div class="masonry-item" data-title="Prateleira Frame — Prateleira de Parede" data-src="uploads/yupp-generated-image-675778.jpg">
+          <img src="uploads/yupp-generated-image-675778.jpg" alt="Prateleira Frame" loading="lazy" />
+          <div class="masonry-overlay"><div class="m-title">Prateleira Frame</div><div class="m-cat">Prateleira de Parede</div></div>
+        </div>
+
+        <div class="masonry-item" data-title="Prateleira Diamante — Prateleira de Parede" data-src="uploads/yupp-generated-image-453063.png">
+          <img src="uploads/yupp-generated-image-453063.png" alt="Prateleira Diamante" loading="lazy" />
+          <div class="masonry-overlay"><div class="m-title">Prateleira Diamante</div><div class="m-cat">Prateleira de Parede</div></div>
+        </div>
+
+        <div class="masonry-item" data-title="Prateleira Geo — Prateleira de Parede" data-src="uploads/yupp-generated-image-437450.jpg">
+          <img src="uploads/yupp-generated-image-437450.jpg" alt="Prateleira Geo" loading="lazy" />
+          <div class="masonry-overlay"><div class="m-title">Prateleira Geo</div><div class="m-cat">Prateleira de Parede</div></div>
+        </div>
+
+        <div class="masonry-item" data-title="Nicho Trio — Nicho de Parede" data-src="uploads/yupp-generated-image-433172.jpg">
+          <img src="uploads/yupp-generated-image-433172.jpg" alt="Nicho Trio" loading="lazy" />
+          <div class="masonry-overlay"><div class="m-title">Nicho Trio</div><div class="m-cat">Nicho de Parede</div></div>
+        </div>
+
+        <div class="masonry-item" data-title="Rack Linea — Rack de TV" data-src="uploads/rack-linea.jpg">
+          <img src="uploads/rack-linea.jpg" alt="Rack Linea" loading="lazy" />
+          <div class="masonry-overlay"><div class="m-title">Rack Linea</div><div class="m-cat">Rack de TV</div></div>
+        </div>
+
+        <div class="masonry-item" data-title="Aparador Grade — Aparador" data-src="uploads/aparador-grade.jpg">
+          <img src="uploads/aparador-grade.jpg" alt="Aparador Grade" loading="lazy" />
+          <div class="masonry-overlay"><div class="m-title">Aparador Grade</div><div class="m-cat">Aparador</div></div>
+        </div>
+
+        <div class="masonry-item" data-title="Banco Hall — Sapateira / Banco" data-src="uploads/banco-hall.jpg">
+          <img src="uploads/banco-hall.jpg" alt="Banco Hall" loading="lazy" />
+          <div class="masonry-overlay"><div class="m-title">Banco Hall</div><div class="m-cat">Sapateira / Banco</div></div>
+        </div>
+        </div>
+      </div>
+
+      <div class="cat-block fade-up" id="cat-cozinha">
+        <div class="cat-head">
+          <h2><span class="cat-num">05</span>Cozinha</h2>
+          <span class="cat-count">3 peças</span>
+        </div>
+        <div class="masonry">
+        <div class="masonry-item" data-title="Prateleira Gourmet — Prateleira de Cozinha" data-src="uploads/yupp-generated-image-803302.jpg">
+          <img src="uploads/yupp-generated-image-803302.jpg" alt="Prateleira Gourmet" loading="lazy" />
+          <div class="masonry-overlay"><div class="m-title">Prateleira Gourmet</div><div class="m-cat">Prateleira de Cozinha</div></div>
+        </div>
+
+        <div class="masonry-item" data-title="Prateleira Chef — Prateleira de Cozinha" data-src="uploads/yupp-generated-image-554951.png">
+          <img src="uploads/yupp-generated-image-554951.png" alt="Prateleira Chef" loading="lazy" />
+          <div class="masonry-overlay"><div class="m-title">Prateleira Chef</div><div class="m-cat">Prateleira de Cozinha</div></div>
+        </div>
+
+        <div class="masonry-item" data-title="Prateleira Pantry — Prateleira de Cozinha" data-src="uploads/yupp-generated-image-618928.jpg">
+          <img src="uploads/yupp-generated-image-618928.jpg" alt="Prateleira Pantry" loading="lazy" />
+          <div class="masonry-overlay"><div class="m-title">Prateleira Pantry</div><div class="m-cat">Prateleira de Cozinha</div></div>
+        </div>
+        </div>
+      </div>
+
+      <div class="cat-block fade-up" id="cat-banheiro">
+        <div class="cat-head">
+          <h2><span class="cat-num">06</span>Banheiro & Lavanderia</h2>
+          <span class="cat-count">4 peças</span>
+        </div>
+        <div class="masonry">
+        <div class="masonry-item" data-title="Gabinete Spa — Gabinete de Banheiro" data-src="uploads/yupp-generated-image-145970.jpg">
+          <img src="uploads/yupp-generated-image-145970.jpg" alt="Gabinete Spa" loading="lazy" />
+          <div class="masonry-overlay"><div class="m-title">Gabinete Spa</div><div class="m-cat">Gabinete de Banheiro</div></div>
+        </div>
+
+        <div class="masonry-item" data-title="Toalheiro Cascata — Toalheiro" data-src="uploads/yupp-generated-image-337612.jpg">
+          <img src="uploads/yupp-generated-image-337612.jpg" alt="Toalheiro Cascata" loading="lazy" />
+          <div class="masonry-overlay"><div class="m-title">Toalheiro Cascata</div><div class="m-cat">Toalheiro</div></div>
+        </div>
+
+        <div class="masonry-item" data-title="Organizador Lave — Estante para Lavanderia" data-src="uploads/yupp-generated-image-863219.png">
+          <img src="uploads/yupp-generated-image-863219.png" alt="Organizador Lave" loading="lazy" />
+          <div class="masonry-overlay"><div class="m-title">Organizador Lave</div><div class="m-cat">Estante para Lavanderia</div></div>
+        </div>
+
+        <div class="masonry-item" data-title="Toalheiro Onsen — Toalheiro" data-src="uploads/toalheiro-onsen.jpg">
+          <img src="uploads/toalheiro-onsen.jpg" alt="Toalheiro Onsen" loading="lazy" />
+          <div class="masonry-overlay"><div class="m-title">Toalheiro Onsen</div><div class="m-cat">Toalheiro</div></div>
+        </div>
+        </div>
+      </div>
+
+      <div class="cat-block fade-up" id="cat-araras">
+        <div class="cat-head">
+          <h2><span class="cat-num">07</span>Araras & Closet</h2>
+          <span class="cat-count">8 peças</span>
+        </div>
+        <div class="masonry">
+        <div class="masonry-item" data-title="Arara Slim — Arara de Roupas" data-src="uploads/yupp-generated-image-661252.png">
+          <img src="uploads/yupp-generated-image-661252.png" alt="Arara Slim" loading="lazy" />
+          <div class="masonry-overlay"><div class="m-title">Arara Slim</div><div class="m-cat">Arara de Roupas</div></div>
+        </div>
+
+        <div class="masonry-item" data-title="Arara Boutique — Arara de Roupas" data-src="uploads/yupp-generated-image-821659.png">
+          <img src="uploads/yupp-generated-image-821659.png" alt="Arara Boutique" loading="lazy" />
+          <div class="masonry-overlay"><div class="m-title">Arara Boutique</div><div class="m-cat">Arara de Roupas</div></div>
+        </div>
+
+        <div class="masonry-item" data-title="Arara Closet — Arara com Prateleiras" data-src="uploads/yupp-generated-image-819510.jpg">
+          <img src="uploads/yupp-generated-image-819510.jpg" alt="Arara Closet" loading="lazy" />
+          <div class="masonry-overlay"><div class="m-title">Arara Closet</div><div class="m-cat">Arara com Prateleiras</div></div>
+        </div>
+
+        <div class="masonry-item" data-title="Arara Display — Arara de Roupas" data-src="uploads/yupp-generated-image-837619.png">
+          <img src="uploads/yupp-generated-image-837619.png" alt="Arara Display" loading="lazy" />
+          <div class="masonry-overlay"><div class="m-title">Arara Display</div><div class="m-cat">Arara de Roupas</div></div>
+        </div>
+
+        <div class="masonry-item" data-title="Arara Vitrine — Arara de Roupas" data-src="uploads/arara-vitrine.jpg">
+          <img src="uploads/arara-vitrine.jpg" alt="Arara Vitrine" loading="lazy" />
+          <div class="masonry-overlay"><div class="m-title">Arara Vitrine</div><div class="m-cat">Arara de Roupas</div></div>
+        </div>
+
+        <div class="masonry-item" data-title="Arara Dupla — Arara Closet" data-src="uploads/arara-dupla.jpg">
+          <img src="uploads/arara-dupla.jpg" alt="Arara Dupla" loading="lazy" />
+          <div class="masonry-overlay"><div class="m-title">Arara Dupla</div><div class="m-cat">Arara Closet</div></div>
+        </div>
+
+        <div class="masonry-item" data-title="Arara Móvel — Arara com Rodízios" data-src="uploads/arara-movel.jpg">
+          <img src="uploads/arara-movel.jpg" alt="Arara Móvel" loading="lazy" />
+          <div class="masonry-overlay"><div class="m-title">Arara Móvel</div><div class="m-cat">Arara com Rodízios</div></div>
+        </div>
+
+        <div class="masonry-item" data-title="Arara Parede — Arara de Parede" data-src="uploads/arara-parede.jpg">
+          <img src="uploads/arara-parede.jpg" alt="Arara Parede" loading="lazy" />
+          <div class="masonry-overlay"><div class="m-title">Arara Parede</div><div class="m-cat">Arara de Parede</div></div>
+        </div>
+        </div>
+      </div>
+
+      <div class="cat-block fade-up" id="cat-iluminacao">
+        <div class="cat-head">
+          <h2><span class="cat-num">08</span>Iluminação & Suportes</h2>
+          <span class="cat-count">2 peças</span>
+        </div>
+        <div class="masonry">
+        <div class="masonry-item" data-title="Lustre Cube — Pendente / Lustre" data-src="uploads/yupp-generated-image-473273.jpg">
+          <img src="uploads/yupp-generated-image-473273.jpg" alt="Lustre Cube" loading="lazy" />
+          <div class="masonry-overlay"><div class="m-title">Lustre Cube</div><div class="m-cat">Pendente / Lustre</div></div>
+        </div>
+
+        <div class="masonry-item" data-title="Suporte Torre — Suporte para Plantas" data-src="uploads/yupp-generated-image-162424.png">
+          <img src="uploads/yupp-generated-image-162424.png" alt="Suporte Torre" loading="lazy" />
+          <div class="masonry-overlay"><div class="m-title">Suporte Torre</div><div class="m-cat">Suporte para Plantas</div></div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CTA STRIP ══ -->
+  <div class="cta-strip fade-up">
+    <div class="container">
+      <div class="section-label">Vamos criar juntos</div>
+      <h2>Quer uma peça<br>assim para você?</h2>
+      <p>Cada projeto começa com uma conversa. Sem formulários, sem espera.</p>
+      <a href="https://wa.me/5511926457142" target="_blank" class="btn btn-wa">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.116.554 4.103 1.523 5.824L.057 23.7a.75.75 0 0 0 .917.93l6.04-1.582A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.693 9.693 0 0 1-4.934-1.351l-.353-.212-3.661.96.977-3.565-.232-.369A9.698 9.698 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25c5.384 0 9.75 4.365 9.75 9.75S17.384 21.75 12 21.75z"/></svg>
+        Pedir Orçamento Agora
+      </a>
+    </div>
+  </div>
+
+  <!-- ══ FOOTER ══ -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="f-logo">
+          <img src="uploads/onyx_alabaster_dark_logo.png" alt="Dilino" />
+          <div>
+            <span class="logo-name" style="font-size:16px;">Dilino</span>
+            <span class="logo-sub">Studio</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-cols">
+        <div class="f-col">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="index.html#inicio">Início</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
+            <li><a href="index.html#processo">Processo</a></li>
+            <li><a href="index.html#sobre">Sobre</a></li>
+            <li><a href="index.html#contato">Contato</a></li>
+          </ul>
+        </div>
+        <div class="f-col">
+          <h4>Contato</h4>
+          <ul>
+            <li><a href="https://wa.me/5511926457142" target="_blank">WhatsApp</a></li>
+            <li><a href="mailto:contato@dilinostudio.com.br">contato@dilinostudio.com.br</a></li>
+            <li><a href="https://instagram.com/dilinostudio" target="_blank">@dilinostudio</a></li>
+          </ul>
+        </div>
+        <div class="f-col">
+          <h4>Localização</h4>
+          <address>São Paulo — SP<br>Atendimento por agendamento<br>Projetos em todo o Brasil</address>
+        </div>
+      </div>
+      <p class="footer-copy">© 2025 Dilino Studio · Todos os direitos reservados</p>
+    </div>
+  </footer>
+
+  <!-- ══ FLOAT WA ══ -->
+  <a href="https://wa.me/5511926457142" target="_blank" class="wa-float" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.116.554 4.103 1.523 5.824L.057 23.7a.75.75 0 0 0 .917.93l6.04-1.582A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.693 9.693 0 0 1-4.934-1.351l-.353-.212-3.661.96.977-3.565-.232-.369A9.698 9.698 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25c5.384 0 9.75 4.365 9.75 9.75S17.384 21.75 12 21.75z"/></svg>
+  </a>
+
+  <!-- ══ LIGHTBOX ══ -->
+  <div class="lightbox" id="lightbox">
+    <button class="lb-close" id="lb-close">✕</button>
+    <button class="lb-nav lb-prev" id="lb-prev">‹</button>
+    <button class="lb-nav lb-next" id="lb-next">›</button>
+    <div class="lb-inner">
+      <img class="lb-img" id="lb-img" alt="" style="object-fit: contain" />
+      <div class="lb-caption">
+        <strong id="lb-title"></strong>
+        <span id="lb-cat"></span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Mobile menu
+    document.getElementById('ham').addEventListener('click', () => document.getElementById('mob').classList.add('open'));
+    document.getElementById('mob-close').addEventListener('click', () => document.getElementById('mob').classList.remove('open'));
+    document.querySelectorAll('.mob-link').forEach(l => l.addEventListener('click', () => document.getElementById('mob').classList.remove('open')));
+
+    // Fade-up
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.fade-up').forEach((el, i) => {
+      el.style.transitionDelay = (i % 4) * 60 + 'ms';
+      io.observe(el);
+    });
+
+    // Count
+    const allItems = document.querySelectorAll('.masonry-item');
+    const pieceCount = document.getElementById('piece-count');
+    pieceCount.textContent = allItems.length + ' peças em exibição';
+
+    // Lightbox
+    const lb = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lb-img');
+    const lbTitle = document.getElementById('lb-title');
+    const lbCat = document.getElementById('lb-cat');
+    let currentItems = [], currentIdx = 0;
+
+    function getVisible() { return [...document.querySelectorAll('.masonry-item')]; }
+
+    function openLightbox(item) {
+      currentItems = getVisible();
+      currentIdx = currentItems.indexOf(item);
+      showLightbox(currentIdx);
+      lb.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function showLightbox(idx) {
+      const item = currentItems[idx];
+      const parts = item.dataset.title.split(' — ');
+      lbImg.src = item.dataset.src;
+      lbImg.alt = item.dataset.title;
+      lbTitle.textContent = parts[0];
+      lbCat.textContent = parts[1] || '';
+    }
+    function closeLightbox() { lb.classList.remove('open'); document.body.style.overflow = ''; }
+
+    allItems.forEach(item => item.addEventListener('click', () => openLightbox(item)));
+    document.getElementById('lb-close').addEventListener('click', closeLightbox);
+    lb.addEventListener('click', e => { if (e.target === lb) closeLightbox(); });
+    document.getElementById('lb-prev').addEventListener('click', () => { currentIdx = (currentIdx - 1 + currentItems.length) % currentItems.length; showLightbox(currentIdx); });
+    document.getElementById('lb-next').addEventListener('click', () => { currentIdx = (currentIdx + 1) % currentItems.length; showLightbox(currentIdx); });
+    document.addEventListener('keydown', e => {
+      if (!lb.classList.contains('open')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') { currentIdx = (currentIdx - 1 + currentItems.length) % currentItems.length; showLightbox(currentIdx); }
+      if (e.key === 'ArrowRight') { currentIdx = (currentIdx + 1) % currentItems.length; showLightbox(currentIdx); }
+    });
+  </script>
+</body>
+</html>
