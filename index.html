@@ -317,7 +317,7 @@
         </sc-for>
       </div>
       <div style="border-top:1px solid #2a2724;margin-top:56px;padding-top:24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;">
-        <div style="font-size:10.5px;font-weight:500;letter-spacing:1px;color:#8d877d;">CNPJ 00.000.000/0001-00 · Dilino Studio · Arujá — SP</div>
+        <div style="font-size:10.5px;font-weight:500;letter-spacing:1px;color:#8d877d;">CNPJ 34.872.803/0001-58 · Dilino Studio · Arujá — SP</div>
         <div style="display:flex;gap:20px;font-size:12px;font-weight:400;color:#938c81;">
           <a href="#" style="color:#938c81;">Instagram</a>
           <a href="https://wa.me/5511926457142?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Dilino%20Studio." target="_blank" rel="noopener" style="color:#938c81;">WhatsApp</a>
@@ -517,19 +517,36 @@ class Component extends DCLogic {
   riscado(price, badge){ if(price==null||!badge) return null; const m=String(badge).match(/(\d+)\s*%/); if(!m) return null; const pct=+m[1]; if(!pct||pct>=100) return null; return this.fmt(Math.round(price/(1-pct/100))); }
 
   data() {
-    // Peças em destaque na home — mesma ficha do catálogo (código DS-, medidas, descrição)
-    const P = (rawCode, name, price, priceFull, badge, dims, desc) => ({ rawCode, name, price, priceFull: priceFull || null, badge: badge || null, dims, desc });
-    return [
-      P('DS-008','Aparador Vitrali',1189,1489,'-20%','89 × 60 × 19 cm','Aparador industrial de cozinha'),
-      P('DS-002','Estante Argos',949,1190,'-20%','101 × 160,7 × 36 cm','Estante industrial de cozinha com bancada'),
-      P('DS-012','Escrivaninha Turim',999,null,'Novo','118 × 75 × 53 cm','Escrivaninha industrial com gaveta'),
-      P('DS-023','Criado-Mudo Onyx',449,549,'-20%','50 × 45 × 40 cm','Criado-mudo industrial com gaveta basculante'),
-      P('DS-032','Mesa Havana',749,899,null,'47 × 45 × 45 cm','Mesa lateral industrial de cabeceira'),
-      P('DS-001','Suporte Vulcano',169,219,null,'60 × 40 × 40 cm','Suporte industrial suspenso para forno e micro-ondas'),
-      P('DS-016','Nicho Módena',419,null,'Novo','70 × 70 × 20 cm','Nicho de parede modular com compartimentos assimétricos · Ferro galvanizado · Madeira maciça'),
-      P('DS-030','Arara Amêndoa',329,399,null,'100 × 180 × 34 cm','Arara closet industrial com prateleiras'),
-    ];
-  }
+  const lista = window.DILINO_PRODUTOS || [];
+
+  const destaque = [
+    "DS-008",
+    "DS-002",
+    "DS-012",
+    "DS-023",
+    "DS-032",
+    "DS-001",
+    "DS-016",
+    "DS-030"
+  ];
+
+  return destaque
+    .map(codigo => {
+      const p = lista.find(item => item.codigo === codigo);
+      if (!p) return null;
+
+      return {
+        rawCode: p.codigo,
+        name: p.nome,
+        price: p.preco,
+        priceFull: null,              // será calculado automaticamente pelo selo
+        badge: p.selo || null,
+        dims: p.medidas,
+        desc: p.descricao
+      };
+    })
+    .filter(Boolean);
+}
 
   renderVals() {
     const P = (name, priceNow, priceFull, badge) => ({ name, priceNow, priceFull: priceFull || null, badge: badge || null });
@@ -539,7 +556,9 @@ class Component extends DCLogic {
     const WA_GERAL = 'https://wa.me/5511926457142?text=' + encodeURIComponent('Olá! Vim pelo site da Dilino Studio.');
     const WA_PROJ = 'https://wa.me/5511926457142?text=' + encodeURIComponent('Olá! Gostaria de falar sobre um projeto sob medida.');
     const L = (label, href, ext) => ({ label, href: href || '#', target: ext ? '_blank' : undefined, rel: ext ? 'noopener' : undefined });
-    const byCode = Object.fromEntries(products.map(p => [p.rawCode, p]));
+    const byCode = Object.fromEntries(
+    products.map(p => [p.rawCode || p.codigo, p])
+);
     const sel = this.state.selected ? byCode[this.state.selected] : null;
     const v = this.state.visible;
     const R = this.reduced;
