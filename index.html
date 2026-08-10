@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<title>Dilino Studio — Serralheria de autoria em ferro e madeira</title>
+<meta name="description" content="Peças autorais em ferro galvanizado e madeira maciça, soldadas à mão — prontas ou sob medida. Fabricação própria em Arujá, SP, com entrega e montagem na Grande São Paulo.">
+<meta name="ext-resource-dependency" content="assets/servico-projetos.png" data-resource-id="servProjetos" />
+<meta name="ext-resource-dependency" content="assets/servico-estruturas.png" data-resource-id="servEstruturas" />
+<meta name="ext-resource-dependency" content="assets/servico-fornecimento.png" data-resource-id="servFornecimento" />
+<meta name="ext-resource-dependency" content="assets/servico-completo.png" data-resource-id="servCompleto" />
+<meta name="ext-resource-dependency" content="assets/comodo-cozinha.png" data-resource-id="comodoCozinha" />
+<meta name="ext-resource-dependency" content="assets/comodo-escritorio.png" data-resource-id="comodoEscritorio" />
+<meta name="ext-resource-dependency" content="assets/comodo-quarto.png" data-resource-id="comodoQuarto" />
+<meta name="ext-resource-dependency" content="assets/comodo-banheiro.png" data-resource-id="comodoBanheiro" />
+<template id="__bundler_thumbnail" data-bg-color="#1C1917">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#1C1917"/>
+    <rect x="470" y="300" width="260" height="200" rx="24" fill="none" stroke="#B8874A" stroke-width="10"/>
+    <path d="M560 300 v200 M600 300 v200 M640 300 v200" stroke="#899BA7" stroke-width="8" stroke-linecap="round"/>
+    <text x="600" y="590" text-anchor="middle" font-family="Montserrat,Arial,sans-serif" font-size="48" font-weight="800" letter-spacing="6" fill="#F4F1EC">DILINO</text>
+  </svg>
+</template>
+</head>
+<body>
+<x-dc>
+<helmet>
+<script src="./produtos.js"></script>
+<link rel="preload" as="image" href="assets/hero-estante.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+  /* ===== DESIGN TOKENS ===== */
+  :root{
+    /* brand palette */
+    --ink:#1C1917;      /* fundo escuro */
+    --iron:#2E2B28;     /* cinza-ferro (palette; disponível p/ uso) */
+    --bone:#F4F1EC;     /* claro / osso */
+    --brass:#B8874A;    /* latão */
+    --patina:#899BA7;   /* patina */
+    --tile:#ECE7DB;     /* placeholder de imagem */
+    --line:#e0dacd;     /* divisórias claras (modal) */
+    /* raios */
+    --radius-md:18px;
+    --radius-lg:20px;
+    --radius-xl:28px;
+    --radius-pill:999px;
+    /* layout */
+    --gutter:48px;      /* respiro horizontal das seções */
+    --maxw:1240px;      /* largura do container */
+  }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; }
+  a{ color:var(--brass); text-decoration:none; }
+  a:hover{ color:#cf9d5f; }
+  ::selection{ background:rgba(184,135,74,.35); color:var(--bone); }
+  a:focus-visible,button:focus-visible{ outline:2px solid var(--brass); outline-offset:3px; }
+
+  /* ===== RESPONSIVO (desktop intacto; overrides só em telas menores) ===== */
+  /* menu mobile */
+  .nav-burger{ display:none; }
+  .nav-drawer{ position:fixed; inset:0; z-index:60; display:none; overflow:hidden; }
+  .nav-drawer.open{ display:block; }
+  .nav-drawer .backdrop{ position:absolute; inset:0; background:rgba(20,18,16,.55); }
+  .nav-drawer .panel{ position:absolute; top:0; right:0; height:100%; width:min(82vw,320px); background:var(--ink); box-shadow:-24px 0 60px rgba(0,0,0,.5); padding:92px 26px 32px; display:flex; flex-direction:column; gap:6px; transform:translateX(100%); transition:transform .32s ease; }
+  .nav-drawer.open .panel{ transform:translateX(0); }
+  /* tipografia fluida — clamp limitado ao tamanho desktop, então desktop nao muda */
+  .hero-title{ letter-spacing:-0.02em!important; }
+  .sec-title{ font-size:clamp(26px,4.6vw,36px)!important; }
+  .serv-lg-title{ font-size:clamp(22px,4vw,30px)!important; }
+
+  @media (max-width:1024px){
+    .grid-comodos{ grid-template-columns:repeat(3,1fr)!important; }
+    .grid-procuradas{ grid-template-columns:repeat(2,1fr)!important; }
+    .grid-footer{ grid-template-columns:repeat(2,1fr)!important; gap:32px 40px!important; }
+  }
+  @media (max-width:768px){
+    :root{ --gutter:22px; }
+    .nav-links{ display:none!important; }
+    .nav-cta{ display:none!important; }
+    .nav-burger{ display:inline-flex!important; }
+    .grid-serv{ grid-template-columns:1fr!important; }
+    .grid-procuradas{ gap:16px 14px!important; }
+    .grid-comodos{ grid-template-columns:repeat(2,1fr)!important; gap:16px!important; }
+    .hero-pad{ padding-top:96px!important; padding-bottom:56px!important; }
+    .hero-copy{ max-width:88%!important; }
+    .banner-box{ aspect-ratio:16/9!important; }
+    .banner-img{ object-position:74% center!important; }
+    .banner-shade{ background:linear-gradient(90deg,rgba(20,18,16,.92) 0%,rgba(20,18,16,.7) 42%,rgba(20,18,16,.32) 72%,rgba(20,18,16,.05) 100%)!important; }
+  }
+  @media (max-width:600px){
+    .grid-footer{ grid-template-columns:1fr!important; }
+  }
+  @media (max-width:480px){
+    .nav-row img{ height:32px!important; width:32px!important; }
+    .banner-box{ aspect-ratio:4/3!important; }
+    .banner-img{ object-position:78% center!important; }
+  }
+
+  /* ===== MODAL · quick view (reaproveitado do catálogo) ===== */
+  .modal-grid{ display:grid; grid-template-columns:1.05fr 1fr; }
+  .modal-gallery{ display:grid; grid-template-columns:72px 1fr; gap:16px; }
+  .modal-actions{ display:flex; gap:12px; flex-wrap:wrap; }
+  @media (max-width:768px){
+    .modal-grid{ grid-template-columns:1fr!important; }
+    .modal-gallery{ grid-template-columns:1fr!important; }
+    .modal-thumbs{ flex-direction:row!important; order:2; }
+    .modal-actions .btn-buy{ flex:1 1 100%!important; }
+  }
+</style>
+</helmet>
+<div style="background:var(--ink);font-family:'Montserrat',sans-serif;color:var(--bone);min-height:100vh;overflow-x:hidden;font-weight:400;">
+
+  <!-- HEADER · fixo, centralizado, transparente no topo → ink ao rolar -->
+  <div ref="{{ headerRef }}" style="position:fixed;top:0;left:0;right:0;z-index:50;background:transparent;border-bottom:1px solid transparent;transition:background .35s ease, box-shadow .35s ease, border-color .35s ease;">
+    <div class="nav-row" style="max-width:var(--maxw);margin:0 auto;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:18px var(--gutter);">
+      <a href="#" style="justify-self:start;display:flex;align-items:center;gap:12px;">
+        <img src="assets/dilino-mark.png" alt="Dilino Studio" decoding="async" style="height:38px;width:38px;object-fit:contain;display:block;">
+        <span style="display:flex;flex-direction:column;line-height:1;">
+          <span style="font-weight:800;font-size:17px;letter-spacing:1px;color:var(--bone);">DILINO</span>
+          <span style="font-weight:600;font-size:9px;letter-spacing:5px;color:var(--patina);margin-top:4px;">STUDIO</span>
+        </span>
+      </a>
+      <div class="nav-links" style="justify-self:center;display:flex;align-items:center;gap:44px;font-size:13.5px;font-weight:500;color:#d9d3c8;">
+        <sc-for list="{{ menu }}" as="m" hint-placeholder-count="4">
+          <a href="{{ m.href }}" style="color:#d9d3c8;" style-hover="color:var(--bone);">{{ m.label }}</a>
+        </sc-for>
+      </div>
+      <div style="justify-self:end;display:flex;align-items:center;gap:12px;">
+        <a href="https://wa.me/5511926457142?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Dilino%20Studio." target="_blank" rel="noopener" class="nav-cta" style="white-space:nowrap;border:1px solid rgba(244,241,236,.45);color:var(--bone);font-size:13px;font-weight:500;padding:10px 22px;border-radius:var(--radius-pill);" style-hover="border-color:var(--bone);background:rgba(244,241,236,.08);">Fale no WhatsApp</a>
+        <button class="nav-burger" type="button" aria-label="Abrir menu" onClick="{{ toggleMenu }}" style="appearance:none;background:transparent;border:0;padding:0;cursor:pointer;width:44px;height:44px;align-items:center;justify-content:center;color:var(--bone);">
+          <svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"></path></svg>
+        </button>
+      </div>
+    </div>
+    <div class="nav-drawer" ref="{{ drawerRef }}">
+      <div class="backdrop" onClick="{{ closeMenu }}"></div>
+      <nav class="panel" aria-label="Menu principal">
+        <sc-for list="{{ menu }}" as="m" hint-placeholder-count="4">
+          <a href="{{ m.href }}" onClick="{{ closeMenu }}" style="color:var(--bone);font-size:18px;font-weight:600;padding:14px 4px;border-bottom:1px solid rgba(244,241,236,.1);">{{ m.label }}</a>
+        </sc-for>
+        <a href="https://wa.me/5511926457142?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Dilino%20Studio." target="_blank" rel="noopener" onClick="{{ closeMenu }}" style="margin-top:18px;display:inline-flex;align-items:center;justify-content:center;background:var(--bone);color:var(--ink);font-weight:600;font-size:15px;padding:15px 22px;border-radius:var(--radius-pill);">Fale no WhatsApp</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- HERÓI · full-bleed, degradê ink→imagem à direita -->
+  <div class="hero" style="position:relative;background:var(--ink);">
+    <img class="hero-img" src="assets/hero-estante.png" alt="Estante Dilino em ferro galvanizado e madeira maciça" fetchpriority="high" decoding="async" width="1672" height="941" style="display:block;width:100%;height:auto;aspect-ratio:1672/941;">
+    <div style="position:absolute;inset:0;background:linear-gradient(to right, rgba(26,21,18,0.9) 0%, rgba(26,21,18,0.75) 20%, rgba(26,21,18,0.5) 40%, rgba(26,21,18,0.25) 60%, rgba(26,21,18,0.08) 80%, rgba(26,21,18,0) 100%);"></div>
+
+    <div class="hero-pad" style="position:absolute;inset:0;z-index:3;display:flex;align-items:center;padding:112px var(--gutter) 96px;">
+      <div style="width:100%;max-width:var(--maxw);margin:0 auto;">
+      <div class="hero-copy" style="max-width:52%;">
+      <h1 class="hero-title" style="font-weight:900;font-size:clamp(96px,12vw,180px);line-height:.9;letter-spacing:-0.02em;margin:0;color:var(--bone);">peças</h1>
+      <div style="margin-top:16px;display:flex;flex-direction:column;gap:10px;">
+        <div style="font-weight:700;font-size:clamp(24px,2.4vw,36px);color:var(--bone);">Ferro galvanizado e madeira maciça</div>
+        <div style="font-weight:400;font-size:clamp(16px,1.4vw,20px);color:#cdc7bc;">soldados à mão, peças prontas ou sob medida.</div>
+      </div>
+      <div style="margin-top:40px;">
+        <a href="Catálogo.dc.html" style="display:inline-flex;align-items:center;gap:10px;background:var(--bone);color:var(--ink);font-weight:600;font-size:15px;padding:15px 30px;border-radius:var(--radius-pill);" style-hover="background:#fff;">Ver peças <span style="color:var(--brass);">›</span></a>
+      </div>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- REGIÃO CLARA · cards de cômodo + mais procuradas -->
+  <div style="position:relative;z-index:4;margin-top:-72px;background:var(--bone);border-radius:var(--radius-xl) var(--radius-xl) 0 0;">
+
+    <!-- CARDS DE CÔMODO -->
+    <div id="comodos" style="padding:56px var(--gutter) 24px;">
+      <div style="max-width:var(--maxw);margin:0 auto;">
+        <div class="grid-comodos" style="display:grid;grid-template-columns:repeat(5,1fr);gap:20px;">
+          <sc-for list="{{ comodos }}" as="c" hint-placeholder-count="5">
+            <a href="{{ c.href }}" style="display:flex;flex-direction:column;gap:14px;color:var(--ink);cursor:pointer;">
+              <div style="font-weight:700;font-size:17px;letter-spacing:.2px;">{{ c.label }}</div>
+              <div style="position:relative;aspect-ratio:1/1;border-radius:var(--radius-md);overflow:hidden;background:#ece7db;transition:box-shadow .3s ease;" style-hover="box-shadow:0 22px 46px rgba(28,25,23,.2);">
+                <sc-if value="{{ c.img }}" hint-placeholder-val="{{ true }}">
+                  <img src="{{ c.img }}" alt="Móveis Dilino Studio para {{ c.label }}" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+                </sc-if>
+                <sc-if value="{{ c.placeholder }}" hint-placeholder-val="{{ false }}">
+                  <span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:16px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10px;font-weight:400;letter-spacing:.5px;color:#9a9488;text-align:center;line-height:1.7;">{{ c.placeholder }}</span>
+                </sc-if>
+              </div>
+            </a>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIS PROCURADAS · grade 4×2 -->
+    <div id="procuradas" style="padding:64px var(--gutter) 96px;">
+      <div style="max-width:var(--maxw);margin:0 auto;">
+        <div style="display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center;margin-bottom:56px;">
+          <h2 class="sec-title" style="font-weight:700;font-size:36px;letter-spacing:-.5px;margin:0;color:var(--ink);">Mais Procuradas</h2>
+          <div style="font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--patina);">Casa · Escritório</div>
+        </div>
+        <div class="grid-procuradas" style="display:grid;grid-template-columns:repeat(4,1fr);gap:32px;">
+          <sc-for list="{{ procuradas }}" as="p" hint-placeholder-count="8">
+            <div onClick="{{ p.open }}" style="display:flex;flex-direction:column;color:var(--ink);cursor:pointer;">
+              <div style="position:relative;aspect-ratio:1/1;border-radius:var(--radius-md);overflow:hidden;background:#ECE7DB;transition:box-shadow .3s ease;" style-hover="box-shadow:0 20px 42px rgba(28,25,23,.16);">
+                <sc-if value="{{ p.badge }}" hint-placeholder-val="{{ false }}">
+                  <span style="position:absolute;top:12px;right:12px;z-index:2;font-size:10px;font-weight:600;letter-spacing:.5px;color:var(--ink);background:var(--brass);border-radius:var(--radius-pill);padding:4px 11px;">{{ p.badge }}</span>
+                </sc-if>
+                <sc-if value="{{ p.img }}" hint-placeholder-val="{{ false }}">
+                  <img src="{{ p.img }}" alt="{{ p.name }} em ferro galvanizado e madeira maciça" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;">
+                </sc-if>
+                <sc-if value="{{ p.noImg }}" hint-placeholder-val="{{ true }}">
+                  <span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:9.5px;font-weight:500;letter-spacing:1.5px;color:#a39c90;text-transform:uppercase;text-align:center;line-height:1.9;">IMG 1:1<br>{{ p.name }}</span>
+                </sc-if>
+              </div>
+              <div style="text-align:center;margin-top:16px;font-weight:500;font-size:15px;color:var(--ink);line-height:1.3;">{{ p.name }}</div>
+              <div style="display:flex;align-items:baseline;justify-content:center;flex-wrap:wrap;gap:4px 8px;margin-top:6px;white-space:nowrap;">
+                <span style="font-weight:600;font-size:15px;color:var(--brass);">{{ p.priceNow }}</span>
+                <sc-if value="{{ p.priceFull }}" hint-placeholder-val="{{ false }}">
+                  <span style="font-size:12.5px;font-weight:400;color:var(--patina);text-decoration:line-through;">{{ p.priceFull }}</span>
+                </sc-if>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+        <div style="display:flex;justify-content:center;margin-top:56px;">
+          <a href="Catálogo.dc.html" style="display:inline-flex;align-items:center;gap:10px;border:1px solid var(--brass);color:var(--brass);font-weight:500;font-size:14px;letter-spacing:.3px;padding:15px 34px;border-radius:var(--radius-pill);transition:all .28s ease;" style-hover="background:var(--brass);color:var(--bone);">Ver mais <span>→</span></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- BANNER PROMOCIONAL · imagem de fundo + texto HTML sobreposto à esquerda -->
+    <div style="padding:16px var(--gutter) 24px;">
+      <div style="max-width:var(--maxw);margin:0 auto;">
+        <div class="banner-box" style="position:relative;width:100%;aspect-ratio:16/6;border-radius:var(--radius-md);overflow:hidden;background:var(--ink);">
+          <img class="banner-img" src="assets/banner-ambiente.png" alt="Estante em ferro galvanizado e madeira maciça em home office iluminado" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;">
+          <div class="banner-shade" style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,18,16,.88) 0%,rgba(20,18,16,.66) 28%,rgba(20,18,16,.24) 54%,rgba(20,18,16,0) 74%);"></div>
+          <div class="banner-content" style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:16px;padding:0 clamp(28px,6%,80px);max-width:600px;">
+            <h2 style="margin:0;font-weight:700;font-size:clamp(24px,3vw,40px);line-height:1.1;letter-spacing:-.6px;color:var(--bone);text-wrap:pretty;">Ferro galvanizado e madeira maciça.</h2>
+            <p style="margin:0;font-weight:400;font-size:clamp(14px,1.5vw,18px);line-height:1.5;color:#cdc7bc;max-width:34ch;">Estruturas autorais para cada ambiente da casa.</p>
+            <a href="Catálogo.dc.html" style="margin-top:6px;display:inline-flex;align-items:center;gap:10px;background:var(--bone);color:var(--ink);font-weight:600;font-size:15px;padding:14px 28px;border-radius:var(--radius-pill);" style-hover="background:#fff;">Ver as peças <span style="color:var(--brass);">→</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- O QUE FABRICAMOS · grade estática 3 + 1 -->
+    <div style="padding:56px var(--gutter) 96px;">
+      <div style="max-width:var(--maxw);margin:0 auto;">
+        <div style="display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center;margin-bottom:48px;">
+          <h2 class="sec-title" style="font-weight:700;font-size:36px;letter-spacing:-.5px;margin:0;color:var(--ink);">Outros serviços</h2>
+          <div style="font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--patina);">Sob medida · Projetos · B2B</div>
+        </div>
+
+        <div class="grid-serv" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+          <sc-for list="{{ fabricamos }}" as="f" hint-placeholder-count="3">
+            <a href="#" style="position:relative;display:flex;flex-direction:column;justify-content:flex-end;min-height:440px;border-radius:var(--radius-lg);overflow:hidden;padding:36px 32px;color:var(--bone);">
+              <img src="{{ f.img }}" alt="{{ f.title }}" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+              <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,18,16,.12) 0%,rgba(20,18,16,.5) 42%,rgba(20,18,16,.95) 100%);"></div>
+              <div style="position:relative;z-index:2;display:flex;flex-direction:column;gap:14px;">
+                <span style="font-size:10.5px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#C79A5C;">{{ f.tag }}</span>
+                <div style="font-weight:700;font-size:23px;line-height:1.2;letter-spacing:-.3px;color:var(--bone);text-wrap:pretty;">{{ f.title }}</div>
+                <div style="font-size:13.5px;font-weight:400;line-height:1.55;color:#d5cfc4;max-width:38ch;">{{ f.desc }}</div>
+                <div style="margin-top:6px;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--patina);">{{ f.para }}</div>
+                <span style="margin-top:6px;display:inline-flex;align-self:flex-start;align-items:center;gap:8px;background:var(--bone);color:var(--ink);font-weight:600;font-size:13px;padding:11px 22px;border-radius:var(--radius-pill);transition:background .25s ease;" style-hover="background:#fff;">Saiba mais</span>
+              </div>
+            </a>
+          </sc-for>
+
+          <a href="#" style="grid-column:1 / -1;position:relative;display:flex;flex-direction:column;justify-content:flex-end;min-height:380px;border-radius:var(--radius-lg);overflow:hidden;padding:44px var(--gutter);color:var(--bone);">
+            <img src="assets/servico-completo.png" alt="{{ destaque.title }}" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 60%;">
+            <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,18,16,.92) 0%,rgba(20,18,16,.7) 42%,rgba(20,18,16,.32) 78%,rgba(20,18,16,.12) 100%);"></div>
+            <div style="position:relative;z-index:2;display:flex;flex-direction:column;gap:15px;max-width:680px;">
+              <span style="font-size:10.5px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#C79A5C;">{{ destaque.tag }}</span>
+              <div class="serv-lg-title" style="font-weight:700;font-size:30px;line-height:1.15;letter-spacing:-.6px;color:var(--bone);text-wrap:pretty;">{{ destaque.title }}</div>
+              <div style="font-size:14.5px;font-weight:400;line-height:1.6;color:#d5cfc4;max-width:58ch;">{{ destaque.desc }}</div>
+              <div style="margin-top:6px;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--patina);">{{ destaque.para }}</div>
+              <span style="margin-top:8px;display:inline-flex;align-self:flex-start;align-items:center;gap:8px;background:var(--bone);color:var(--ink);font-weight:600;font-size:13px;padding:12px 24px;border-radius:var(--radius-pill);transition:background .25s ease;" style-hover="background:#fff;">Saiba mais</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- RODAPÉ -->
+  <div id="contato" style="background:var(--ink);border-top:1px solid #2a2724;padding:80px var(--gutter) 32px;">
+    <div style="max-width:var(--maxw);margin:0 auto;">
+      <div class="grid-footer" style="display:grid;grid-template-columns:1.4fr repeat(4,1fr);gap:40px;">
+        <div style="display:flex;flex-direction:column;gap:14px;">
+          <div style="display:flex;align-items:center;gap:11px;">
+            <img src="assets/dilino-mark.png" alt="Dilino Studio" loading="lazy" decoding="async" style="height:32px;width:32px;object-fit:contain;display:block;">
+            <span style="display:flex;flex-direction:column;line-height:1;">
+              <span style="font-weight:800;font-size:15px;letter-spacing:1px;color:var(--bone);">DILINO</span>
+              <span style="font-weight:600;font-size:8px;letter-spacing:4.5px;color:var(--patina);margin-top:3px;">STUDIO</span>
+            </span>
+          </div>
+          <div style="font-size:10px;font-weight:600;letter-spacing:2.5px;color:#8d877d;text-transform:uppercase;margin-top:2px;">Serralheria de autoria</div>
+          <p style="font-size:13px;font-weight:400;line-height:1.7;color:#a49d92;margin:6px 0 0;max-width:34ch;">Ferro galvanizado e madeira maciça, fabricação própria em Arujá – SP. Entrega e montagem na Grande São Paulo.</p>
+        </div>
+        <sc-for list="{{ footerCols }}" as="c" hint-placeholder-count="4">
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <div style="font-size:10px;font-weight:600;letter-spacing:2px;color:var(--patina);text-transform:uppercase;">{{ c.head }}</div>
+            <sc-for list="{{ c.links }}" as="l" hint-placeholder-count="3">
+              <a href="{{ l.href }}" target="{{ l.target }}" rel="{{ l.rel }}" style="font-size:13px;font-weight:400;color:#c1bbb0;" style-hover="color:var(--brass);">{{ l.label }}</a>
+            </sc-for>
+          </div>
+        </sc-for>
+      </div>
+      <div style="border-top:1px solid #2a2724;margin-top:56px;padding-top:24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;">
+        <div style="font-size:10.5px;font-weight:500;letter-spacing:1px;color:#8d877d;">CNPJ 00.000.000/0001-00 · Dilino Studio · Arujá — SP</div>
+        <div style="display:flex;gap:20px;font-size:12px;font-weight:400;color:#938c81;">
+          <a href="#" style="color:#938c81;">Instagram</a>
+          <a href="https://wa.me/5511926457142?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Dilino%20Studio." target="_blank" rel="noopener" style="color:#938c81;">WhatsApp</a>
+          <span>Pix · Cartão · até 10x</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL · quick view (mesmo componente do catálogo) -->
+  <sc-if value="{{ modalOpen }}" hint-placeholder-val="{{ false }}">
+    <div ref="{{ overlayRef }}" onClick="{{ closeModal }}" style="{{ overlayStyle }}">
+      <div onClick="{{ stop }}" role="dialog" aria-modal="true" aria-label="Detalhes da peça" tabindex="-1" style="{{ cardStyle }}">
+        <button type="button" aria-label="Fechar" onClick="{{ closeModal }}" style="position:absolute;top:16px;right:16px;z-index:3;appearance:none;cursor:pointer;width:42px;height:42px;display:inline-flex;align-items:center;justify-content:center;background:#fff;border:1px solid var(--line);border-radius:var(--radius-pill);color:var(--ink);box-shadow:0 2px 8px rgba(28,25,23,.1);" style-hover="background:var(--ink);color:var(--bone);">
+          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+        </button>
+        <div class="modal-grid">
+          <!-- GALERIA -->
+          <div style="padding:40px;background:#efeae0;">
+            <div class="modal-gallery">
+              <div class="modal-thumbs" style="display:flex;flex-direction:column;gap:12px;">
+                <sc-for list="{{ modal.thumbs }}" as="th" hint-placeholder-count="4">
+                  <button type="button" onClick="{{ th.onClick }}" aria-label="{{ th.label }}" style="{{ th.style }}">
+                    <img src="{{ th.src }}" alt="{{ th.alt }}" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:{{ th.imgFit }};">
+                  </button>
+                </sc-for>
+              </div>
+              <div style="position:relative;aspect-ratio:4/5;border-radius:14px;overflow:hidden;background:{{ modal.mainBg }};">
+                <sc-if value="{{ modal.mainImg }}" hint-placeholder-val="{{ false }}">
+                  <img src="{{ modal.mainImg }}" alt="{{ modal.name }}" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:{{ modal.mainFit }};object-position:{{ modal.mainPos }};">
+                </sc-if>
+                <sc-if value="{{ modal.noImg }}" hint-placeholder-val="{{ true }}">
+                  <span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:20px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:.5px;color:#9a9488;text-align:center;line-height:1.8;">{{ modal.mainCaption }}</span>
+                </sc-if>
+              </div>
+            </div>
+          </div>
+          <!-- INFORMAÇÕES -->
+          <div style="padding:52px 44px 44px;display:flex;flex-direction:column;">
+            <div style="font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--patina);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;">{{ modal.code }}</div>
+            <h3 style="margin:14px 0 0;font-weight:800;font-size:34px;line-height:1.05;letter-spacing:-.8px;color:var(--ink);">{{ modal.name }}</h3>
+            <div style="margin-top:12px;font-size:14px;font-weight:400;line-height:1.55;color:var(--patina);">{{ modal.desc }}</div>
+            <div style="height:1px;background:var(--line);margin:26px 0;"></div>
+            <div style="display:flex;flex-direction:column;gap:14px;">
+              <div style="display:grid;grid-template-columns:112px 1fr;gap:16px;align-items:baseline;">
+                <span style="font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--patina);">Medidas</span>
+                <span style="font-size:13.5px;font-weight:500;color:var(--ink);">{{ modal.dims }}</span>
+              </div>
+              <div style="display:grid;grid-template-columns:112px 1fr;gap:16px;align-items:baseline;">
+                <span style="font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--patina);">Material</span>
+                <span style="font-size:13.5px;font-weight:500;color:var(--ink);">Ferro galvanizado · Madeira maciça</span>
+              </div>
+              <div style="display:grid;grid-template-columns:112px 1fr;gap:16px;align-items:baseline;">
+                <span style="font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--patina);">Acabamento</span>
+                <span style="font-size:13.5px;font-weight:500;color:var(--ink);">Pintura fosca · Junções sem emenda</span>
+              </div>
+              <div style="display:grid;grid-template-columns:112px 1fr;gap:16px;align-items:baseline;">
+                <span style="font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--patina);">Produção</span>
+                <span style="font-size:13.5px;font-weight:500;color:var(--ink);">7 a 10 dias úteis</span>
+              </div>
+            </div>
+            <div style="height:1px;background:var(--line);margin:26px 0;"></div>
+            <div style="display:flex;flex-direction:column;gap:4px;">
+              <div style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;">
+                <div style="font-weight:800;font-size:30px;letter-spacing:-.5px;color:var(--brass);">{{ modal.priceLabel }}</div>
+                <sc-if value="{{ modal.priceFull }}" hint-placeholder-val="{{ false }}">
+                  <div style="font-size:16px;font-weight:400;color:var(--patina);text-decoration:line-through;">{{ modal.priceFull }}</div>
+                </sc-if>
+              </div>
+              <sc-if value="{{ modal.showParcela }}" hint-placeholder-val="{{ true }}">
+                <div style="font-size:12px;font-weight:400;color:#7c766c;">{{ modal.parcela }}</div>
+              </sc-if>
+            </div>
+            <div class="modal-actions" style="margin-top:26px;">
+              <a href="{{ modal.checkout }}" target="_blank" rel="noopener" class="btn-buy" style="flex:1 1 auto;display:inline-flex;align-items:center;justify-content:center;background:var(--ink);color:var(--bone);font-weight:600;font-size:14.5px;padding:16px 26px;border-radius:var(--radius-pill);white-space:nowrap;" style-hover="background:#2c2825;">Comprar agora</a>
+              <a href="{{ modal.whatsapp }}" target="_blank" rel="noopener" class="btn-buy" style="flex:1 1 auto;display:inline-flex;align-items:center;justify-content:center;gap:8px;background:transparent;color:var(--brass);border:1px solid var(--brass);font-weight:600;font-size:14.5px;padding:16px 26px;border-radius:var(--radius-pill);white-space:nowrap;" style-hover="background:var(--brass);color:var(--bone);">Comprar pelo WhatsApp</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:1400}}">
+class Component extends DCLogic {
+  state = { selected: null, thumb: 0, visible: false };
+  headerRef = React.createRef();
+  drawerRef = React.createRef();
+  overlayRef = React.createRef();
+  THUMBS = ['Ambiente','Oficina','Detalhe','Perfil'];
+  IMG = { 'DS-001':'assets/DS-001.png','DS-002':'assets/DS-002.png','DS-003':'assets/DS-003.png','DS-004':'assets/DS-004.png','DS-005':'assets/DS-005.png','DS-006':'assets/DS-006.png','DS-007':'assets/DS-007.png','DS-008':'assets/DS-008.png','DS-009':'assets/DS-009.png','DS-010':'assets/DS-010.png','DS-011':'assets/DS-011.png','DS-036':'assets/DS-036.png','DS-037':'assets/DS-037.png','DS-038':'assets/DS-038.png','DS-039':'assets/DS-039.png','DS-040':'assets/DS-040.png','DS-041':'assets/DS-041.png','DS-042':'assets/DS-042.png','DS-043':'assets/DS-043.png','DS-044':'assets/DS-044.png','DS-012':'assets/DS-012.png','DS-013':'assets/DS-013.png','DS-014':'assets/DS-014.png','DS-015':'assets/DS-015.png','DS-016':'assets/DS-016.png','DS-017':'assets/DS-017.png','DS-018':'assets/DS-018.png','DS-019':'assets/DS-019.png','DS-020':'assets/DS-020.png','DS-021':'assets/DS-021.png','DS-022':'assets/DS-022.png','DS-023':'assets/DS-023.png','DS-024':'assets/DS-024.png','DS-025':'assets/DS-025.png','DS-026':'assets/DS-026.png','DS-027':'assets/DS-027.png','DS-028':'assets/DS-028.png','DS-029':'assets/DS-029.png','DS-030':'assets/DS-030.png','DS-031':'assets/DS-031.png','DS-032':'assets/DS-032.png','DS-033':'assets/DS-033.png','DS-034':'assets/DS-034.png','DS-035':'assets/DS-035.png','DS-045':'assets/DS-045.png','DS-046':'assets/DS-046.png','DS-047':'assets/DS-047.png','DS-048':'assets/DS-048.png','DS-049':'assets/DS-049.png','DS-050':'assets/DS-050.png','DS-051':'assets/DS-051.png' };
+  IMGX = { 'DS-001':{ Detalhe:'assets/DS-001-detalhe.png' }, 'DS-002':{ Detalhe:'assets/DS-002-detalhe.png' }, 'DS-003':{ Detalhe:'assets/DS-003-detalhe.png' }, 'DS-004':{ Detalhe:'assets/DS-004-detalhe.png' }, 'DS-005':{ Detalhe:'assets/DS-005-detalhe.png' }, 'DS-006':{ Detalhe:'assets/DS-006-detalhe.png' }, 'DS-007':{ Detalhe:'assets/DS-007-detalhe.png' }, 'DS-008':{ Detalhe:'assets/DS-008-detalhe.png' }, 'DS-009':{ Detalhe:'assets/DS-009-detalhe.png' }, 'DS-010':{ Detalhe:'assets/DS-010-detalhe.png' }, 'DS-011':{ Perfil:'assets/DS-011-perfil.png' }, 'DS-012':{ Perfil:'assets/DS-012-perfil.png' }, 'DS-013':{ Perfil:'assets/DS-013-perfil.png' }, 'DS-014':{ Perfil:'assets/DS-014-perfil.png' }, 'DS-015':{ Perfil:'assets/DS-015-perfil.png' }, 'DS-017':{ Detalhe:'assets/DS-017-detalhe.png' }, 'DS-018':{ Detalhe:'assets/DS-018-detalhe.png' }, 'DS-019':{ Detalhe:'assets/DS-019-detalhe.png' }, 'DS-020':{ Detalhe:'assets/DS-020-detalhe.png' }, 'DS-021':{ Detalhe:'assets/DS-021-detalhe.png' }, 'DS-022':{ Detalhe:'assets/DS-022-detalhe.png' }, 'DS-023':{ Detalhe:'assets/DS-023-detalhe.png' }, 'DS-024':{ Detalhe:'assets/DS-024-detalhe.png' }, 'DS-025':{ Detalhe:'assets/DS-025-detalhe.png' }, 'DS-026':{ Detalhe:'assets/DS-026-detalhe.png' }, 'DS-027':{ Detalhe:'assets/DS-027-detalhe.png' }, 'DS-028':{ Detalhe:'assets/DS-028-detalhe.png' }, 'DS-029':{ Detalhe:'assets/DS-029-detalhe.png' }, 'DS-030':{ Detalhe:'assets/DS-030-detalhe.png' }, 'DS-031':{ Detalhe:'assets/DS-031-detalhe.png' }, 'DS-032':{ Detalhe:'assets/DS-032-detalhe.png' }, 'DS-033':{ Detalhe:'assets/DS-033-detalhe.png' }, 'DS-034':{ Detalhe:'assets/DS-034-detalhe.png' }, 'DS-035':{ Perfil:'assets/DS-035-perfil.png' }, 'DS-036':{ Detalhe:'assets/DS-036-detalhe.png' }, 'DS-037':{ Detalhe:'assets/DS-037-detalhe.png' }, 'DS-038':{ Detalhe:'assets/DS-038-detalhe.png' }, 'DS-039':{ Detalhe:'assets/DS-039-detalhe.png' }, 'DS-040':{ Detalhe:'assets/DS-040-detalhe.png' }, 'DS-041':{ Perfil:'assets/DS-041-perfil.png' }, 'DS-042':{ Detalhe:'assets/DS-042-detalhe.png' }, 'DS-043':{ Perfil:'assets/DS-043-perfil.png' }, 'DS-044':{ Perfil:'assets/DS-044-perfil.png' }, 'DS-045':{ Perfil:'assets/DS-045-perfil.png' }, 'DS-046':{ Detalhe:'assets/DS-046-detalhe.png' }, 'DS-047':{ Detalhe:'assets/DS-047-detalhe.png' }, 'DS-048':{ Detalhe:'assets/DS-048-detalhe.png' }, 'DS-049':{ Detalhe:'assets/DS-049-detalhe.png' }, 'DS-050':{ Detalhe:'assets/DS-050-detalhe.png' }, 'DS-051':{ Detalhe:'assets/DS-051-detalhe.png' } }; /* extras por código: { 'DS-001': { Oficina:'...', Detalhe:'...', Perfil:'...' } } */
+
+  MED = { 'DS-001':'assets/DS-001-medidas.png','DS-002':'assets/DS-002-medidas.png','DS-003':'assets/DS-003-medidas.png','DS-004':'assets/DS-004-medidas.png','DS-005':'assets/DS-005-medidas.png','DS-006':'assets/DS-006-medidas.png','DS-007':'assets/DS-007-medidas.png','DS-008':'assets/DS-008-medidas.png','DS-010':'assets/DS-010-medidas.png','DS-011':'assets/DS-011-medidas.png','DS-012':'assets/DS-012-medidas.png','DS-013':'assets/DS-013-medidas.png','DS-014':'assets/DS-014-medidas.png','DS-015':'assets/DS-015-medidas.png','DS-016':'assets/DS-016-medidas.png','DS-017':'assets/DS-017-medidas.png','DS-018':'assets/DS-018-medidas.png','DS-019':'assets/DS-019-medidas.png','DS-020':'assets/DS-020-medidas.png','DS-021':'assets/DS-021-medidas.jpg','DS-022':'assets/DS-022-medidas.png','DS-023':'assets/DS-023-medidas.png','DS-024':'assets/DS-024-medidas.jpg','DS-025':'assets/DS-025-medidas.png','DS-026':'assets/DS-026-medidas.png','DS-027':'assets/DS-027-medidas.png','DS-029':'assets/DS-029-medidas.png','DS-030':'assets/DS-030-medidas.png','DS-034':'assets/DS-034-medidas.png','DS-035':'assets/DS-035-medidas.png','DS-031':'assets/DS-031-medidas.png','DS-032':'assets/DS-032-medidas.png','DS-036':'assets/DS-036-medidas.png','DS-037':'assets/DS-037-medidas.png','DS-038':'assets/DS-038-medidas.png','DS-039':'assets/DS-039-medidas.png','DS-040':'assets/DS-040-medidas.png','DS-041':'assets/DS-041-medidas.png','DS-042':'assets/DS-042-medidas.png','DS-043':'assets/DS-043-medidas.png','DS-044':'assets/DS-044-medidas.png','DS-045':'assets/DS-045-medidas.png','DS-046':'assets/DS-046-medidas.png','DS-047':'assets/DS-047-medidas.png','DS-048':'assets/DS-048-medidas.png','DS-049':'assets/DS-049-medidas.png','DS-050':'assets/DS-050-medidas.png','DS-051':'assets/DS-051-medidas.png' };
+  _lockCount = 0;
+  lockScroll = () => {
+    if (this._lockCount === 0) {
+      const sb = window.innerWidth - document.documentElement.clientWidth;
+      if (sb > 0) document.body.style.paddingRight = sb + 'px';
+      document.body.style.overflow = 'hidden';
+    }
+    this._lockCount++;
+  };
+  unlockScroll = () => {
+    this._lockCount = Math.max(0, this._lockCount - 1);
+    if (this._lockCount === 0) {
+      document.body.style.overflow = '';
+      document.body.style.paddingRight = '';
+    }
+  };
+  openModal = (code) => {
+    this.lockScroll();
+    clearTimeout(this._openT);
+    this.setState({ selected: code, thumb: 0, visible: false });
+    this._openT = setTimeout(() => this.setState({ visible: true }), 30);
+  };
+  closeModal = () => {
+    this.setState({ visible: false });
+    clearTimeout(this._closeT);
+    this._closeT = setTimeout(() => {
+      this.setState({ selected: null });
+      this.unlockScroll();
+    }, this.reduced ? 260 : 340);
+  };
+  setThumb = (i) => this.setState({ thumb: i });
+  stop = (e) => e.stopPropagation();
+
+  toggleMenu = () => {
+    const el = this.drawerRef.current; if (!el) return;
+    const open = el.classList.toggle('open');
+    if (open && !this._drawerOpen) { this._drawerOpen = true; this.lockScroll(); }
+    else if (!open && this._drawerOpen) { this._drawerOpen = false; this.unlockScroll(); }
+  };
+  closeMenu = () => {
+    const el = this.drawerRef.current; if (el) el.classList.remove('open');
+    if (this._drawerOpen) { this._drawerOpen = false; this.unlockScroll(); }
+  };
+  componentDidMount() {
+    this.reduced = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+    this.onKey = (e) => {
+      if (!this.state.selected) return;
+      if (e.key === 'Escape') { this.closeModal(); return; }
+      if (e.key === 'Tab') {
+        const el = this.overlayRef.current; if (!el) return;
+        const nodes = el.querySelectorAll('a[href],button:not([disabled]),input,select,textarea,[tabindex]:not([tabindex="-1"])');
+        const list = Array.prototype.filter.call(nodes, n => n.offsetWidth || n.offsetHeight || n.getClientRects().length);
+        if (!list.length) return;
+        const first = list[0], last = list[list.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    };
+    window.addEventListener('keydown', this.onKey);
+    this.onScroll = () => {
+      const el = this.headerRef.current; if (!el) return;
+      const scrolled = window.scrollY > 24;
+      if (scrolled === this._scrolled) return;
+      this._scrolled = scrolled;
+      if (scrolled) {
+        el.style.background = 'var(--ink)';
+        el.style.boxShadow = '0 10px 34px rgba(0,0,0,.4)';
+        el.style.borderBottomColor = '#2a2724';
+      } else {
+        el.style.background = 'transparent';
+        el.style.boxShadow = 'none';
+        el.style.borderBottomColor = 'transparent';
+      }
+    };
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    this.onScroll();
+  }
+  componentDidUpdate(_p, prev) {
+    if (this.state.selected && !prev.selected) {
+      this._lastFocus = document.activeElement;
+      const el = this.overlayRef.current;
+      if (el) { const f = el.querySelector('[role="dialog"]') || el; if (f && f.focus) f.focus(); }
+    } else if (!this.state.selected && prev.selected) {
+      if (this._lastFocus && this._lastFocus.focus) this._lastFocus.focus();
+    }
+  }
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.onScroll);
+    window.removeEventListener('keydown', this.onKey);
+    clearTimeout(this._openT);
+    clearTimeout(this._closeT);
+    this._lockCount = 0;
+    document.body.style.overflow = '';
+    document.body.style.paddingRight = '';
+  }
+
+  fmt(n){ if (n == null) return 'Sob consulta'; return 'R$ ' + n.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); }
+  fmt2(n){ return 'R$ ' + n.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); }
+  linkCheckout(code){ const list = (window.DILINO_PRODUTOS || []); const p = list.find(x => x.codigo === code); return (p && p.link_checkout) || ''; }
+  // Preço riscado ("de") calculado a partir do preço atual + % do selo de desconto
+  riscado(price, badge){ if(price==null||!badge) return null; const m=String(badge).match(/(\d+)\s*%/); if(!m) return null; const pct=+m[1]; if(!pct||pct>=100) return null; return this.fmt(Math.round(price/(1-pct/100))); }
+
+  data() {
+    // Peças em destaque na home — mesma ficha do catálogo (código DS-, medidas, descrição)
+    const P = (rawCode, name, price, priceFull, badge, dims, desc) => ({ rawCode, name, price, priceFull: priceFull || null, badge: badge || null, dims, desc });
+    return [
+      P('DS-008','Aparador Vitrali',1189,1489,'-20%','89 × 60 × 19 cm','Aparador industrial de cozinha'),
+      P('DS-002','Estante Argos',949,1190,'-20%','101 × 160,7 × 36 cm','Estante industrial de cozinha com bancada'),
+      P('DS-012','Escrivaninha Turim',999,null,'Novo','118 × 75 × 53 cm','Escrivaninha industrial com gaveta'),
+      P('DS-023','Criado-Mudo Onyx',449,549,'-20%','50 × 45 × 40 cm','Criado-mudo industrial com gaveta basculante'),
+      P('DS-032','Mesa Havana',749,899,null,'47 × 45 × 45 cm','Mesa lateral industrial de cabeceira'),
+      P('DS-001','Suporte Vulcano',169,219,null,'60 × 40 × 40 cm','Suporte industrial suspenso para forno e micro-ondas'),
+      P('DS-016','Nicho Módena',419,null,'Novo','70 × 70 × 20 cm','Nicho de parede modular com compartimentos assimétricos · Ferro galvanizado · Madeira maciça'),
+      P('DS-030','Arara Amêndoa',329,399,null,'100 × 180 × 34 cm','Arara closet industrial com prateleiras'),
+    ];
+  }
+
+  renderVals() {
+    const P = (name, priceNow, priceFull, badge) => ({ name, priceNow, priceFull: priceFull || null, badge: badge || null });
+    const icon = (body) => ({ __html: `<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">${body}</svg>` });
+
+    const products = this.data();
+    const WA_GERAL = 'https://wa.me/5511926457142?text=' + encodeURIComponent('Olá! Vim pelo site da Dilino Studio.');
+    const WA_PROJ = 'https://wa.me/5511926457142?text=' + encodeURIComponent('Olá! Gostaria de falar sobre um projeto sob medida.');
+    const L = (label, href, ext) => ({ label, href: href || '#', target: ext ? '_blank' : undefined, rel: ext ? 'noopener' : undefined });
+    const byCode = Object.fromEntries(products.map(p => [p.rawCode, p]));
+    const sel = this.state.selected ? byCode[this.state.selected] : null;
+    const v = this.state.visible;
+    const R = this.reduced;
+    const anim = R ? 'opacity .26s ease, backdrop-filter .26s ease, -webkit-backdrop-filter .26s ease'
+                   : 'opacity .3s ease, backdrop-filter .3s ease, -webkit-backdrop-filter .3s ease';
+    const cardAnim = R ? 'opacity .26s ease' : 'opacity .3s ease, transform .34s cubic-bezier(.2,.8,.25,1)';
+    const cardTransform = R ? 'none' : (v ? 'scale(1)' : 'scale(.94)');
+    const overlayStyle = 'position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;padding:24px;background:rgba(20,18,16,.56);'
+      + 'backdrop-filter:blur(' + (v ? 6 : 0) + 'px);-webkit-backdrop-filter:blur(' + (v ? 6 : 0) + 'px);'
+      + 'opacity:' + (v ? 1 : 0) + ';transition:' + anim + ';will-change:opacity;';
+    const cardStyle = 'position:relative;width:100%;max-width:980px;max-height:90vh;overflow-y:auto;background:var(--bone);border-radius:22px;'
+      + 'box-shadow:0 40px 100px rgba(20,18,16,.5);opacity:' + (v ? 1 : 0) + ';transform:' + cardTransform + ';'
+      + 'transition:' + cardAnim + ';will-change:transform,opacity;';
+    let modal = null;
+    if (sel) {
+      const gallery = [];
+      if (this.IMG[sel.rawCode]) gallery.push({ label:'Ambiente', src:this.IMG[sel.rawCode] });
+      const ex = (this.IMGX && this.IMGX[sel.rawCode]) || {};
+      ['Oficina','Detalhe','Perfil'].forEach(l => { if (ex[l]) gallery.push({ label:l, src:ex[l] }); });
+      if (this.MED && this.MED[sel.rawCode]) gallery.push({ label:'Medidas', src:this.MED[sel.rawCode], technical:true });
+      const gi = Math.min(this.state.thumb, Math.max(gallery.length - 1, 0));
+      const current = gallery[gi] || null;
+      const thumbLabel = current ? current.label : this.THUMBS[this.state.thumb];
+      const WA_PECA = 'https://wa.me/5511926457142?text=' + encodeURIComponent('Olá! Tenho interesse na peça ' + sel.name + ' (' + sel.rawCode + ').');
+      modal = {
+        rawCode: sel.rawCode,
+        code: sel.rawCode + ' · SÉRIE OFICINA',
+        name: sel.name.toUpperCase(),
+        desc: sel.desc,
+        dims: sel.dims,
+        priceLabel: sel.price == null ? 'Sob consulta' : this.fmt(sel.price),
+        priceFull: this.riscado(sel.price, sel.badge),
+        parcela: sel.price == null ? '' : '10x de ' + this.fmt2(sel.price / 10) + ' sem juros',
+        showParcela: sel.price != null,
+        whatsapp: WA_PECA,
+        checkout: this.linkCheckout(sel.rawCode) || WA_PECA,
+        mainCaption: 'IMG · ' + sel.name + ' · ' + thumbLabel,
+        mainImg: current ? current.src : null,
+        mainFit: current && current.technical ? 'contain' : 'cover',
+        mainPos: 'center',
+        mainBg: current && current.technical ? '#FFFFFF' : 'var(--tile)',
+        noImg: !current,
+        thumbs: gallery.map((g, i) => ({
+          label: g.label,
+          alt: sel.name + ' — ' + g.label,
+          src: g.src,
+          imgFit: g.technical ? 'contain' : 'cover',
+          onClick: () => this.setThumb(i),
+          style: 'appearance:none;cursor:pointer;position:relative;aspect-ratio:1/1;border-radius:10px;overflow:hidden;background:' + (g.technical ? '#FFFFFF' : 'var(--tile)') + ';padding:0;transition:border-color .2s ease;'
+            + (i === gi ? 'border:2px solid var(--brass);' : 'border:1px solid var(--line);'),
+        })),
+      };
+    }
+    return {
+      fabricamos: [
+        {
+          tag:'Projetos',
+          img:(window.__resources&&window.__resources.servProjetos)||'assets/servico-projetos.png',
+          title:'Componentes metálicos sob medida',
+          desc:'Pés, bases e estruturas a partir do desenho do arquiteto.',
+          para:'Para arquitetos e designers',
+        },
+        {
+          tag:'Estruturas',
+          img:(window.__resources&&window.__resources.servEstruturas)||'assets/servico-estruturas.png',
+          title:'Estruturas metálicas em geral',
+          desc:'Mezaninos, escadas, suportes e serralheria sob especificação.',
+          para:'Para engenheiros e obras',
+        },
+        {
+          tag:'Fornecimento',
+          img:(window.__resources&&window.__resources.servFornecimento)||'assets/servico-fornecimento.png',
+          title:'Estruturas e partes metálicas para planejados',
+          desc:'Fornecedor fixo de marcenarias, com padrão e prazo constantes.',
+          para:'Para marcenarias e planejados',
+        },
+      ],
+      destaque: {
+        tag:'Projeto completo',
+        img:(window.__resources&&window.__resources.servCompleto)||'assets/servico-completo.png',
+        title:'Lojas, escritórios e cômodos completos',
+        desc:'Ambientes comerciais e residenciais inteiros, fabricados mediante o projeto do cliente.',
+        para:'Para lojistas, empresas e escritórios',
+      },
+      headerRef: this.headerRef,
+      drawerRef: this.drawerRef,
+      toggleMenu: this.toggleMenu,
+      closeMenu: this.closeMenu,
+      menu: [
+        { label:'Peças', href:'Catálogo.dc.html' },
+        { label:'Ambientes', href:'#comodos' },
+        { label:'Sob Medida', href:'#contato' },
+        { label:'Contato', href:'#contato' },
+      ],
+      comodos: [
+        { label:'Sala de Estar', href:'Catálogo.dc.html?ambiente=' + encodeURIComponent('Sala de Estar'), img:'assets/comodo-sala.png' },
+        { label:'Cozinha', href:'Catálogo.dc.html?ambiente=' + encodeURIComponent('Cozinha'), img:(window.__resources&&window.__resources.comodoCozinha)||'assets/comodo-cozinha.png' },
+        { label:'Escritório', href:'Catálogo.dc.html?ambiente=' + encodeURIComponent('Escritório'), img:(window.__resources&&window.__resources.comodoEscritorio)||'assets/comodo-escritorio.png' },
+        { label:'Quarto', href:'Catálogo.dc.html?ambiente=' + encodeURIComponent('Quarto'), img:(window.__resources&&window.__resources.comodoQuarto)||'assets/comodo-quarto.png' },
+        { label:'Banheiro', href:'Catálogo.dc.html?ambiente=' + encodeURIComponent('Banheiro'), img:(window.__resources&&window.__resources.comodoBanheiro)||'assets/comodo-banheiro.png' },
+      ],
+      procuradas: products.map(p => ({
+        name: p.name,
+        img: this.IMG[p.rawCode] || null,
+        noImg: !this.IMG[p.rawCode],
+        priceNow: this.fmt(p.price),
+        priceFull: this.riscado(p.price, p.badge),
+        badge: p.badge,
+        open: () => this.openModal(p.rawCode),
+      })),
+      modal,
+      modalOpen: !!sel,
+      closeModal: this.closeModal,
+      stop: this.stop,
+      overlayStyle,
+      cardStyle,
+      overlayRef: this.overlayRef,
+      footerCols: [
+        { head:'Atendimento', links:[L('Seg–Sex 9h–18h'),L('(11) 92645-7142'),L('contato@dilino.studio')] },
+        { head:'Institucional', links:[L('Quem somos'),L('Políticas'),L('Trocas e garantia')] },
+        { head:'Sob medida', links:[L('Para arquitetos'),L('Para marcenarias'),L('WhatsApp corporativo', WA_PROJ, true)] },
+        { head:'Redes & pagamento', links:[L('Instagram'),L('WhatsApp', WA_GERAL, true),L('Pix · Cartão · 10x')] },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>
