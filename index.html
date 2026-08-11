@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
 <title>Dilino Studio — Serralheria de autoria em ferro e madeira</title>
-<link rel="icon" type="image/png" href="uploads/sapphire_night_dark_logo.png">
 <meta name="description" content="Peças autorais em ferro galvanizado e madeira maciça, soldadas à mão — prontas ou sob medida. Fabricação própria em Arujá, SP, com entrega e montagem na Grande São Paulo.">
 <meta name="ext-resource-dependency" content="assets/servico-projetos.png" data-resource-id="servProjetos" />
 <meta name="ext-resource-dependency" content="assets/servico-estruturas.png" data-resource-id="servEstruturas" />
@@ -85,8 +84,14 @@
     .grid-serv{ grid-template-columns:1fr!important; }
     .grid-procuradas{ gap:16px 14px!important; }
     .grid-comodos{ grid-template-columns:repeat(2,1fr)!important; gap:16px!important; }
-    .hero-pad{ padding-top:96px!important; padding-bottom:56px!important; }
-    .hero-copy{ max-width:88%!important; }
+    /* HERÓI mobile: a imagem preenche uma caixa de altura mínima (em vez de
+       ditar uma altura curta), e o texto fica centralizado por cima sem
+       transbordar nem colidir com o header/seção de baixo. */
+    .hero{ min-height:78vh!important; }
+    .hero-img{ position:absolute!important; inset:0; width:100%!important; height:100%!important; object-fit:cover!important; object-position:68% center!important; aspect-ratio:auto!important; }
+    .hero-pad{ padding-top:104px!important; padding-bottom:72px!important; }
+    .hero-copy{ max-width:100%!important; }
+    .hero-title{ font-size:clamp(68px,19vw,112px)!important; }
     .banner-box{ aspect-ratio:16/9!important; }
     .banner-img{ object-position:74% center!important; }
     .banner-shade{ background:linear-gradient(90deg,rgba(20,18,16,.92) 0%,rgba(20,18,16,.7) 42%,rgba(20,18,16,.32) 72%,rgba(20,18,16,.05) 100%)!important; }
