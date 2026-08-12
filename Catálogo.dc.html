@@ -382,14 +382,19 @@ class Component extends DCLogic {
     window.addEventListener('keydown', this.onKey);
     this.onScroll();
   }
-  componentDidUpdate(_p, prev) {
-    if (this.state.selected && !prev.selected) {
+  componentDidUpdate() {
+    // O runtime chama componentDidUpdate(prevProps) — sem prevState. Rastreamos
+    // o "selected" anterior num campo próprio para gerir o foco do modal.
+    const prevSelected = this._prevSelected || null;
+    const curSelected = (this.state && this.state.selected) || null;
+    if (curSelected && !prevSelected) {
       this._lastFocus = document.activeElement;
       const el = this.overlayRef.current;
       if (el) { const f = el.querySelector('[role="dialog"]') || el; if (f && f.focus) f.focus(); }
-    } else if (!this.state.selected && prev.selected) {
+    } else if (!curSelected && prevSelected) {
       if (this._lastFocus && this._lastFocus.focus) this._lastFocus.focus();
     }
+    this._prevSelected = curSelected;
   }
   componentWillUnmount() {
     window.removeEventListener('scroll', this.onScroll);
