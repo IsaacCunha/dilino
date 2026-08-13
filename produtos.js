@@ -86,7 +86,7 @@ window.DILINO_PRODUTOS = [
     medidas:"70 × 70 × 20 cm", descricao:"Nicho de parede modular com compartimentos assimétricos · Ferro galvanizado · Madeira maciça",
     material:"Ferro galvanizado · Madeira maciça", acabamento:"Pintura fosca · Junções sem emenda",
     imagens:{ ambiente:"assets/DS-016.png", oficina:null, detalhe:null, perfil:null, medidas:"assets/DS-016-medidas.png" },
-    link_checkout:"https://dilino-studio.pay.yampi.com.br/r/FG8BMWXODP" },
+    link_checkout:"https://dilino-studio.pay.yampi.com.br/r/12NCHBX0CR" },
   { codigo:"DS-017", nome:"Prateleira Modena", ambiente:"Escritório", preco:344.25, preco_riscado:459, badge:"-25%",
     medidas:"120 × 88 × 20 cm", descricao:"Prateleira industrial dupla para livros",
     material:"Ferro galvanizado · Madeira maciça", acabamento:"Pintura fosca · Junções sem emenda",
