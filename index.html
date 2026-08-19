@@ -3,10 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Meta Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1053325227139338');   /* Meta Pixel — Dilino Studio */
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1053325227139338&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel Code -->
 <script src="./support.js"></script>
-<link rel="icon" href="uploads/sapphire_night_dark_logo.png" type="image/png">
 <title>Dilino Studio — Serralheria de autoria em ferro e madeira</title>
-
 <meta name="description" content="Peças autorais em ferro galvanizado e madeira maciça, soldadas à mão — prontas ou sob medida. Fabricação própria em Arujá, SP, com entrega e montagem na Grande São Paulo.">
 <meta name="ext-resource-dependency" content="assets/servico-projetos.png" data-resource-id="servProjetos" />
 <meta name="ext-resource-dependency" content="assets/servico-estruturas.png" data-resource-id="servEstruturas" />
@@ -434,6 +445,7 @@ class Component extends DCLogic {
     clearTimeout(this._openT);
     this.setState({ selected: code, thumb: 0, visible: false });
     this._openT = setTimeout(() => this.setState({ visible: true }), 30);
+    if (window.fbq) window.fbq('track', 'ViewContent', this.fbParams(code));
   };
   closeModal = () => {
     this.setState({ visible: false });
@@ -489,6 +501,21 @@ class Component extends DCLogic {
     };
     window.addEventListener('scroll', this.onScroll, { passive: true });
     this.onScroll();
+    // Meta Pixel — um único listener delegado no documento (sobrevive aos re-renders do
+    // framework; sem querySelector por botão). WhatsApp -> Contact | Yampi -> InitiateCheckout.
+    this.onPixelClick = (e) => {
+      if (!window.fbq) return;
+      const a = e.target.closest && e.target.closest('a[href]');
+      if (!a) return;
+      const href = a.getAttribute('href') || '';
+      if (/yampi\.com\.br/i.test(href)) {
+        window.fbq('track', 'InitiateCheckout', this.fbParams(this.state && this.state.selected));
+      } else if (/wa\.me|api\.whatsapp\.com|(^|\.)whatsapp\.com/i.test(href)) {
+        const inModal = a.closest && a.closest('[role="dialog"]');
+        window.fbq('track', 'Contact', inModal ? this.fbParams(this.state && this.state.selected) : {});
+      }
+    };
+    document.addEventListener('click', this.onPixelClick, true);
   }
   componentDidUpdate() {
     // O runtime chama componentDidUpdate(prevProps) — sem prevState. Rastreamos
@@ -507,6 +534,7 @@ class Component extends DCLogic {
   componentWillUnmount() {
     window.removeEventListener('scroll', this.onScroll);
     window.removeEventListener('keydown', this.onKey);
+    document.removeEventListener('click', this.onPixelClick, true);
     clearTimeout(this._openT);
     clearTimeout(this._closeT);
     this._lockCount = 0;
@@ -517,6 +545,14 @@ class Component extends DCLogic {
   fmt(n){ if (n == null) return 'Sob consulta'; return 'R$ ' + n.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); }
   fmt2(n){ return 'R$ ' + n.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); }
   linkCheckout(code){ const list = (window.DILINO_PRODUTOS || []); const p = list.find(x => x.codigo === code); return (p && p.link_checkout) || ''; }
+  // Meta Pixel — monta os parâmetros do produto (ViewContent / InitiateCheckout / Contact no modal)
+  fbParams(code){
+    const p = (window.DILINO_PRODUTOS || []).find(x => x.codigo === code);
+    if (!p) return code ? { content_ids:[code] } : {};
+    const o = { content_ids:[p.codigo], content_type:'product', content_name:p.nome, currency:'BRL' };
+    if (p.preco != null) o.value = p.preco;
+    return o;
+  }
   // Preço riscado ("de") calculado a partir do preço atual + % do selo de desconto
   riscado(price, badge){ if(price==null||!badge) return null; const m=String(badge).match(/(\d+)\s*%/); if(!m) return null; const pct=+m[1]; if(!pct||pct>=100) return null; return this.fmt(Math.round(price/(1-pct/100))); }
 
