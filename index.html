@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Meta Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('consent', (function(){ try { return localStorage.getItem('dilino_consent') === 'granted'; } catch (e) { return false; } })() ? 'grant' : 'revoke');
+  fbq('init', '1053325227139338');   /* Meta Pixel — Dilino Studio */
+  fbq('track', 'PageView');
+</script>
+<!-- End Meta Pixel Code -->
+<!-- Google Consent Mode v2 — default (roda ANTES do gtag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'analytics_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'wait_for_update': 500
+  });
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18409994256"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-18409994256');
+</script>
+<!-- End Google tag -->
+<script src="./support.js"></script>
+<title>Dilino Studio — Serralheria de autoria em ferro e madeira</title>
+<meta name="description" content="Peças autorais em ferro galvanizado e madeira maciça, soldadas à mão — prontas ou sob medida. Fabricação própria em Arujá, SP, com entrega e montagem na Grande São Paulo.">
+<link rel="canonical" href="https://dilinostudio.com.br/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Dilino Studio">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Dilino Studio — Serralheria de autoria em ferro e madeira">
+<meta property="og:description" content="Peças autorais em ferro galvanizado e madeira maciça, soldadas à mão — prontas ou sob medida. Fabricação própria em Arujá, SP, com entrega e montagem na Grande São Paulo.">
+<meta property="og:url" content="https://dilinostudio.com.br/">
+<meta property="og:image" content="https://dilinostudio.com.br/assets/banner-1-1280.webp">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="720">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Dilino Studio",
+  "legalName": "EDSON LINO DA SILVA 30172566851",
+  "url": "https://dilinostudio.com.br",
+  "logo": "https://dilinostudio.com.br/assets/dilino-mark.png",
+  "telephone": "+55 11 92645-7142",
+  "email": "comercial@dilinostudio.com.br",
+  "sameAs": ["https://www.instagram.com/dilinostudio"],
+  "taxID": "34.872.803/0001-58",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rua Antonieta, 243, Apto 22 - Picanço",
+    "addressLocality": "Guarulhos",
+    "addressRegion": "SP",
+    "postalCode": "07080-120",
+    "addressCountry": "BR"
+  },
+  "hasMerchantReturnPolicy": {
+    "@type": "MerchantReturnPolicy",
+    "applicableCountry": "BR",
+    "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+    "merchantReturnDays": 7,
+    "returnFees": "https://schema.org/FreeReturn",
+    "merchantReturnLink": "https://dilinostudio.com.br/trocas.html"
+  }
+}
+</script>
+<meta name="ext-resource-dependency" content="assets/servico-projetos.png" data-resource-id="servProjetos" />
+<meta name="ext-resource-dependency" content="assets/servico-estruturas.png" data-resource-id="servEstruturas" />
+<meta name="ext-resource-dependency" content="assets/servico-fornecimento.png" data-resource-id="servFornecimento" />
+<meta name="ext-resource-dependency" content="assets/servico-completo.png" data-resource-id="servCompleto" />
+<meta name="ext-resource-dependency" content="assets/comodo-cozinha.png" data-resource-id="comodoCozinha" />
+<meta name="ext-resource-dependency" content="assets/comodo-escritorio.png" data-resource-id="comodoEscritorio" />
+<meta name="ext-resource-dependency" content="assets/comodo-quarto.png" data-resource-id="comodoQuarto" />
+<meta name="ext-resource-dependency" content="assets/comodo-banheiro.png" data-resource-id="comodoBanheiro" />
+<template id="__bundler_thumbnail" data-bg-color="#1C1917">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#1C1917"/>
+    <rect x="470" y="300" width="260" height="200" rx="24" fill="none" stroke="#B8874A" stroke-width="10"/>
+    <path d="M560 300 v200 M600 300 v200 M640 300 v200" stroke="#899BA7" stroke-width="8" stroke-linecap="round"/>
+    <text x="600" y="590" text-anchor="middle" font-family="Montserrat,Arial,sans-serif" font-size="48" font-weight="800" letter-spacing="6" fill="#F4F1EC">DILINO</text>
+  </svg>
+</template>
+<!-- fontes locais: so a Inter tem preload (texto de interface acima da dobra); Montserrat sem preload -->
+<link rel="preload" href="assets/fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/motion.css">
+</head>
+<body>
+<!-- =========================================================================
+     DILINO STUDIO — HOME (mobile-first, curada).
+     O <head> acima (Pixel, Consent default, Google tag, support.js,
+     Organization JSON-LD) NÃO é tocado. support.js fica inerte (sem <x-dc>).
+     Produtos vêm de window.DILINO_PRODUTOS (produtos.js), sem hardcode.
+     Banners: imagem pura, placeholders 16:9 com data-img-slot.
+     Sem wishlist/coração. Sem listagem das 51 peças (isso é o catálogo).
+     ========================================================================= -->
+<style>
+  /* ---- fontes locais (assets/fonts). Arquivos variaveis: 1 arquivo cobre todos os pesos da faixa. ---- */
+  @font-face{ font-family:'Inter'; font-style:normal; font-weight:400 500; font-display:swap;
+    src:url('assets/fonts/inter-latin-var.woff2') format('woff2'); unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+  @font-face{ font-family:'Montserrat'; font-style:normal; font-weight:400 800; font-display:swap;
+    src:url('assets/fonts/montserrat-latin-var.woff2') format('woff2'); unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+  :root{
+    --ink:#1C1917; --iron:#2E2B28; --bone:#F4F1EC; --brass:#B8874A; --patina:#899BA7;
+    --tile:#ECE7DB; --line:#e0dacd; --hair:#ebe5d8; --sheet:#efeae0;
+    --text:#3d3833; --text-soft:#6b655c; --text-label:#7a736a; --ink-hover:#2c2825;
+    --bone-72:#c1bbb0; --bone-55:#938c81; --rule-dark:#2a2724;
+    --radius-md:18px; --radius-lg:20px; --radius-xl:28px; --radius-pill:999px;
+    --gutter:20px; --maxw:1200px;
+    /* tipografia: Inter em todo texto de interface < 16px; Montserrat so em titulo de secao e marca */
+    --font-ui:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+    --font-display:'Montserrat',system-ui,sans-serif;
+    --text-tertiary:#9A928A;
+    --t-title-size:26px;  --t-title-track:.01em;                      /* TITULO DE SECAO  Montserrat 400 */
+    --t-name-size:13px;   --t-name-lh:1.35;                           /* NOME DE PRODUTO  Inter 500 */
+    --t-price-size:12px;                                              /* PRECO            Inter 400 */
+    --t-micro-size:10px;  --t-micro-track:.08em;                      /* MICROTAG         Inter 500 caixa alta */
+    --t-btn-size:13px;    --t-btn-track:.02em;                        /* BOTAO            Inter 500 */
+    --t-body-size:15px;   --t-body-lh:1.7;                            /* CORPO            Inter 400 */
+  }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; }
+  body{ background:var(--bone); color:var(--text); font-family:var(--font-ui); font-weight:400; -webkit-text-size-adjust:100%; overflow-x:clip; }  /* clip (nao hidden): nao cria scroll container */
+  a{ color:inherit; text-decoration:none; }
+  img{ max-width:100%; display:block; }
+  ::selection{ background:rgba(184,135,74,.30); }
+  button{ font-family:inherit; cursor:pointer; }
+  .wrap{ max-width:var(--maxw); margin:0 auto; padding:0 var(--gutter); }
+
+  /* animação sutil de entrada */
+  .reveal{ opacity:0; transform:translateY(14px); transition:opacity .5s ease, transform .5s ease; }
+  .reveal.is-in{ opacity:1; transform:none; }
+  @media (prefers-reduced-motion:reduce){ .reveal{ opacity:1; transform:none; transition:none; } }
+
+  /* ===================== CABEÇALHO ===================== */
+  .hd{ position:sticky; top:0; z-index:50; background:rgba(244,241,236,.92); -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px); border-bottom:1px solid var(--line); }
+  .hd-in{ max-width:var(--maxw); margin:0 auto; padding:12px var(--gutter); display:flex; align-items:center; justify-content:space-between; gap:12px; }
+  .hd-logo{ display:flex; align-items:center; gap:10px; }
+  .hd-logo img{ width:30px; height:30px; object-fit:contain; }
+  .hd-logo b{ font-family:var(--font-display); font-weight:800; font-size:15px; letter-spacing:1px; color:var(--ink); line-height:1; }
+  .hd-logo i{ font-family:var(--font-display); font-style:normal; font-weight:600; font-size:8px; letter-spacing:4px; color:var(--patina); display:block; margin-top:2px; }
+  .hd-nav{ display:none; }                      /* links: só no desktop */
+  .hd-actions{ display:flex; align-items:center; gap:8px; }
+  .hd-btn{ position:relative; width:44px; height:44px; display:inline-flex; align-items:center; justify-content:center; border-radius:var(--radius-pill); background:transparent; border:1px solid var(--line); color:var(--ink); transition:background .2s ease, border-color .2s ease; }
+  .hd-btn:hover{ background:rgba(28,25,23,.05); border-color:var(--ink); }
+  .hd-btn.is-wa{ color:var(--brass); border-color:var(--brass); }
+  .hd-wa-text{ display:none; }                  /* pílula "Fale no WhatsApp": só no desktop */
+  .hd-cart-count{ position:absolute; top:-4px; right:-4px; min-width:19px; height:19px; padding:0 5px; border-radius:999px; background:var(--brass); color:var(--bone); font:500 11px/19px var(--font-ui); text-align:center; }
+  .hd-cart-count:empty{ display:none; }
+
+  /* ===================== SEÇÕES ===================== */
+  .sec{ padding:26px 0 0; }
+  .sec-h{ text-align:center; margin:0 0 22px; }
+  .sec-h h2{ margin:0; font-family:var(--font-display); font-size:var(--t-title-size); font-weight:400; letter-spacing:var(--t-title-track); line-height:1.2; color:var(--ink); }
+  .sec-h h2::after{ content:""; display:block; width:60px; height:1px; margin:14px auto 0; background:var(--text-label); }
+
+  /* ===================== BANNERS (imagem pura) ===================== */
+  .ph{ position:relative; width:100%; height:100%; background:repeating-linear-gradient(45deg,var(--tile),var(--tile) 12px,#e6e0d3 12px,#e6e0d3 24px); }
+  .ph::after{ content:attr(data-label); position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-size:var(--t-micro-size); font-weight:500; letter-spacing:var(--t-micro-track); text-transform:uppercase; color:var(--text-tertiary); text-align:center; padding:8px; }
+  .banner-sec{ padding-top:18px; }
+  .car{ position:relative; border-radius:var(--radius-xl); overflow:hidden; background:var(--tile); }
+  .car-track{ display:flex; overflow-x:auto; scroll-snap-type:x mandatory; scrollbar-width:none; -ms-overflow-style:none; -webkit-overflow-scrolling:touch; }
+  .car-track::-webkit-scrollbar{ display:none; }
+  .car-slide{ flex:0 0 100%; scroll-snap-align:center; aspect-ratio:16/9; position:relative; }
+  .car-slide img{ width:100%; height:100%; object-fit:cover; }
+  .dots{ display:flex; gap:8px; justify-content:center; padding:12px 0 2px; }
+  .dot{ width:24px; height:24px; padding:0; border:0; background:transparent; display:inline-flex; align-items:center; justify-content:center; }
+  .dot::before{ content:''; width:7px; height:7px; border-radius:999px; background:var(--line); transition:background .25s ease, width .25s ease; }
+  .dot[aria-selected="true"]::before{ background:var(--brass); width:18px; }
+  /* banner do meio: mesma proporção, sem carrossel */
+  .banner-meio{ margin-top:30px; border-radius:var(--radius-xl); overflow:hidden; background:var(--tile); aspect-ratio:16/9; }
+  .banner-meio img{ width:100%; height:100%; object-fit:cover; }
+
+  /* ===================== CATEGORIAS ===================== */
+  .cats{ display:flex; gap:16px; overflow-x:auto; scrollbar-width:none; -ms-overflow-style:none; padding:2px var(--gutter); margin:0 calc(var(--gutter)*-1); scroll-snap-type:x proximity; }
+  .cats::-webkit-scrollbar{ display:none; }
+  .cat{ flex:0 0 auto; width:72px; text-align:center; scroll-snap-align:start; }
+  .cat-ic{ position:relative; isolation:isolate; width:64px; height:64px; margin:0 auto 8px; border-radius:var(--radius-pill); background:var(--tile); border:1px solid var(--hair); display:flex; align-items:center; justify-content:center; color:var(--brass); transition:transform .2s ease, box-shadow .2s ease; overflow:hidden; }
+  .cat:active .cat-ic{ transform:scale(.94); }
+  .cat-lbl{ font-size:11px; font-weight:500; color:var(--text); line-height:1.2; }
+  /* ícones de linha dos cômodos: estáticos por padrão; movimento só com mouse (bloco hover no fim do <style>) */
+  .cat-ic svg{ width:40px; height:40px; display:block; overflow:visible; }
+  .cat-ic .ln{ fill:none; stroke:var(--ink); stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round; vector-effect:non-scaling-stroke; }
+  .cat-ic .ac{ stroke:var(--brass); }
+
+  /* ===================== FAIXA DE CONFIANÇA =====================
+     Faixa contínua e ESTÁTICA: 4 itens sempre lado a lado, nas 3 larguras.
+     Sem carrossel, sem scroll, sem quebra de linha (flex 1fr, nunca wrap).
+     <600px: icone ACIMA do texto. Com o icone a esquerda o titulo mais longo
+     ("PARCELAMENTO", palavra indivisivel de 12 caracteres) so caberia a ~7px;
+     empilhando, o texto usa a largura toda do item e sobe para 9.5px legiveis. */
+  .trust{ margin:26px calc(var(--gutter)*-1) 0; background:var(--sheet); border-top:1px solid var(--hair); border-bottom:1px solid var(--hair); }
+  .trust-in{ display:flex; flex-wrap:nowrap; align-items:flex-start; gap:6px; padding:14px 10px; }
+  .trust-i{ flex:1 1 0; min-width:0; display:flex; flex-direction:column; align-items:center; text-align:center; gap:5px; }
+  .trust-i svg{ flex:none; width:19px; height:19px; color:var(--brass); }
+  .trust-i b{ display:block; font-size:9.5px; font-weight:500; letter-spacing:.2px; text-transform:uppercase; color:var(--ink); line-height:1.25; }
+  .trust-i span{ display:block; font-size:8.5px; font-weight:400; color:var(--text-soft); line-height:1.3; margin-top:2px; }
+  @media (min-width:600px){
+    .trust-in{ align-items:center; gap:14px; padding:18px var(--gutter); }
+    .trust-i{ flex-direction:row; align-items:center; text-align:left; gap:10px; }
+    .trust-i svg{ width:22px; height:22px; }
+    .trust-i b{ font-size:11px; letter-spacing:.4px; }
+    .trust-i span{ font-size:10px; margin-top:3px; }
+  }
+  @media (min-width:1025px){
+    .trust-in{ gap:26px; padding:22px var(--gutter); }
+    .trust-i{ gap:13px; }
+    .trust-i svg{ width:24px; height:24px; }
+    .trust-i b{ font-size:12px; }
+    .trust-i span{ font-size:11px; }
+  }
+
+  /* ===================== CARD DE PRODUTO — componente único =====================
+     Fonte legível: assets/card.css. Inline aqui e nas 51 (pelo gerador) para não
+     custar 1 request render-blocking no mobile (100% do tráfego). Card ≤ 2,2 KB.
+     Ao mexer no card: edite assets/card.css, regere as 51 e espelhe a linha abaixo. */
+  .pgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:12px;row-gap:32px}@media (min-width:600px){.pgrid{grid-template-columns:repeat(3,minmax(0,1fr));column-gap:20px}}@media (min-width:1025px){.pgrid{grid-template-columns:repeat(4,minmax(0,1fr));column-gap:24px}}.pcard{display:block;min-width:0;color:inherit;text-decoration:none;-webkit-tap-highlight-color:transparent}.pcard-media{position:relative;display:block;aspect-ratio:4/5;border-radius:12px;overflow:hidden;background:var(--tile)}.pcard-img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover}.pcard-badge{position:absolute;top:12px;left:12px;z-index:1;padding:4px 9px;border-radius:999px;background:var(--brass);color:#fff;font-family:var(--font-ui);font-size:var(--t-micro-size);font-weight:500;line-height:1.2;letter-spacing:var(--t-micro-track);text-transform:uppercase}.pcard-body{display:block;margin-top:12px}.pcard-row{display:flex;flex-direction:column;align-items:flex-start;gap:3px}.pcard-name{min-width:0;font-size:var(--t-name-size);font-weight:500;line-height:var(--t-name-lh);color:var(--ink)}.pcard-dots{display:none;flex:1 1 auto;min-width:12px;border-bottom:1px dotted var(--line);transform:translateY(-3px)}.pcard-price{font-size:var(--t-price-size);font-weight:600;color:var(--brass)}.pcard-price s{margin-right:6px;font-weight:400;color:var(--text-tertiary)}.pcard-pix{display:block;margin-top:5px;font-size:var(--t-micro-size);font-weight:500;color:var(--text-label)}.pcard-parcela{display:block;margin-top:2px;font-size:var(--t-micro-size);font-weight:400;color:var(--text-label)}@media (min-width:1025px){.pcard-row{flex-direction:row;align-items:baseline;gap:8px}.pcard-name{flex:0 1 auto}.pcard-dots{display:block}.pcard-price{flex:0 0 auto;white-space:nowrap}}.pcard-media{transition:transform .35s cubic-bezier(.22,.8,.24,1),box-shadow .5s ease}.pcard-img{transition:transform .9s cubic-bezier(.22,.8,.24,1)}.pcard-name{transition:color .3s ease}@media (hover:hover) and (pointer:fine){.pcard:hover .pcard-img{transform:scale(1.05)}.pcard:hover .pcard-media{box-shadow:0 18px 36px -18px rgba(28,25,23,.35)}.pcard:hover .pcard-name{color:var(--brass)}}.pcard:active .pcard-media{transform:scale(.985)}.pcard:focus-visible{outline:none}.pcard:focus-visible .pcard-media{outline:2px solid var(--brass);outline-offset:3px}.rail{scroll-padding-inline:var(--gutter);overscroll-behavior-x:contain}@media (hover:hover) and (pointer:fine){.rail{cursor:grab}}.rail.is-drag{cursor:grabbing;scroll-snap-type:none;user-select:none}.rail.is-drag .pcard{pointer-events:none}.rail-shell{position:relative}.rail-btn{position:absolute;z-index:2;top:var(--rail-mid,40%);width:38px;height:38px;margin-top:-19px;padding:0;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;border:1px solid rgba(28,25,23,.06);color:var(--ink);background:rgba(244,241,236,.88);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:0 6px 18px -8px rgba(28,25,23,.45);transition:opacity .35s ease,visibility .35s,transform .35s cubic-bezier(.22,.8,.24,1),background .3s ease,color .3s ease}.rail-btn[data-dir="-1"]{left:calc(var(--rail-l,20px) + 8px)}.rail-btn[data-dir="1"]{right:calc(var(--rail-r,20px) + 8px)}.rail-btn[hidden]{display:none}.rail-btn:disabled{opacity:0;visibility:hidden;transform:scale(.8);cursor:default}.rail-btn:active:not(:disabled){transform:scale(.92)}.rail-btn:focus-visible{outline:2px solid var(--brass);outline-offset:2px}@media (hover:hover) and (pointer:fine){.rail-btn{width:46px;height:46px;margin-top:-23px;background:rgba(255,255,255,.94)}.rail-btn[data-dir="-1"]{left:calc(var(--rail-l,40px) - 23px)}.rail-btn[data-dir="1"]{right:calc(var(--rail-r,40px) - 23px)}.rail-btn:hover:not(:disabled){background:var(--ink);color:#F4F1EC;transform:scale(1.06)}}.rail-ctrl{display:flex;justify-content:center;margin-top:22px}.rail-ctrl[hidden]{display:none}.rail-prog{position:relative;width:88px;height:3px;border-radius:3px;background:rgba(28,25,23,.1);overflow:hidden}.rail-prog-bar{position:absolute;left:0;top:0;bottom:0;border-radius:3px;background:var(--brass);transition:transform .45s cubic-bezier(.22,.8,.24,1),width .45s cubic-bezier(.22,.8,.24,1)}@media (min-width:1025px){.rail-ctrl{margin-top:28px}.rail-prog{width:120px}}@media (prefers-reduced-motion:reduce){.pcard-img,.pcard-media,.rail-prog-bar,.rail-btn{transition:none !important}}
+  .more{ text-align:center; margin-top:20px; }
+  .more a{ display:inline-block; border:1px solid var(--ink); color:var(--ink); font-weight:500; font-size:var(--t-btn-size); letter-spacing:var(--t-btn-track); padding:13px 26px; border-radius:var(--radius-pill); transition:background .2s ease, color .2s ease; }
+  .more a:hover{ background:var(--ink); color:var(--bone); }
+
+  /* ===================== DESTAQUES (carrossel) ===================== */
+  .rail{ display:flex; gap:12px; overflow-x:auto; scroll-snap-type:x mandatory; scrollbar-width:none; -ms-overflow-style:none; margin:0 calc(var(--gutter)*-1); padding:2px var(--gutter) 6px; }
+  .rail::-webkit-scrollbar{ display:none; }
+  .rail .pcard{ flex:0 0 66%; scroll-snap-align:start; }   /* ~1,5 card visível no mobile */
+
+  /* ===================== CAPTURA DE E-MAIL ===================== */
+  .lead{ margin-top:30px; background:var(--ink); color:var(--bone); border-radius:var(--radius-xl); padding:26px 22px; }
+  .lead h3{ margin:0 0 6px; font-family:var(--font-display); font-size:22px; font-weight:400; letter-spacing:var(--t-title-track); }
+  .lead p{ margin:0 0 16px; font-size:var(--t-body-size); color:var(--bone-72); line-height:var(--t-body-lh); }
+  .lead-form{ display:flex; flex-direction:column; gap:10px; }
+  .lead-form input{ width:100%; min-height:48px; border-radius:var(--radius-pill); border:1px solid var(--rule-dark); background:#242019; color:var(--bone); font-size:14px; padding:0 18px; font-family:inherit; }
+  .lead-form input::placeholder{ color:#8b857b; }
+  .lead-form button{ min-height:48px; border-radius:var(--radius-pill); border:0; background:var(--bone); color:var(--ink); font-weight:500; font-size:var(--t-btn-size); letter-spacing:var(--t-btn-track); }
+  .lead-ok{ font-size:13px; color:var(--brass); margin-top:10px; }
+
+  /* ===================== RODAPÉ ===================== */
+  .foot{ background:var(--ink); border-top:1px solid var(--rule-dark); padding:34px var(--gutter) 22px; margin-top:34px; }
+  .foot-in{ max-width:var(--maxw); margin:0 auto; }
+  .foot-lock{ display:flex; align-items:center; gap:11px; }
+  .foot-lock img{ height:32px; width:32px; object-fit:contain; }
+  .foot-lock span{ display:flex; flex-direction:column; line-height:1; }
+  .foot-lock b{ font-family:var(--font-display); font-weight:800; font-size:15px; letter-spacing:1px; color:var(--bone); }
+  .foot-lock i{ font-family:var(--font-display); font-style:normal; font-weight:600; font-size:8px; letter-spacing:4.5px; color:var(--patina); margin-top:3px; }
+  .foot-links{ display:grid; grid-template-columns:1fr 1fr; gap:0 18px; margin:18px 0 0; }
+  .foot-links a{ font-size:12.5px; font-weight:400; color:var(--bone-72); min-height:44px; display:flex; align-items:center; }
+  .foot-links a:hover{ color:var(--brass); }
+  .foot-bar{ border-top:1px solid var(--rule-dark); margin-top:18px; padding-top:16px; }
+  .foot-cnpj{ font-size:10.5px; font-weight:500; letter-spacing:1px; color:var(--bone-55); }
+  .foot-addr{ font-size:10.5px; font-weight:400; letter-spacing:.4px; color:#7d776e; margin-top:6px; }
+  .foot-addr a{ color:#7d776e; }
+  .foot-note{ font-size:9.5px; font-weight:400; line-height:1.6; color:#6e6961; margin-top:6px; max-width:66ch; }
+
+  /* ===================== CTA SOBRE O BANNER ===================== */
+  .car-cta{ position:absolute; left:14px; bottom:14px; z-index:2; display:inline-flex; align-items:center; gap:7px; min-height:36px; padding:0 16px; border-radius:var(--radius-pill); background:var(--bone); color:var(--ink); font-size:12px; font-weight:500; letter-spacing:var(--t-btn-track); box-shadow:0 6px 18px -6px rgba(28,25,23,.45); transition:background .2s ease, color .2s ease; }
+  .car-cta svg{ width:14px; height:14px; flex:none; }
+  .car-cta:hover{ background:var(--ink); color:var(--bone); }
+
+  /* ===================== SOB ENCOMENDA ===================== */
+  .enc{ text-align:center; max-width:720px; margin:0 auto; padding:34px 4px 6px; border-top:1px solid var(--line); }
+  .tag{ display:inline-block; font-size:var(--t-micro-size); font-weight:500; letter-spacing:var(--t-micro-track); text-transform:uppercase; color:var(--brass); }
+  .enc h2{ margin:10px 0 14px; font-family:var(--font-display); font-size:var(--t-title-size); font-weight:400; letter-spacing:var(--t-title-track); line-height:1.2; color:var(--ink); }
+  .enc p{ margin:0; font-size:var(--t-body-size); line-height:var(--t-body-lh); color:var(--text); }
+  .enc p b{ font-weight:500; color:var(--ink); }
+  .enc-steps{ list-style:none; margin:22px 0 0; padding:0; display:flex; gap:8px; }
+  .enc-steps li{ flex:1 1 0; min-width:0; background:var(--sheet); border:1px solid var(--hair); border-radius:var(--radius-md); padding:12px 8px; }
+  .enc-steps b{ display:block; font-size:11px; font-weight:500; color:var(--ink); line-height:1.3; }
+  .enc-steps span{ display:block; margin-top:3px; font-size:10.5px; color:var(--text-soft); line-height:1.35; }
+
+  /* ===================== TRANSPARÊNCIA / FALE COM A FÁBRICA ===================== */
+  .transp{ margin-top:30px; background:var(--sheet); border:1px solid var(--line); border-top:3px solid var(--brass); border-radius:var(--radius-xl); padding:26px 22px; }
+  .transp h2{ margin:10px 0 12px; font-family:var(--font-display); font-size:23px; font-weight:400; letter-spacing:var(--t-title-track); line-height:1.25; color:var(--ink); }
+  .transp > p{ margin:0; font-size:var(--t-body-size); line-height:var(--t-body-lh); color:var(--text); }
+  .transp-list{ list-style:none; margin:18px 0 0; padding:0; display:grid; gap:12px; }
+  .transp-list li{ display:flex; gap:11px; align-items:flex-start; font-size:14px; line-height:1.5; color:var(--text); }
+  .transp-list svg{ flex:none; width:20px; height:20px; margin-top:1px; color:var(--brass); }
+  .transp-list b{ font-weight:500; color:var(--ink); }
+  .transp-cta{ margin-top:22px; display:flex; align-items:center; justify-content:center; gap:10px; min-height:54px; padding:0 22px; border-radius:var(--radius-pill); background:var(--ink); color:var(--bone); font-size:14px; font-weight:500; letter-spacing:var(--t-btn-track); transition:background .2s ease; }
+  .transp-cta:hover{ background:var(--ink-hover); }
+  .transp-note{ margin:12px 0 0; text-align:center; font-size:12px; color:var(--text-soft); }
+  .transp-note a{ text-decoration:underline; text-underline-offset:2px; }
+
+  /* captura de e-mail: aviso e erro */
+  .lead-legal{ margin:10px 0 0 !important; font-size:11px !important; line-height:1.5 !important; color:var(--bone-55) !important; }
+  .lead-legal a{ text-decoration:underline; text-underline-offset:2px; }
+  .lead-err{ font-size:13px; color:#e0a58a; margin-top:10px; }
+  .lead-form button[disabled]{ opacity:.6; cursor:wait; }
+  .hp{ position:absolute !important; left:-9999px !important; width:1px; height:1px; overflow:hidden; }
+  .sr-only{ position:absolute; width:1px; height:1px; margin:-1px; padding:0; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; border:0; }
+
+  @media (min-width:641px){
+    .car-cta{ left:24px; bottom:24px; min-height:42px; padding:0 20px; font-size:13px; }
+    .enc-steps b{ font-size:12.5px; }
+    .enc-steps span{ font-size:12px; }
+    .transp{ padding:34px 32px; }
+    .transp-list{ grid-template-columns:1fr 1fr; gap:14px 28px; }
+    .transp-cta{ display:inline-flex; }
+  }
+  @media (min-width:1025px){
+    .car-cta{ left:36px; bottom:36px; min-height:48px; padding:0 26px; font-size:14px; }
+    .transp{ display:grid; grid-template-columns:1fr 1fr; column-gap:48px; padding:44px 48px; }
+    .transp > .transp-head{ grid-column:1; }
+    .transp > .transp-list{ grid-column:2; grid-row:1 / span 2; margin-top:0; grid-template-columns:1fr; align-self:center; }
+  }
+
+  /* ===================== MICROINTERAÇÕES (pente fino) ===================== */
+  a, button{ -webkit-tap-highlight-color:transparent; }
+  a:focus-visible, button:focus-visible, input:focus-visible{ outline:2px solid var(--brass); outline-offset:3px; }
+  .hd-logo{ transition:opacity .3s ease; }
+  .hd-btn{ transition:background .3s ease, border-color .3s ease, color .3s ease, transform .2s ease; }
+  .hd-btn:active, .dot:active{ transform:scale(.94); }
+  .hd-wa-text{ transition:background .3s ease, color .3s ease, transform .2s ease !important; }
+  .more a, .car-cta, .banner-cta, .transp-cta, .lead-form button{ transition:background .3s ease, color .3s ease, border-color .3s ease, box-shadow .4s ease, transform .3s cubic-bezier(.22,.8,.24,1); }
+  .more a:active, .car-cta:active, .banner-cta:active, .transp-cta:active, .lead-form button:active{ transform:scale(.97); }
+  .car-cta svg, .banner-cta svg{ transition:transform .35s cubic-bezier(.22,.8,.24,1); }
+  .lead-form input{ transition:border-color .3s ease, background .3s ease; }
+  .lead-form input:focus{ outline:none; border-color:var(--brass); background:#2a251d; }
+  .foot-links a, .foot-addr a, .transp-list a, .lead-legal a{ transition:color .25s ease; }
+  .enc-steps li{ transition:border-color .35s ease, transform .35s cubic-bezier(.22,.8,.24,1), background .35s ease; }
+  .banner-meio{ position:relative; }
+  .banner-meio img, .car-slide img{ transition:transform 1.2s cubic-bezier(.22,.8,.24,1); }
+  .dot:hover::before{ background:var(--text-label); }
+  .dot[aria-selected="true"]:hover::before{ background:var(--brass); }
+  @media (hover:hover) and (pointer:fine){
+    .hd-logo:hover{ opacity:.75; }
+    .more a:hover{ box-shadow:0 10px 22px -12px rgba(28,25,23,.45); transform:translateY(-1px); }
+    .car-cta:hover, .banner-cta:hover{ transform:translateY(-2px); box-shadow:0 14px 28px -10px rgba(28,25,23,.55); }
+    .car-cta:hover svg, .banner-cta:hover svg{ transform:translateX(3px); }
+    .transp-cta:hover{ transform:translateY(-2px); box-shadow:0 14px 28px -12px rgba(28,25,23,.55); }
+    .lead-form button:hover{ background:#fff; }
+    .foot-addr a:hover, .transp-list a:hover, .lead-legal a:hover{ color:var(--brass); }
+    .enc-steps li:hover{ border-color:var(--brass); background:#fff; transform:translateY(-3px); }
+    .banner-meio:hover img{ transform:scale(1.025); }
+  }
+  /* CTA do banner do meio (10% no Pix) */
+  .banner-cta{ position:absolute; left:14px; bottom:14px; z-index:2; display:inline-flex; align-items:center; gap:7px; min-height:36px; padding:0 16px; border-radius:var(--radius-pill); background:var(--brass); color:#fff; font-size:12px; font-weight:500; letter-spacing:var(--t-btn-track); box-shadow:0 6px 18px -6px rgba(28,25,23,.45); }
+  .banner-cta svg{ width:14px; height:14px; flex:none; }
+  .banner-cta:hover{ background:#a4763d; color:#fff; }
+  @media (min-width:641px){ .banner-cta{ left:24px; bottom:24px; min-height:42px; padding:0 20px; font-size:13px; } }
+  @media (min-width:1025px){ .banner-cta{ left:36px; bottom:36px; min-height:48px; padding:0 26px; font-size:14px; } }
+  @media (prefers-reduced-motion:reduce){ .banner-meio img, .car-slide img, .car-cta, .banner-cta, .transp-cta, .more a, .enc-steps li{ transition:none !important; transform:none !important; } }
+
+  /* ===================== TABLET — a partir de 641px ===================== */
+  @media (min-width:641px){
+    :root{ --gutter:28px; }
+    .rail{ gap:20px; }
+    .rail .pcard{ flex:0 0 calc((100% - 40px) / 3); }   /* 3 inteiros: o fim do trilho não corta card */
+    .cats{ overflow-x:visible; flex-wrap:wrap; justify-content:center; gap:20px; margin:0; padding:2px 0; }
+    .lead-form{ flex-direction:row; }
+    .lead-form input{ flex:1 1 auto; }
+    .lead-form button{ flex:0 0 auto; padding:0 28px; }
+    .foot-links{ display:flex; flex-wrap:wrap; gap:0 26px; }
+    .foot-links a{ min-height:0; }
+  }
+
+  /* ===================== DESKTOP — a partir de 1025px ===================== */
+  @media (min-width:1025px){
+    :root{ --gutter:40px; }
+    .rail{ gap:24px; }
+    .rail .pcard{ flex:0 0 calc((100% - 72px) / 4); }   /* 4 inteiros */
+    .sec{ padding-top:40px; }
+    /* cabeçalho ANTIGO: logo | links no meio | Fale no WhatsApp + carrinho */
+    .hd-in{ padding:16px var(--gutter); gap:24px; }
+    .hd-logo img{ width:34px; height:34px; }
+    .hd-logo b{ font-size:16px; }
+    .hd-nav{ display:flex; align-items:center; gap:38px; font-size:var(--t-btn-size); font-weight:500; letter-spacing:var(--t-btn-track); }
+    .hd-nav a{ color:var(--text); transition:color .2s ease; }
+    .hd-nav a:hover{ color:var(--brass); }
+    .hd-btn.is-wa{ display:none; }              /* no desktop vira a pílula de texto */
+    .hd-wa-text{ display:inline-flex; align-items:center; white-space:nowrap; border:1px solid var(--ink); color:var(--ink); font-size:var(--t-btn-size); font-weight:500; letter-spacing:var(--t-btn-track); padding:11px 22px; border-radius:var(--radius-pill); transition:background .2s ease, color .2s ease; }
+    .hd-wa-text:hover{ background:var(--ink); color:var(--bone); }
+    .cats{ gap:30px; }
+    .cat{ width:88px; }
+    .cat-ic{ width:78px; height:78px; }
+    .cat-ic svg{ width:48px; height:48px; }
+    .cat-ic .ln{ stroke-width:1.75; }
+    .cat-lbl{ font-size:12px; }
+    .lead{ padding:34px 32px; }
+  }
+  /* ---- categorias: animação só onde existe mouse de verdade (desktop). No toque fica estático. ---- */
+  @media (hover:hover) and (pointer:fine){
+    .cat-ic{ transition:transform .45s cubic-bezier(.22,.8,.24,1), box-shadow .45s ease, border-color .45s ease, background-color .45s ease; }
+    .cat-ic::after{ content:""; position:absolute; inset:0; border-radius:inherit; z-index:-1; pointer-events:none;
+      background:radial-gradient(circle at 50% 38%, rgba(184,135,74,.16), transparent 70%); opacity:0; transition:opacity .45s ease; }
+    .cat-ic svg{ transition:transform .45s cubic-bezier(.22,.8,.24,1); }
+    .cat-lbl{ transition:color .35s ease; }
+
+    .cat:hover .cat-ic{ transform:translateY(-5px); background-color:#fff; border-color:var(--brass);
+      box-shadow:0 16px 30px -14px rgba(28,25,23,.32), 0 2px 6px -2px rgba(28,25,23,.08); }
+    .cat:hover .cat-ic::after{ opacity:1; }
+    .cat:hover .cat-ic svg{ transform:scale(1.06); }
+    .cat:hover .cat-lbl{ color:var(--brass); }
+    .cat:active .cat-ic{ transform:translateY(-2px) scale(.97); }
+
+    /* micro-movimento próprio de cada cômodo */
+    .cat:hover .m-lift{ animation:catLift 2.6s ease-in-out infinite; }
+    .cat:hover .m-glow{ animation:catGlow 2.4s ease-in-out infinite; }
+    .cat:hover .m-drop{ animation:catDrip 1.9s ease-in-out infinite; }
+    .cat:hover .m-drop:nth-of-type(2){ animation-delay:.3s; }
+    .cat:hover .m-drop:nth-of-type(3){ animation-delay:.6s; }
+    .cat:hover .m-steam > *{ animation:catSteam 2.2s ease-in-out infinite; }
+    .cat:hover .m-steam > :nth-child(2){ animation-delay:.45s; }
+    .cat:hover .m-steam > :nth-child(3){ animation-delay:.9s; }
+  }
+  .cat:focus-visible{ outline:none; }
+  .cat:focus-visible .cat-ic{ outline:2px solid var(--brass); outline-offset:3px; }
+  @keyframes catLift{ 0%,100%{ transform:translateY(0) } 50%{ transform:translateY(-2.5px) } }
+  @keyframes catGlow{ 0%,100%{ opacity:.45 } 50%{ opacity:1 } }
+  @keyframes catDrip{ 0%,55%,100%{ transform:translateY(0); opacity:.35 } 78%{ transform:translateY(3px); opacity:1 } }
+  @keyframes catSteam{ 0%{ opacity:0; transform:translateY(2px) } 45%{ opacity:.95 } 100%{ opacity:0; transform:translateY(-4px) } }
+  @media (prefers-reduced-motion:reduce){ .cat, .cat *{ animation:none !important; } }
+</style>
+
+<!-- ===================== 1. CABEÇALHO ===================== -->
+<header class="hd">
+  <div class="hd-in">
+    <a class="hd-logo" href="index.html" aria-label="Dilino Studio — início">
+      <img src="assets/dilino-mark-sapphire-64.webp" srcset="assets/dilino-mark-sapphire-64.webp 2x, assets/dilino-mark-sapphire-128.webp 3x" alt="Símbolo da Dilino Studio" width="30" height="30" decoding="async">
+      <span><b>DILINO</b><i>STUDIO</i></span>
+    </a>
+
+    <!-- links do cabeçalho antigo (só no desktop) -->
+    <nav class="hd-nav" aria-label="Navegação principal">
+      <a href="Cat%C3%A1logo.dc.html">Peças</a>
+      <a href="#categorias">Ambientes</a>
+      <a href="https://wa.me/5511926457142?text=Ol%C3%A1!%20Gostaria%20de%20falar%20sobre%20um%20projeto%20sob%20medida." target="_blank" rel="noopener">Sob Medida</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+
+    <div class="hd-actions">
+      <a class="hd-wa-text" href="https://wa.me/5511926457142?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Dilino%20Studio." target="_blank" rel="noopener">Fale no WhatsApp</a>
+      <a class="hd-btn is-wa" href="https://wa.me/5511926457142?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Dilino%20Studio." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+        <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.4L3 20.5l1.7-5.5A8.4 8.4 0 1 1 21 11.5z"></path></svg>
+      </a>
+      <button type="button" class="hd-btn" data-dlc-cart aria-label="Abrir carrinho">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"></path></svg>
+        <span class="hd-cart-count" data-dlc-cart-count aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <h1 class="sr-only">Dilino Studio — móveis de ferro e madeira feitos à mão</h1>
+
+  <!-- ===================== 2. BANNER — carrossel, imagem pura ===================== -->
+  <section class="banner-sec reveal" aria-label="Destaques">
+    <div class="car">
+      <div class="car-track" id="carTrack">
+        <div class="car-slide" data-img-slot="banner-1">
+          <img src="assets/banner-1-1280.webp" srcset="assets/banner-1-768.webp 768w, assets/banner-1-1280.webp 1280w, assets/banner-1-2000.webp 2000w" sizes="(min-width:1240px) 1120px, (min-width:768px) calc(100vw - 56px), calc(100vw - 40px)" alt="Sofá de canto em ferro e madeira em área gourmet — móveis sob medida da Dilino Studio" width="2000" height="1125" fetchpriority="high" decoding="async">
+          <a class="car-cta" href="Cat%C3%A1logo.dc.html">Conhecer as peças <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+        </div>
+        <div class="car-slide" data-img-slot="banner-2">
+          <img src="assets/banner-2-1280.webp" srcset="assets/banner-2-768.webp 768w, assets/banner-2-1280.webp 1280w, assets/banner-2-2000.webp 2000w" sizes="(min-width:1240px) 1120px, (min-width:768px) calc(100vw - 56px), calc(100vw - 40px)" alt="Mesa lateral em ferro galvanizado e madeira maciça da Dilino Studio" width="2000" height="1125" loading="lazy" decoding="async">
+          <a class="car-cta" href="Cat%C3%A1logo.dc.html">Ver a coleção <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+        </div>
+        <div class="car-slide" data-img-slot="banner-3">
+          <img src="assets/banner-3-1280.webp" srcset="assets/banner-3-768.webp 768w, assets/banner-3-1280.webp 1280w, assets/banner-3-2000.webp 2000w" sizes="(min-width:1240px) 1120px, (min-width:768px) calc(100vw - 56px), calc(100vw - 40px)" alt="Sofá em ferro e madeira na sala de estar — Dilino Studio" width="2000" height="1125" loading="lazy" decoding="async">
+          <a class="car-cta" href="https://wa.me/5511926457142?text=Ol%C3%A1!%20Quero%20falar%20diretamente%20com%20a%20f%C3%A1brica.%20Vim%20pelo%20site%20da%20Dilino%20Studio." target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.4L3 20.5l1.7-5.5A8.4 8.4 0 1 1 21 11.5z"></path></svg> Falar diretamente com a fábrica</a>
+        </div>
+      </div>
+    </div>
+    <div class="dots" id="carDots" role="tablist" aria-label="Escolher banner"></div>
+  </section>
+
+  <!-- ===================== 3. FAIXA DE CONFIANÇA ===================== -->
+  <section class="trust reveal" aria-label="Por que comprar na Dilino">
+    <div class="trust-in" role="list">
+
+      <div class="trust-i" role="listitem">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2.5"></rect><path d="M2 9.6h20"></path><path d="M5.6 14.6h4.2"></path></svg>
+        <div><b>Parcelamento</b><span>Em até 10x sem juros</span></div>
+      </div>
+
+      <div class="trust-i" role="listitem">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.8 20 5.6v6.1c0 4.4-3.3 7.7-8 9.5-4.7-1.8-8-5.1-8-9.5V5.6z"></path><path d="M8.9 11.9l2.2 2.2 4.3-4.3"></path></svg>
+        <div><b>Loja segura</b><span>Para sua compra</span></div>
+      </div>
+
+      <div class="trust-i" role="listitem">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 6.6A1.6 1.6 0 0 1 3.6 5h9.2a1.6 1.6 0 0 1 1.6 1.6V16H2z"></path><path d="M14.4 9.4h3.2a2 2 0 0 1 1.6.8l1.8 2.5V16h-6.6z"></path><circle cx="6.6" cy="18" r="1.9"></circle><circle cx="17" cy="18" r="1.9"></circle></svg>
+        <div><b>Frete grátis</b><span>Até 40 km de Arujá</span></div>
+      </div>
+
+      <div class="trust-i" role="listitem">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 12l-8.5 8.5a2.1 2.1 0 1 1-3-3L12 9"></path><path d="M17.6 15 22 10.6"></path><path d="M20.9 11.7l-1.25-1.25c-.6-.6-.93-1.4-.93-2.25v-.86L16 4.6a5.56 5.56 0 0 0-3.94-1.64H9l.92.82A6.18 6.18 0 0 1 12 8.4v1.56l2 2h2.47z"></path></svg>
+        <div><b>Peças feitas à mão</b><span>Feito para durar</span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== 4. CATEGORIAS ===================== -->
+  <section class="sec reveal" id="categorias" aria-labelledby="h-cat">
+    <div class="sec-h"><h2 id="h-cat">Por ambiente</h2></div>
+    <div class="cats" id="cats" role="list"></div>
+    <div class="more"><a href="Cat%C3%A1logo.dc.html">Ver tudo</a></div>
+  </section>
+
+  <!-- ===================== 5. SELEÇÃO DE PEÇAS (8, curada) ===================== -->
+  <section class="sec reveal" aria-labelledby="h-sel">
+    <div class="sec-h"><h2 id="h-sel">Seleção de peças</h2></div>
+    <div class="pgrid" id="selecao"></div>
+    <div class="more"><a href="Cat%C3%A1logo.dc.html">Ver todas as peças</a></div>
+  </section>
+
+  <!-- ===================== 5b. SOB ENCOMENDA ===================== -->
+  <section class="sec reveal" aria-labelledby="h-enc">
+    <div class="enc">
+      <span class="tag">Direto da oficina</span>
+      <h2 id="h-enc">Sua peça, nova e exclusiva</h2>
+      <p>Nada de estoque parado: cada peça sai nova da nossa oficina, soldada à mão pra você.</p>
+      <ol class="enc-steps">
+        <li><b>Fábrica própria</b><span>Sem intermediário</span></li>
+        <li><b>Soldada à mão</b><span>Feita pra durar</span></li>
+        <li><b>Até 15 dias úteis</b><span>Na sua casa</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===================== 6. SEGUNDO BANNER — imagem pura ===================== -->
+  <section class="reveal" aria-label="Banner">
+    <div class="banner-meio" data-img-slot="banner-meio">
+      <img src="assets/banner-meio-1280.webp" srcset="assets/banner-meio-768.webp 768w, assets/banner-meio-1280.webp 1280w, assets/banner-meio-2000.webp 2000w" sizes="(min-width:1240px) 1120px, (min-width:768px) calc(100vw - 56px), calc(100vw - 40px)" alt="Aparador em ferro e madeira com 10% de desconto pagando no Pix — Dilino Studio" width="2000" height="1125" loading="lazy" decoding="async">
+      <a class="banner-cta" href="Cat%C3%A1logo.dc.html">Garantir 10% no Pix <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+    </div>
+  </section>
+
+  <!-- ===================== 7. DESTAQUES (curadoria, não métrica) ===================== -->
+  <section class="sec reveal" aria-labelledby="h-dest">
+    <div class="sec-h"><h2 id="h-dest">Destaques da Dilino</h2></div>
+    <div class="rail" id="rail"></div>
+  </section>
+
+  <!-- ===================== 7b. TRANSPARÊNCIA — FALE DIRETO COM A FÁBRICA ===================== -->
+  <section class="reveal" aria-labelledby="h-transp">
+    <div class="transp">
+      <div class="transp-head">
+        <span class="tag">Atendimento direto</span>
+        <h2 id="h-transp">Fale direto com a fábrica</h2>
+        <p>Tire qualquer dúvida antes de comprar. Quem responde é quem fabrica.</p>
+        <a class="transp-cta" href="https://wa.me/5511926457142?text=Ol%C3%A1!%20Quero%20falar%20diretamente%20com%20a%20f%C3%A1brica.%20Vim%20pelo%20site%20da%20Dilino%20Studio." target="_blank" rel="noopener"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.4L3 20.5l1.7-5.5A8.4 8.4 0 1 1 21 11.5z"></path></svg> Chamar no WhatsApp</a>
+      </div>
+      <ul class="transp-list">
+        <li><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.6A1.6 1.6 0 0 1 3.6 5h9.2a1.6 1.6 0 0 1 1.6 1.6V16H2z"></path><path d="M14.4 9.4h3.2a2 2 0 0 1 1.6.8l1.8 2.5V16h-6.6z"></path><circle cx="6.6" cy="18" r="1.9"></circle><circle cx="17" cy="18" r="1.9"></circle></svg><span><b>Frete visto antes de pagar</b></span></li>
+        <li><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.8 20 5.6v6.1c0 4.4-3.3 7.7-8 9.5-4.7-1.8-8-5.1-8-9.5V5.6z"></path><path d="M8.9 11.9l2.2 2.2 4.3-4.3"></path></svg><span><b>Garantia de 1 ano</b> na estrutura</span></li>
+        <li><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="10.5" width="15" height="10" rx="2.2"></rect><path d="M8 10.5V7.6a4 4 0 0 1 8 0v2.9"></path><path d="M12 14.6v2.2"></path></svg><span><b>CNPJ 34.872.803/0001-58</b></span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===================== 8. CAPTURA DE E-MAIL ===================== -->
+  <section class="reveal" aria-label="Novidades">
+    <div class="lead">
+      <h3>Ganhe 5% na primeira compra</h3>
+      <p>Deixe seu e-mail e receba o cupom na hora. Depois, só novidades da oficina, sem spam.</p>
+      <form class="lead-form" id="leadForm" novalidate>
+        <input type="email" id="leadEmail" name="email" placeholder="seu@email.com" autocomplete="email" aria-label="Seu e-mail" required>
+        <input type="text" name="_honey" id="leadHoney" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button type="submit" id="leadBtn">Quero o cupom</button>
+      </form>
+      <div class="lead-ok" id="leadOk" hidden>Pronto! Seu cupom é <b>BEMVINDO5</b>. Ele já vai aplicado no checkout.</div>
+      <div class="lead-err" id="leadErr" role="alert" hidden>Não conseguimos cadastrar agora. Tente de novo em instantes ou fale com a gente no WhatsApp.</div>
+      <p class="lead-legal">Ao enviar, você concorda em receber e-mails da Dilino Studio. Veja a <a href="privacidade.html">Política de Privacidade</a>.</p>
+      <!-- Coletor: salvar-email.php grava em dados/emails.csv (pasta bloqueada ao público). -->
+    </div>
+  </section>
+
+</main>
+
+<!-- ===================== 9. RODAPÉ ===================== -->
+<footer class="foot">
+  <div class="foot-in">
+    <div class="foot-lock">
+      <img src="assets/dilino-mark.webp" alt="Dilino Studio" width="32" height="32" loading="lazy" decoding="async">
+      <span><b>DILINO</b><i>STUDIO</i></span>
+    </div>
+    <nav class="foot-links" aria-label="Institucional">
+      <a href="Cat%C3%A1logo.dc.html">Ver todas as peças</a>
+      <a href="privacidade.html">Política de Privacidade</a>
+      <a href="trocas.html">Trocas e Devoluções</a>
+      <a href="entrega.html">Entrega e Frete</a>
+      <a href="termos.html">Termos de Uso</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+    <div class="foot-bar">
+      <div class="foot-cnpj">Dilino Studio · EDSON LINO DA SILVA 30172566851 · CNPJ 34.872.803/0001-58</div>
+      <div class="foot-addr">Rua Antonieta, 243, Apto 22, Picanço, Guarulhos – SP, CEP 07080-120 · <a href="mailto:comercial@dilinostudio.com.br">comercial@dilinostudio.com.br</a></div>
+      <div class="foot-note">Sede administrativa, sem atendimento ao público. Nossas peças são feitas na oficina própria em Arujá – SP. Atendimento por WhatsApp e e-mail.</div>
+    </div>
+  </div>
+</footer>
+
+<!-- fonte de dados + carrinho + cookies -->
+<script src="./produtos.js"></script>
+<script src="./carrinho.js"></script>
+<script src="./cookies.js"></script>
+<script src="./assets/boas-vindas.js"></script>
+<script src="./assets/card.js"></script>
+<script src="./assets/rail.js" defer></script>
+
+<!-- ===================== RENDER DA HOME ===================== -->
+<script>
+(function(){
+  'use strict';
+  var P = (window.DILINO_PRODUTOS || []).slice();
+
+  function brl(n){ return 'R$ ' + (Number(n)||0).toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2}); }
+  function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+  function slug(nome, codigo){
+    var s = String(nome).normalize('NFKD').replace(/[̀-ͯ]/g,'')
+             .toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+    return s + '-' + String(codigo).toLowerCase();
+  }
+  function hrefProduto(p){ return 'produto/' + slug(p.nome, p.codigo) + '.html'; }
+  /* card de produto: componente único assets/card.js (+ CSS inline acima).
+     width/height = proporção 4:5 da caixa; a caixa reserva o espaço, sem salto. */
+  var SIZES_GRADE  = '(min-width:1025px) 268px, (min-width:600px) 31vw, 46vw';
+  var SIZES_TRILHO = '(min-width:1025px) 258px, (min-width:641px) 31vw, 66vw';
+  function card(p, sizes){
+    var base = 'assets/' + p.codigo;
+    return window.DilinoCard.render(p, {
+      href: hrefProduto(p), alt: p.nome, brl: brl,
+      img: { src: base+'-480.webp', srcset: base+'-480.webp 480w, '+base+'-768.webp 768w, '+base+'-1122.webp 1122w',
+             sizes: sizes, width: 480, height: 600 }
+    });
+  }
+
+  /* ---- categorias (cômodos reais) ---- */
+  /* ícones de linha dos cômodos (arte Dilino, viewBox 64). O viewBox de cada um é deslocado
+     pra centralizar o desenho opticamente no círculo. aria-hidden: o rótulo já nomeia o link. */
+  var ICONES_COMODO = {
+    'sala-de-estar': '<svg viewBox="1 4.5 64 64" aria-hidden="true" focusable="false">'
+      + '<g class="m-lift"><path class="ln" d="M16 34v-6a3 3 0 0 1 3-3h16a3 3 0 0 1 3 3v6"/><line class="ln ac" x1="27" y1="26" x2="27" y2="34"/>'
+      + '<path class="ln" d="M16 34v-2a2.5 2.5 0 0 0-5 0v8"/><path class="ln" d="M38 34v-2a2.5 2.5 0 0 1 5 0v8"/><path class="ln" d="M11 40h32v4H11z"/>'
+      + '<line class="ln" x1="14" y1="44" x2="14" y2="48"/><line class="ln" x1="40" y1="44" x2="40" y2="48"/></g>'
+      + '<path class="ln ac m-glow" d="M47 26h8l-2 7h-4z"/><line class="ln" x1="51" y1="33" x2="51" y2="48"/><line class="ln" x1="47" y1="48" x2="55" y2="48"/></svg>',
+    'cozinha': '<svg viewBox="0 -3.5 64 64" aria-hidden="true" focusable="false">'
+      + '<g class="m-steam"><path class="ln ac" d="M25 16c-1.2-1.6-1.2-2.8 0-4.4s1.2-2.8 0-4.4"/><path class="ln ac" d="M31 15c-1.2-1.6-1.2-2.8 0-4.4s1.2-2.8 0-4.4"/><path class="ln ac" d="M37 16c-1.2-1.6-1.2-2.8 0-4.4s1.2-2.8 0-4.4"/></g>'
+      + '<line class="ln" x1="18" y1="26" x2="44" y2="26"/><path class="ln" d="M20 26h22l-2 14a4 4 0 0 1-4 3.5H26a4 4 0 0 1-4-3.5z"/>'
+      + '<path class="ln" d="M20 29h-4a2 2 0 0 0 0 4h4"/><path class="ln" d="M42 29h4a2 2 0 0 1 0 4h-4"/>'
+      + '<line class="ln" x1="10" y1="43.5" x2="54" y2="43.5"/><line class="ln" x1="13" y1="43.5" x2="13" y2="50"/><line class="ln" x1="51" y1="43.5" x2="51" y2="50"/></svg>',
+    'escritorio': '<svg viewBox="-1.5 1 64 64" aria-hidden="true" focusable="false">'
+      + '<rect class="ln" x="12" y="18" width="18" height="12" rx="1.5"/><rect class="ln ac m-glow" x="15" y="21" width="12" height="6" rx="1"/>'
+      + '<line class="ln" x1="21" y1="30" x2="21" y2="33"/><line class="ln" x1="17" y1="33" x2="25" y2="33"/>'
+      + '<line class="ln" x1="8" y1="36" x2="34" y2="36"/><line class="ln" x1="11" y1="36" x2="11" y2="48"/><line class="ln" x1="31" y1="36" x2="31" y2="48"/>'
+      + '<path class="ln" d="M40 32v-5a6 6 0 0 1 12 0v5"/><path class="ln" d="M39 32h14v3.5a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 39 35.5z"/>'
+      + '<line class="ln" x1="46" y1="37" x2="46" y2="44"/><line class="ln" x1="41" y1="44" x2="51" y2="44"/><line class="ln" x1="42" y1="44" x2="40" y2="48"/><line class="ln" x1="50" y1="44" x2="52" y2="48"/></svg>',
+    'quarto': '<svg viewBox="1 3 64 64" aria-hidden="true" focusable="false">'
+      + '<g class="m-lift"><path class="ln" d="M9 36V24a2 2 0 0 1 2-2h26a2 2 0 0 1 2 2v12"/><rect class="ln ac" x="13" y="27" width="10" height="5" rx="1.5"/><rect class="ln ac" x="25" y="27" width="10" height="5" rx="1.5"/>'
+      + '<path class="ln" d="M9 36h30v-2a2 2 0 0 0-2-2H11a2 2 0 0 0-2 2z"/><line class="ln" x1="9" y1="40" x2="39" y2="40"/><line class="ln" x1="9" y1="36" x2="9" y2="44"/><line class="ln" x1="39" y1="36" x2="39" y2="44"/></g>'
+      + '<rect class="ln" x="45" y="34" width="12" height="14" rx="1.5"/><line class="ln" x1="45" y1="41" x2="57" y2="41"/><path class="ln ac m-glow" d="M47 27h8l-2 5h-4z"/></svg>',
+    'banheiro': '<svg viewBox="0 0.5 64 64" aria-hidden="true" focusable="false">'
+      + '<path class="ln" d="M14 10h8v6"/><path class="ln" d="M13 20a9 4 0 0 1 18 0z"/>'
+      + '<line class="ln ac m-drop" x1="17" y1="24" x2="17" y2="27"/><line class="ln ac m-drop" x1="22" y1="26" x2="22" y2="29"/><line class="ln ac m-drop" x1="27" y1="24" x2="27" y2="27"/>'
+      + '<path class="ln ac" d="M48 38v-3a3 3 0 0 0-6 0"/><path class="ln" d="M11 38h42v5a8 8 0 0 1-8 8H19a8 8 0 0 1-8-8z"/><path class="ln" d="M11 38v-2a2 2 0 0 1 2-2"/>'
+      + '<line class="ln" x1="53" y1="38" x2="53" y2="35"/><line class="ln" x1="18" y1="51" x2="17" y2="55"/><line class="ln" x1="46" y1="51" x2="47" y2="55"/></svg>'
+  };
+  var COMODOS = ['Sala de Estar','Cozinha','Escritório','Quarto','Banheiro'];
+  (function(){
+    var el = document.getElementById('cats'); if(!el) return;
+    el.innerHTML = COMODOS.map(function(c){
+      var q = encodeURIComponent(c);
+      var sl = c.normalize('NFKD').replace(/[̀-ͯ]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-');
+      return '<a class="cat" role="listitem" href="Cat%C3%A1logo.dc.html?ambiente='+q+'">'
+           + '<span class="cat-ic" data-img-slot="categoria-'+sl+'">'+(ICONES_COMODO[sl]||'')+'</span>'
+           + '<span class="cat-lbl">'+esc(c)+'</span></a>';
+    }).join('');
+  })();
+
+  /* ---- curadoria: seleção (8) e destaques (8), sem repetir, sem métrica ---- */
+  function espalharPorPreco(lista, n){
+    var ord = lista.slice().sort(function(a,b){ return (a.preco||0)-(b.preco||0); });
+    var out = [], vistos = {};
+    if(!ord.length) return out;
+    for(var i=0;i<n;i++){
+      var idx = Math.round(i*(ord.length-1)/Math.max(1,n-1));
+      while(idx < ord.length && vistos[ord[idx].codigo]) idx++;
+      if(idx >= ord.length){ for(var j=0;j<ord.length;j++){ if(!vistos[ord[j].codigo]){ idx=j; break; } } }
+      var p = ord[idx];
+      if(p && !vistos[p.codigo]){ vistos[p.codigo]=1; out.push(p); }
+    }
+    return out;
+  }
+
+  var usados = {};
+  // seleção: uma peça de cada ambiente (a de preço mediano) + completa até 8 espalhando preço
+  var selecao = [];
+  COMODOS.forEach(function(c){
+    var lista = P.filter(function(p){ return p.ambiente === c; })
+                 .sort(function(a,b){ return (a.preco||0)-(b.preco||0); });
+    if(lista.length){ var m = lista[Math.floor(lista.length/2)]; usados[m.codigo]=1; selecao.push(m); }
+  });
+  var restoSel = P.filter(function(p){ return !usados[p.codigo]; });
+  espalharPorPreco(restoSel, 8 - selecao.length).forEach(function(p){ usados[p.codigo]=1; selecao.push(p); });
+
+  // destaques: espalhamento de preço entre as que sobraram
+  var destaques = espalharPorPreco(P.filter(function(p){ return !usados[p.codigo]; }), 8);
+
+  var elSel = document.getElementById('selecao');
+  if(elSel) elSel.innerHTML = selecao.map(function(p){ return card(p, SIZES_GRADE); }).join('');
+  var elRail = document.getElementById('rail');
+  if(elRail) elRail.innerHTML = destaques.map(function(p){ return card(p, SIZES_TRILHO); }).join('');
+
+  /* ---- carrossel de banners: autoplay 5s, swipe, dots, pausa ao interagir ---- */
+  (function(){
+    var track = document.getElementById('carTrack');
+    var dotsEl = document.getElementById('carDots');
+    if(!track || !dotsEl) return;
+    var slides = [].slice.call(track.children);
+    if(slides.length < 2) return;
+    var reduz = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var atual = 0, timer = null, retomar = null;
+
+    dotsEl.innerHTML = slides.map(function(_,i){
+      return '<button class="dot" type="button" role="tab" aria-label="Banner '+(i+1)+'" aria-selected="'+(i===0?'true':'false')+'"></button>';
+    }).join('');
+    var dots = [].slice.call(dotsEl.children);
+
+    function marcar(i){
+      atual = i;
+      dots.forEach(function(d,k){ d.setAttribute('aria-selected', k===i ? 'true' : 'false'); });
+    }
+    function irPara(i, suave){
+      atual = (i + slides.length) % slides.length;
+      track.scrollTo({ left: track.clientWidth * atual, behavior: (suave && !reduz) ? 'smooth' : 'auto' });
+      marcar(atual);
+    }
+    function tocar(){ if(reduz) return; parar(); timer = setInterval(function(){ irPara(atual+1, true); }, 5000); }
+    function parar(){ if(timer){ clearInterval(timer); timer = null; } }
+    function pausarERetomar(){
+      parar();
+      clearTimeout(retomar);
+      retomar = setTimeout(tocar, 8000);   // retoma após 8s parado
+    }
+
+    dots.forEach(function(d,i){ d.addEventListener('click', function(){ irPara(i, true); pausarERetomar(); }); });
+
+    // sincroniza os dots quando o usuário arrasta/desliza
+    var scrollTO = null;
+    track.addEventListener('scroll', function(){
+      clearTimeout(scrollTO);
+      scrollTO = setTimeout(function(){
+        var i = Math.round(track.scrollLeft / Math.max(1, track.clientWidth));
+        if(i !== atual) marcar(Math.min(slides.length-1, Math.max(0, i)));
+      }, 120);
+    }, { passive:true });
+
+    ['pointerdown','touchstart','wheel'].forEach(function(ev){
+      track.addEventListener(ev, pausarERetomar, { passive:true });
+    });
+    track.addEventListener('mouseenter', parar);
+    track.addEventListener('mouseleave', tocar);
+    window.addEventListener('resize', function(){ irPara(atual, false); }, { passive:true });
+
+    tocar();
+  })();
+
+  /* ---- captura de e-mail → salvar-email.php → dados/emails.csv (no servidor) ---- */
+  var LEAD_ENDPOINT = 'salvar-email.php';
+  var form = document.getElementById('leadForm');
+  if(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var input = document.getElementById('leadEmail');
+      var btn = document.getElementById('leadBtn');
+      var ok = document.getElementById('leadOk');
+      var erro = document.getElementById('leadErr');
+      var email = (input.value||'').trim();
+      if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { input.focus(); return; }
+      function sucesso(){ form.hidden = true; erro.hidden = true; ok.hidden = false; if (window.DilinoBoasVindas) window.DilinoBoasVindas.marcarInscrito(); }
+      if((document.getElementById('leadHoney').value||'') !== '') { sucesso(); return; }   // robô: finge sucesso
+      erro.hidden = true;
+      btn.disabled = true; btn.textContent = 'Enviando…';
+      fetch(LEAD_ENDPOINT, {
+        method:'POST',
+        headers:{ 'Content-Type':'application/json', 'Accept':'application/json' },
+        body: JSON.stringify({ email: email, origem: 'Home - Cupom primeira compra' })
+      })
+      .then(function(r){ return r.json().catch(function(){ return {}; }).then(function(d){ return { ok: r.ok, d: d }; }); })
+      .then(function(res){
+        if(res.ok && String(res.d.success) === 'true') sucesso();
+        else throw new Error('falhou');
+      })
+      .catch(function(){
+        erro.hidden = false;
+        btn.disabled = false; btn.textContent = 'Quero o cupom';
+      });
+    });
+  }
+
+  /* ---- animação sutil de entrada (por scroll + rede de segurança) ---- */
+  var pend = [].slice.call(document.querySelectorAll('.reveal'));
+  function revelar(){
+    for (var i = pend.length - 1; i >= 0; i--) {
+      var r = pend[i].getBoundingClientRect();
+      if (r.top < window.innerHeight * 0.92 && r.bottom > 0) { pend[i].classList.add('is-in'); pend.splice(i,1); }
+    }
+    if (!pend.length) {
+      window.removeEventListener('scroll', revelar);
+      window.removeEventListener('resize', revelar);
+    }
+  }
+  revelar();
+  window.addEventListener('scroll', revelar, { passive:true });
+  window.addEventListener('resize', revelar, { passive:true });
+  // rede de seguranca: nenhuma secao pode ficar presa invisivel, aconteca o que acontecer
+  setTimeout(function(){ pend.forEach(function(n){ n.classList.add('is-in'); }); pend.length = 0; }, 2500);
+})();
+</script>
+<script src="assets/motion.js" defer></script>
+</body>
+</html>

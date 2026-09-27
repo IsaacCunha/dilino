@@ -1,0 +1,105 @@
+/* =========================================================================
+   DILINO STUDIO — COMPONENTE: CARD DE PRODUTO (único, compartilhado)
+   Usado pela home (index.html) e pelo trilho "Mais peças" das 51 páginas.
+   Markup gerado por assets/card.js — não duplicar este estilo nas páginas.
+   Depende das variáveis de cada página: --ink, --brass, --tile, --text-label,
+   --text-tertiary, --font-ui e a escala --t-* (NOME, PREÇO, MICROTAG).
+   ========================================================================= */
+
+/* ---- grade ---- */
+.pgrid{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); column-gap:12px; row-gap:32px; }
+@media (min-width:600px){  .pgrid{ grid-template-columns:repeat(3,minmax(0,1fr)); column-gap:20px; } }
+@media (min-width:1025px){ .pgrid{ grid-template-columns:repeat(4,minmax(0,1fr)); column-gap:24px; } }
+
+/* ---- card: sem caixa, sem borda, sem fundo ---- */
+.pcard{ display:block; min-width:0; color:inherit; text-decoration:none; -webkit-tap-highlight-color:transparent; }
+
+/* 1. caixa da foto: único elemento visual. 4:5, raio 12, cover sangrando nas 4 bordas.
+   O fundo --tile só aparece enquanto a imagem (lazy) ainda não chegou. */
+.pcard-media{ position:relative; display:block; aspect-ratio:4/5; border-radius:12px; overflow:hidden; background:var(--tile); }
+.pcard-img{ position:absolute; inset:0; display:block; width:100%; height:100%; object-fit:cover; }
+
+/* 2. selo de desconto: só existe no markup quando há preço promocional real */
+.pcard-badge{ position:absolute; top:12px; left:12px; z-index:1;
+  padding:4px 9px; border-radius:999px; background:var(--brass); color:#fff;
+  font-family:var(--font-ui); font-size:var(--t-micro-size); font-weight:500; line-height:1.2;
+  letter-spacing:var(--t-micro-track); text-transform:uppercase; }
+
+/* 3. texto solto sobre o fundo da página — igual ao catálogo.
+      Mobile/tablet: empilha nome / preço / parcela (sem pontilhado), como o
+      catálogo faz no celular (≤600px). Desktop 4-col (≥1025px): nome
+      ····(pontilhado)···· preço na mesma linha. Tamanhos vêm das variáveis
+      --t-* da página — grade e proporção intactas. */
+.pcard-body{ display:block; margin-top:12px; }
+.pcard-row{ display:flex; flex-direction:column; align-items:flex-start; gap:3px; }
+.pcard-name{ min-width:0;
+  font-size:var(--t-name-size); font-weight:500; line-height:var(--t-name-lh); color:var(--ink); }
+.pcard-dots{ display:none; flex:1 1 auto; min-width:12px;
+  border-bottom:1px dotted var(--line); transform:translateY(-3px); }
+.pcard-price{ font-size:var(--t-price-size); font-weight:600; color:var(--brass); }
+.pcard-price s{ margin-right:6px; font-weight:400; color:var(--text-tertiary); }
+.pcard-pix{ display:block; margin-top:5px; font-size:var(--t-micro-size); font-weight:500; color:var(--text-label); }
+.pcard-parcela{ display:block; margin-top:2px;
+  font-size:var(--t-micro-size); font-weight:400; color:var(--text-label); }
+@media (min-width:1025px){
+  .pcard-row{ flex-direction:row; align-items:baseline; gap:8px; }
+  .pcard-name{ flex:0 1 auto; }
+  .pcard-dots{ display:block; }
+  .pcard-price{ flex:0 0 auto; white-space:nowrap; }
+}
+
+/* 5. interação: suave e discreta.
+      Mouse (qualquer largura): foto aproxima devagar, nome ganha o dourado.
+      Toque: leve "afundar" ao pressionar — nada fica preso em hover. */
+.pcard-media{ transition:transform .35s cubic-bezier(.22,.8,.24,1), box-shadow .5s ease; }
+.pcard-img{ transition:transform .9s cubic-bezier(.22,.8,.24,1); }
+.pcard-name{ transition:color .3s ease; }
+@media (hover:hover) and (pointer:fine){
+  .pcard:hover .pcard-img{ transform:scale(1.05); }
+  .pcard:hover .pcard-media{ box-shadow:0 18px 36px -18px rgba(28,25,23,.35); }
+  .pcard:hover .pcard-name{ color:var(--brass); }
+}
+.pcard:active .pcard-media{ transform:scale(.985); }
+.pcard:focus-visible{ outline:none; }
+.pcard:focus-visible .pcard-media{ outline:2px solid var(--brass); outline-offset:3px; }
+
+/* ---- trilho: controles criados por assets/rail.js ----
+   .rail-shell envolve o trilho; as setas ficam nas laterais, centradas na FOTO
+   (--rail-mid) e alinhadas à borda do 1º/último card visível (--rail-l/--rail-r),
+   medidas pelo rail.js. Nada aqui toca no card. */
+.rail{ scroll-padding-inline:var(--gutter); overscroll-behavior-x:contain; }
+@media (hover:hover) and (pointer:fine){ .rail{ cursor:grab; } }
+.rail.is-drag{ cursor:grabbing; scroll-snap-type:none; user-select:none; }
+.rail.is-drag .pcard{ pointer-events:none; }
+.rail-shell{ position:relative; }
+
+/* setas: vidro claro sobre a foto, somem (fade) no começo/fim do trilho */
+.rail-btn{ position:absolute; z-index:2; top:var(--rail-mid, 40%);
+  width:38px; height:38px; margin-top:-19px; padding:0; border-radius:999px;
+  display:inline-flex; align-items:center; justify-content:center; cursor:pointer;
+  border:1px solid rgba(28,25,23,.06); color:var(--ink);
+  background:rgba(244,241,236,.88); -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px);
+  box-shadow:0 6px 18px -8px rgba(28,25,23,.45);
+  transition:opacity .35s ease, visibility .35s, transform .35s cubic-bezier(.22,.8,.24,1), background .3s ease, color .3s ease; }
+.rail-btn[data-dir="-1"]{ left:calc(var(--rail-l, 20px) + 8px); }
+.rail-btn[data-dir="1"]{ right:calc(var(--rail-r, 20px) + 8px); }
+.rail-btn[hidden]{ display:none; }
+.rail-btn:disabled{ opacity:0; visibility:hidden; transform:scale(.8); cursor:default; }
+.rail-btn:active:not(:disabled){ transform:scale(.92); }
+.rail-btn:focus-visible{ outline:2px solid var(--brass); outline-offset:2px; }
+/* PC: maiores e montadas na borda do card (metade dentro, metade fora) */
+@media (hover:hover) and (pointer:fine){
+  .rail-btn{ width:46px; height:46px; margin-top:-23px; background:rgba(255,255,255,.94); }
+  .rail-btn[data-dir="-1"]{ left:calc(var(--rail-l, 40px) - 23px); }
+  .rail-btn[data-dir="1"]{ right:calc(var(--rail-r, 40px) - 23px); }
+  .rail-btn:hover:not(:disabled){ background:var(--ink); color:#F4F1EC; transform:scale(1.06); }
+}
+
+/* barrinha: trilha curta e centrada; o indicador desliza com easing */
+.rail-ctrl{ display:flex; justify-content:center; margin-top:22px; }
+.rail-ctrl[hidden]{ display:none; }
+.rail-prog{ position:relative; width:88px; height:3px; border-radius:3px; background:rgba(28,25,23,.1); overflow:hidden; }
+.rail-prog-bar{ position:absolute; left:0; top:0; bottom:0; border-radius:3px; background:var(--brass);
+  transition:transform .45s cubic-bezier(.22,.8,.24,1), width .45s cubic-bezier(.22,.8,.24,1); }
+@media (min-width:1025px){ .rail-ctrl{ margin-top:28px; } .rail-prog{ width:120px; } }
+@media (prefers-reduced-motion:reduce){ .pcard-img,.pcard-media,.rail-prog-bar,.rail-btn{ transition:none !important; } }

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google Consent Mode v2 — default (roda ANTES do gtag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'analytics_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'wait_for_update': 500
+  });
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18409994256"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-18409994256');
+</script>
+<!-- End Google tag -->
+<title>Termos de Uso — Dilino Studio</title>
+<meta name="description" content="Regras de uso do site e de compra, propriedade intelectual das fotos e projetos, limitação de responsabilidade e lei aplicável.">
+<link rel="canonical" href="https://dilinostudio.com.br/termos.html">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<style>
+  /* ===== DESIGN TOKENS (idênticos a index.html) ===== */
+  :root{
+    --ink:#1C1917;
+    --iron:#2E2B28;
+    --bone:#F4F1EC;
+    --brass:#B8874A;
+    --patina:#899BA7;
+    --tile:#ECE7DB;
+    --line:#e0dacd;
+    --radius-md:18px;
+    --radius-lg:20px;
+    --radius-xl:28px;
+    --radius-pill:999px;
+    --gutter:48px;
+    --maxw:1240px;
+  }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; }
+  a{ color:var(--brass); text-decoration:none; }
+  a:hover{ color:#cf9d5f; }
+  ::selection{ background:rgba(184,135,74,.35); color:var(--bone); }
+  a:focus-visible,button:focus-visible{ outline:2px solid var(--brass); outline-offset:3px; }
+
+  /* ===== HEADER / MENU MOBILE ===== */
+  .nav-burger{ display:none; }
+  .nav-drawer{ position:fixed; inset:0; z-index:60; display:none; overflow:hidden; }
+  .nav-drawer.open{ display:block; }
+  .nav-drawer .backdrop{ position:absolute; inset:0; background:rgba(20,18,16,.55); }
+  .nav-drawer .panel{ position:absolute; top:0; right:0; height:100%; width:min(82vw,320px); background:var(--ink); box-shadow:-24px 0 60px rgba(0,0,0,.5); padding:92px 26px 32px; display:flex; flex-direction:column; gap:6px; transform:translateX(100%); transition:transform .32s ease; }
+  .nav-drawer.open .panel{ transform:translateX(0); }
+  .nav-links a:hover{ color:var(--bone); }
+  .nav-cta:hover{ border-color:var(--bone); background:rgba(244,241,236,.08); }
+  .foot-link:hover{ color:var(--brass); }
+
+  /* ===== PÁGINA DE CONTEÚDO ===== */
+  .doc-hero{ padding:150px var(--gutter) 56px; background:var(--ink); }
+  .doc-title{ font-weight:800; font-size:clamp(32px,5.6vw,52px); line-height:1.06; letter-spacing:-0.01em; margin:0; color:var(--bone); }
+  .doc-kicker{ font-size:10px; font-weight:600; letter-spacing:2.5px; color:var(--patina); text-transform:uppercase; margin:0 0 18px; }
+  .doc-lead{ font-size:clamp(15px,1.6vw,17px); font-weight:400; line-height:1.75; color:#cdc7bc; margin:20px 0 0; max-width:62ch; }
+  .doc-body{ background:var(--bone); color:var(--ink); border-radius:var(--radius-xl) var(--radius-xl) 0 0; padding:64px var(--gutter) 72px; }
+  .doc-wrap{ max-width:820px; margin:0 auto; }
+  .doc-body h2{ font-weight:700; font-size:clamp(20px,2.6vw,25px); line-height:1.25; letter-spacing:-0.01em; margin:52px 0 14px; color:var(--ink); }
+  .doc-body h2:first-child{ margin-top:0; }
+  .doc-body h3{ font-weight:700; font-size:16px; margin:28px 0 8px; color:var(--ink); }
+  .doc-body p{ font-size:15.5px; font-weight:400; line-height:1.8; color:#3d3833; margin:0 0 16px; }
+  .doc-body ul,.doc-body ol{ margin:0 0 18px; padding-left:20px; }
+  .doc-body li{ font-size:15.5px; font-weight:400; line-height:1.8; color:#3d3833; margin-bottom:9px; }
+  .doc-body strong{ font-weight:600; color:var(--ink); }
+  .doc-body a{ color:#9a6f34; text-decoration:underline; text-underline-offset:2px; }
+  .doc-body a:hover{ color:var(--brass); }
+  .doc-num{ display:inline-block; font-size:11px; font-weight:700; letter-spacing:1.5px; color:var(--brass); margin-right:8px; vertical-align:2px; }
+  .doc-note{ background:#efeae0; border-left:3px solid var(--brass); border-radius:0 var(--radius-md) var(--radius-md) 0; padding:20px 24px; margin:26px 0; }
+  .doc-note p:last-child{ margin-bottom:0; }
+  .doc-note h3{ margin-top:0; }
+  .doc-alert{ background:#f3ece1; border:1px solid #dfd2ba; border-left:3px solid var(--ink); border-radius:0 var(--radius-md) var(--radius-md) 0; padding:22px 26px; margin:26px 0; }
+  .doc-alert p:last-child{ margin-bottom:0; }
+  .doc-alert h3{ margin-top:0; font-size:17px; }
+  .doc-table{ width:100%; border-collapse:collapse; margin:8px 0 24px; font-size:14.5px; }
+  .doc-table th{ text-align:left; font-weight:600; font-size:11px; letter-spacing:1.2px; text-transform:uppercase; color:#7a736a; border-bottom:1px solid var(--line); padding:0 14px 10px 0; }
+  .doc-table td{ vertical-align:top; line-height:1.7; color:#3d3833; border-bottom:1px solid var(--line); padding:13px 14px 13px 0; }
+  .doc-table td:first-child{ font-weight:600; color:var(--ink); }
+  .doc-updated{ margin-top:56px; padding-top:22px; border-top:1px solid var(--line); font-size:12.5px; font-weight:500; color:#7a736a; }
+  .doc-cta{ display:inline-flex; align-items:center; gap:10px; background:var(--ink); color:var(--bone); font-weight:600; font-size:15px; padding:15px 30px; border-radius:var(--radius-pill); margin-top:8px; text-decoration:none; }
+  .doc-cta:hover{ background:#2a2622; color:var(--bone); }
+  .doc-steps{ counter-reset:step; list-style:none; padding:0; margin:0 0 24px; }
+  .doc-steps li{ position:relative; padding-left:44px; margin-bottom:18px; }
+  .doc-steps li::before{ counter-increment:step; content:counter(step); position:absolute; left:0; top:2px; width:28px; height:28px; border-radius:var(--radius-pill); background:var(--ink); color:var(--bone); font-size:13px; font-weight:700; display:flex; align-items:center; justify-content:center; }
+
+  /* ===== RESPONSIVO ===== */
+  @media (max-width:1024px){
+    .grid-footer{ grid-template-columns:repeat(2,1fr)!important; gap:32px 40px!important; }
+  }
+  @media (max-width:768px){
+    :root{ --gutter:22px; }
+    .nav-links{ display:none!important; }
+    .nav-cta{ display:none!important; }
+    .nav-burger{ display:inline-flex!important; }
+    .doc-hero{ padding-top:118px!important; padding-bottom:44px!important; }
+    .doc-body{ padding-top:44px!important; padding-bottom:56px!important; }
+    .doc-table thead{ display:none; }
+    .doc-table tr{ display:block; border-bottom:1px solid var(--line); padding:14px 0; }
+    .doc-table td{ display:block; border:0; padding:0 0 6px; }
+    .doc-table td:first-child{ font-size:13.5px; letter-spacing:.2px; }
+  }
+  @media (max-width:600px){
+    .grid-footer{ grid-template-columns:1fr!important; }
+  }
+  @media (max-width:480px){
+    .nav-row img{ height:32px!important; width:32px!important; }
+  }
+</style>
+<link rel="stylesheet" href="assets/motion.css">
+</head>
+<body>
+<div style="background:var(--ink);font-family:'Montserrat',sans-serif;color:var(--bone);min-height:100vh;overflow-x:hidden;font-weight:400;">
+
+  <!-- HEADER -->
+  <div id="siteHeader" style="position:fixed;top:0;left:0;right:0;z-index:50;background:transparent;border-bottom:1px solid transparent;transition:background .35s ease, box-shadow .35s ease, border-color .35s ease;">
+    <div class="nav-row" style="max-width:var(--maxw);margin:0 auto;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:18px var(--gutter);">
+      <a href="index.html" style="justify-self:start;display:flex;align-items:center;gap:12px;">
+        <img src="assets/dilino-mark-64.webp" srcset="assets/dilino-mark-64.webp 2x, assets/dilino-mark-128.webp 3x" alt="Dilino Studio" decoding="async" style="height:38px;width:38px;object-fit:contain;display:block;">
+        <span style="display:flex;flex-direction:column;line-height:1;">
+          <span style="font-weight:800;font-size:17px;letter-spacing:1px;color:var(--bone);">DILINO</span>
+          <span style="font-weight:600;font-size:9px;letter-spacing:5px;color:var(--patina);margin-top:4px;">STUDIO</span>
+        </span>
+      </a>
+      <div class="nav-links" style="justify-self:center;display:flex;align-items:center;gap:44px;font-size:13.5px;font-weight:500;color:#d9d3c8;">
+        <a href="Catálogo.dc.html" style="color:#d9d3c8;">Peças</a>
+        <a href="index.html#categorias" style="color:#d9d3c8;">Ambientes</a>
+        <a href="https://wa.me/5511926457142?text=Ol%C3%A1!%20Gostaria%20de%20falar%20sobre%20um%20projeto%20sob%20medida." target="_blank" rel="noopener" style="color:#d9d3c8;">Sob Medida</a>
+        <a href="contato.html" style="color:#d9d3c8;">Contato</a>
+      </div>
+      <div style="justify-self:end;display:flex;align-items:center;gap:12px;">
+        <a href="https://wa.me/5511926457142?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Dilino%20Studio." target="_blank" rel="noopener" class="nav-cta" style="white-space:nowrap;border:1px solid rgba(244,241,236,.45);color:var(--bone);font-size:13px;font-weight:500;padding:10px 22px;border-radius:var(--radius-pill);">Fale no WhatsApp</a>
+        <button class="nav-burger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="navDrawer" style="appearance:none;background:transparent;border:0;padding:0;cursor:pointer;width:44px;height:44px;align-items:center;justify-content:center;color:var(--bone);">
+          <svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"></path></svg>
+        </button>
+      </div>
+    </div>
+    <div class="nav-drawer" id="navDrawer">
+      <div class="backdrop" data-close-menu></div>
+      <nav class="panel" aria-label="Menu principal">
+        <a href="Catálogo.dc.html" style="color:var(--bone);font-size:18px;font-weight:600;padding:14px 4px;border-bottom:1px solid rgba(244,241,236,.1);">Peças</a>
+        <a href="index.html#categorias" style="color:var(--bone);font-size:18px;font-weight:600;padding:14px 4px;border-bottom:1px solid rgba(244,241,236,.1);">Ambientes</a>
+        <a href="https://wa.me/5511926457142?text=Ol%C3%A1!%20Gostaria%20de%20falar%20sobre%20um%20projeto%20sob%20medida." target="_blank" rel="noopener" style="color:var(--bone);font-size:18px;font-weight:600;padding:14px 4px;border-bottom:1px solid rgba(244,241,236,.1);">Sob Medida</a>
+        <a href="contato.html" style="color:var(--bone);font-size:18px;font-weight:600;padding:14px 4px;border-bottom:1px solid rgba(244,241,236,.1);">Contato</a>
+        <a href="https://wa.me/5511926457142?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Dilino%20Studio." target="_blank" rel="noopener" data-close-menu style="margin-top:18px;display:inline-flex;align-items:center;justify-content:center;background:var(--bone);color:var(--ink);font-weight:600;font-size:15px;padding:15px 22px;border-radius:var(--radius-pill);">Fale no WhatsApp</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- CABEÇALHO DA PÁGINA -->
+  <div class="doc-hero">
+    <div style="max-width:820px;margin:0 auto;">
+      <p class="doc-kicker">Dilino Studio</p>
+      <h1 class="doc-title">Termos de Uso</h1>
+      <p class="doc-lead">As regras para usar este site e comprar com a gente: preços, pedidos, peças sob medida, direitos sobre as fotos e os projetos, e o que fazer se houver desacordo.</p>
+    </div>
+  </div>
+
+  <!-- CONTEÚDO -->
+  <div class="doc-body">
+    <div class="doc-wrap">
+      <h2><span class="doc-num">01</span>Ao usar este site, você concorda com estes termos</h2>
+      <p>Estes Termos de Uso valem para todas as pessoas que navegam no site da Dilino Studio, pedem um orçamento ou fazem uma compra. Ao usar o site, você concorda com o que está escrito aqui. Se não concordar com algum ponto, o caminho é não utilizar o site.</p>
+      <p>Estes termos funcionam junto com a nossa <a href="privacidade.html">Política de Privacidade</a>, a <a href="trocas.html">Política de Trocas e Devoluções</a> e a <a href="entrega.html">Política de Entrega e Frete</a>. Vale a pena ler as quatro.</p>
+      <h2><span class="doc-num">02</span>Quem somos</h2>
+      <p>Este site é operado por <strong>EDSON LINO DA SILVA 30172566851</strong>, CNPJ <strong>34.872.803/0001-58</strong>, com sede em <strong>Rua Antonieta, 243, Apto 22, Picanço, Guarulhos – SP, CEP 07080-120</strong>, que atua comercialmente sob o nome Dilino Studio. Somos uma serralheria com fabricação própria em Arujá – SP, especializada em peças autorais em ferro galvanizado e madeira maciça.</p>
+      <p style="font-size:13px;line-height:1.65;color:#6b655c;margin:-8px 0 16px;">Sede administrativa, sem atendimento ao público. Nossas peças são feitas na oficina própria em Arujá – SP. Atendimento por WhatsApp e e-mail.</p>
+      <p>Contato: <a href="mailto:comercial@dilinostudio.com.br">comercial@dilinostudio.com.br</a> · WhatsApp <a href="https://wa.me/5511926457142?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Dilino%20Studio." target="_blank" rel="noopener">(11) 92645-7142</a> · Segunda a sexta, das 9h às 18h.</p>
+      <h2><span class="doc-num">03</span>Como usar o site</h2>
+      <p>Você pode navegar, consultar peças, pedir orçamentos e comprar. O que não pode:</p>
+      <ul>
+        <li>Usar o site para qualquer finalidade ilegal ou que prejudique terceiros;</li>
+        <li>Tentar invadir, sobrecarregar ou interferir no funcionamento do site e dos seus servidores;</li>
+        <li>Copiar o conteúdo de forma automatizada (robôs, <em>scrapers</em>, mineração de dados) sem a nossa autorização por escrito;</li>
+        <li>Fornecer dados falsos ou de outra pessoa em pedidos e formulários;</li>
+        <li>Reproduzir as nossas fotos, projetos ou textos para uso comercial, conforme o item 07.</li>
+      </ul>
+      <p>Você é responsável pela veracidade dos dados que informa. Endereço incorreto ou incompleto pode atrasar ou inviabilizar a entrega, e a responsabilidade nesse caso é de quem informou.</p>
+      <p>O site é destinado a <strong>maiores de 18 anos</strong>.</p>
+      <h2><span class="doc-num">04</span>Preços, disponibilidade e erros de publicação</h2>
+      <p>Os preços estão em reais e incluem os impostos aplicáveis. O frete é cobrado à parte, conforme a distância da nossa oficina em Arujá: grátis até 40 km, R$ 69,00 de 40 a 60 km e R$ 119,00 de 60 a 80 km. O valor aparece no checkout, antes do pagamento. Veja a <a href="entrega.html">Política de Entrega e Frete</a>.</p>
+      <p><strong>Os preços podem mudar sem aviso prévio.</strong> Vale sempre o valor exibido no momento em que você finaliza a compra — uma alteração posterior não afeta um pedido já pago.</p>
+      <p>As peças são fabricadas sob demanda, não mantemos estoque parado. Se por algum motivo não pudermos produzir uma peça no prazo informado, avisamos você o quanto antes e oferecemos a escolha entre um novo prazo, outra peça ou o reembolso integral.</p>
+      <h3>Erro evidente de preço</h3>
+      <p>Se um preço for publicado com erro evidente — uma estante anunciada por R$ 9,00, por exemplo, por falha de digitação ou de sistema —, podemos <strong>cancelar o pedido e devolver integralmente</strong> o valor pago. Avisamos você imediatamente e explicamos o que houve. Não usamos essa cláusula para desfazer venda com preço promocional legítimo: ela vale apenas para erro escancarado.</p>
+      <h2><span class="doc-num">05</span>Compra e pagamento</h2>
+      <p>O checkout e o processamento dos pagamentos são feitos pela <strong>Yampi</strong>. Aceitamos <strong>Pix e cartão de crédito em até 10x</strong>. As condições de parcelamento aparecem na tela de pagamento.</p>
+      <p>O pedido só é confirmado após a aprovação do pagamento. Até lá, ele fica pendente e não entra na fila de produção.</p>
+      <p>Podemos recusar ou cancelar um pedido em caso de suspeita de fraude, dados inconsistentes, impossibilidade de entrega no endereço informado ou erro evidente de preço. Nessas situações, o valor pago é devolvido integralmente.</p>
+      <p>Ao usar o checkout, você também fica sujeito aos termos da Yampi e da administradora do seu cartão.</p>
+      <h3>Descontos e cupons</h3>
+      <ul>
+        <li><strong>Pix:</strong> pagamentos por Pix têm 10% de desconto, aplicado automaticamente no checkout.</li>
+        <li><strong>Cupom de primeira compra (BEMVINDO5):</strong> 5% de desconto sobre o valor dos produtos, válido uma única vez por CPF e apenas na primeira compra. Não vale sobre o frete e não pode ser trocado por dinheiro.</li>
+        <li>Promoções e cupons têm as condições informadas na divulgação e podem ser encerrados a qualquer momento, sem afetar pedidos já pagos.</li>
+      </ul>
+      <h2><span class="doc-num">06</span>Peças sob medida</h2>
+      <p>Para peças sob medida, o processo é este: conversamos sobre o projeto, enviamos um desenho com as medidas e o acabamento definidos, e <strong>a produção só começa depois da sua aprovação por escrito</strong>.</p>
+      <ul>
+        <li><strong>As medidas informadas são de responsabilidade do cliente.</strong> Confira o espaço antes de aprovar — uma peça produzida na medida errada por informação incorreta não é caso de garantia.</li>
+        <li>Alterações no projeto são gratuitas e ilimitadas <strong>enquanto o desenho não estiver aprovado</strong>.</li>
+        <li>Depois de aprovado e iniciada a produção, <strong>não há direito de arrependimento</strong>. Isso está explicado em detalhe na <a href="trocas.html">Política de Trocas e Devoluções</a> — leia antes de aprovar.</li>
+        <li>Pequenas variações de até 1 cm nas medidas finais podem ocorrer, por conta da natureza do trabalho manual de solda e acabamento.</li>
+      </ul>
+      <h2><span class="doc-num">07</span>Propriedade intelectual</h2>
+      <p>Todo o conteúdo deste site — <strong>fotografias, projetos, desenhos técnicos, ilustrações, textos, o nome e a marca Dilino Studio, o logotipo, a identidade visual, a estrutura e o código do site</strong> — pertence à Dilino Studio ou é usado sob licença. É protegido pela Lei de Direitos Autorais (Lei 9.610/98) e pela Lei da Propriedade Industrial (Lei 9.279/96).</p>
+      <h3>O que você não pode fazer sem autorização por escrito</h3>
+      <ul>
+        <li>Reproduzir nossas fotos em anúncios, catálogos, sites, marketplaces ou redes sociais de terceiros;</li>
+        <li>Usar nossos desenhos e projetos para fabricar peças, próprias ou para venda;</li>
+        <li>Utilizar o nome, a marca ou o logotipo Dilino Studio para sugerir parceria, representação ou revenda que não existe;</li>
+        <li>Copiar textos do site para uso comercial.</li>
+      </ul>
+      <h3>O que você pode fazer livremente</h3>
+      <ul>
+        <li>Compartilhar o link de uma página ou de uma peça nas suas redes;</li>
+        <li>Publicar fotos da peça <strong>que você comprou</strong>, instalada na sua casa ou no seu projeto;</li>
+        <li>Salvar imagens para uso pessoal, como referência de decoração.</li>
+      </ul>
+      <p>É arquiteto, designer ou marceneiro e quer usar nosso material em uma apresentação de projeto para cliente? Normalmente autorizamos, com crédito. É só pedir pelo WhatsApp.</p>
+      <h3>Peças sob medida desenvolvidas conosco</h3>
+      <p>Quando desenvolvemos um projeto exclusivo para você, <strong>a peça física é sua</strong>, sem restrição de uso. O <strong>desenho técnico e a solução construtiva</strong> permanecem da Dilino Studio, e podemos usá-los como referência e em nosso portfólio. Se você prefere que um projeto não seja divulgado, é só avisar: respeitamos sem discussão.</p>
+      <h2><span class="doc-num">08</span>Fotos, cores e variações naturais</h2>
+      <p>Fazemos o possível para que as fotos representem fielmente as peças. Ainda assim, <strong>cores e texturas podem variar</strong> conforme a calibragem e o brilho da sua tela.</p>
+      <p>Além disso, ferro galvanizado e madeira maciça são materiais naturais: veio, tonalidade, nós e textura mudam de peça para peça, e o brilho da galvanização varia sutilmente. Cada peça é única. Essas variações <strong>são características do material, não defeitos</strong>, e não dão direito a troca por divergência de aparência.</p>
+      <p>As imagens de ambiente servem para mostrar escala e uso; os itens de decoração que aparecem nas fotos não acompanham o produto.</p>
+      <h2><span class="doc-num">09</span>Limitação de responsabilidade</h2>
+      <p>Respondemos integralmente pelos nossos produtos e serviços nos termos do Código de Defesa do Consumidor: defeito de fabricação, avaria no transporte, atraso na entrega por culpa nossa e problemas na montagem que realizarmos. <strong>Nada nesta cláusula reduz os seus direitos de consumidor</strong> — direitos previstos em lei não podem ser afastados por contrato, e não é isso que estamos fazendo aqui.</p>
+      <p>Dito isso, não respondemos por:</p>
+      <ul>
+        <li><strong>Mau uso</strong> da peça, sobrecarga muito acima do uso normal da peça ou uso diferente daquele para o qual foi projetada;</li>
+        <li><strong>Montagem ou fixação feita por terceiros</strong>, e danos decorrentes dela;</li>
+        <li><strong>Danos à alvenaria, ao piso ou a instalações</strong> causados por fixação inadequada realizada por outra pessoa;</li>
+        <li><strong>Desgaste natural</strong> pelo uso ao longo do tempo;</li>
+        <li><strong>Exposição inadequada</strong> — peças de uso interno deixadas em área externa, sob chuva ou sol direto constante;</li>
+        <li><strong>Medidas informadas incorretamente</strong> pelo cliente em peças sob medida;</li>
+        <li><strong>Indisponibilidade temporária do site</strong>, por manutenção, falha de hospedagem ou casos fora do nosso controle;</li>
+        <li><strong>Conteúdo de sites de terceiros</strong> acessados a partir de links nossos;</li>
+        <li><strong>Caso fortuito ou força maior</strong> — greves, desastres, falta de energia, restrições de circulação e situações equivalentes que atrasem a produção ou a entrega. Nesses casos avisamos você o quanto antes e combinamos um novo prazo.</li>
+      </ul>
+      <h2><span class="doc-num">10</span>Links para outros sites</h2>
+      <p>O site pode conter links para páginas de terceiros, como o checkout da Yampi e as nossas redes sociais. Não controlamos o conteúdo nem as práticas de privacidade desses serviços, e não respondemos por eles. Ao sair do nosso site, valem os termos e as políticas de quem opera o destino.</p>
+      <h2><span class="doc-num">11</span>Disponibilidade do site</h2>
+      <p>Trabalhamos para manter o site sempre no ar, mas ele pode ficar temporariamente indisponível para manutenção ou por motivos técnicos. Podemos alterar, suspender ou encerrar qualquer parte do site a qualquer momento. Isso <strong>não afeta pedidos já confirmados e pagos</strong>, que seguem normalmente até a entrega.</p>
+      <h2><span class="doc-num">12</span>Mudanças nestes termos</h2>
+      <p>Podemos atualizar estes Termos de Uso quando necessário. A versão vigente é sempre a publicada nesta página, com a data de atualização no fim. Para um pedido já feito, valem os termos que estavam no ar no momento da compra.</p>
+      <h2><span class="doc-num">13</span>Lei aplicável</h2>
+      <p>Estes termos são regidos pelas leis brasileiras, em especial pelo Código de Defesa do Consumidor (Lei 8.078/90), pelo Código Civil (Lei 10.406/02) e pelo Marco Civil da Internet (Lei 12.965/14).</p>
+      <p><strong>Não elegemos foro contratual.</strong> A competência para resolver qualquer questão relacionada a estes termos segue as regras da legislação brasileira.</p>
+      <div class="doc-note">
+        <p><strong>Se você for consumidor, pode ajuizar ação no foro do seu próprio domicílio</strong>, como garante o artigo 101, inciso I, do Código de Defesa do Consumidor. Nenhuma cláusula deste site limita esse direito.</p>
+        <p>Antes de qualquer disputa, porém, a gente prefere conversar. Mande uma mensagem: a maioria dos problemas se resolve numa troca de WhatsApp. Você também pode usar a plataforma <a href="https://www.consumidor.gov.br" target="_blank" rel="noopener">consumidor.gov.br</a>.</p>
+      </div>
+      <h2><span class="doc-num">14</span>Fale com a gente</h2>
+      <ul>
+        <li><strong>WhatsApp:</strong> <a href="https://wa.me/5511926457142?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Dilino%20Studio." target="_blank" rel="noopener">(11) 92645-7142</a></li>
+        <li><strong>E-mail:</strong> <a href="mailto:comercial@dilinostudio.com.br">comercial@dilinostudio.com.br</a></li>
+        <li><strong>Atendimento:</strong> Segunda a sexta, das 9h às 18h</li>
+      </ul>
+      <p><a class="doc-cta" href="https://wa.me/5511926457142?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Dilino%20Studio." target="_blank" rel="noopener">Falar no WhatsApp <span style="color:var(--brass);">&#8250;</span></a></p>
+
+      <p class="doc-updated">Última atualização: 24 de setembro de 2026.</p>
+    </div>
+  </div>
+
+  <!-- RODAPÉ -->
+  <div id="contato" style="background:var(--ink);border-top:1px solid #2a2724;padding:80px var(--gutter) 32px;">
+    <div style="max-width:var(--maxw);margin:0 auto;">
+      <div class="grid-footer" style="display:grid;grid-template-columns:1.4fr repeat(4,1fr);gap:40px;">
+        <div style="display:flex;flex-direction:column;gap:14px;">
+          <div style="display:flex;align-items:center;gap:11px;">
+            <img src="assets/dilino-mark-64.webp" srcset="assets/dilino-mark-64.webp 2x, assets/dilino-mark-128.webp 3x" alt="Dilino Studio" loading="lazy" decoding="async" style="height:32px;width:32px;object-fit:contain;display:block;">
+            <span style="display:flex;flex-direction:column;line-height:1;">
+              <span style="font-weight:800;font-size:15px;letter-spacing:1px;color:var(--bone);">DILINO</span>
+              <span style="font-weight:600;font-size:8px;letter-spacing:4.5px;color:var(--patina);margin-top:3px;">STUDIO</span>
+            </span>
+          </div>
+          <div style="font-size:10px;font-weight:600;letter-spacing:2.5px;color:#8d877d;text-transform:uppercase;margin-top:2px;">Serralheria de autoria</div>
+          <p style="font-size:13px;font-weight:400;line-height:1.7;color:#a49d92;margin:6px 0 0;max-width:34ch;">Ferro galvanizado e madeira maciça, fabricação própria em Arujá – SP. Entrega e montagem na Grande São Paulo.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div style="font-size:10px;font-weight:600;letter-spacing:2px;color:var(--patina);text-transform:uppercase;">Atendimento</div>
+          <a class="foot-link" href="contato.html" style="font-size:13px;font-weight:400;color:#c1bbb0;">Seg–Sex 9h–18h</a>
+          <a class="foot-link" href="https://wa.me/5511926457142?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Dilino%20Studio." target="_blank" rel="noopener" style="font-size:13px;font-weight:400;color:#c1bbb0;">(11) 92645-7142</a>
+          <a class="foot-link" href="mailto:comercial@dilinostudio.com.br" style="font-size:13px;font-weight:400;color:#c1bbb0;">comercial@dilinostudio.com.br</a>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div style="font-size:10px;font-weight:600;letter-spacing:2px;color:var(--patina);text-transform:uppercase;">Institucional</div>
+          <a class="foot-link" href="privacidade.html" style="font-size:13px;font-weight:400;color:#c1bbb0;">Política de Privacidade</a>
+          <a class="foot-link" href="trocas.html" style="font-size:13px;font-weight:400;color:#c1bbb0;">Trocas e Devoluções</a>
+          <a class="foot-link" href="entrega.html" style="font-size:13px;font-weight:400;color:#c1bbb0;">Entrega e Frete</a>
+          <a class="foot-link" href="termos.html" style="font-size:13px;font-weight:400;color:#c1bbb0;">Termos de Uso</a>
+          <a class="foot-link" href="contato.html" style="font-size:13px;font-weight:400;color:#c1bbb0;">Contato</a>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div style="font-size:10px;font-weight:600;letter-spacing:2px;color:var(--patina);text-transform:uppercase;">Sob medida</div>
+          <a class="foot-link" href="https://wa.me/5511926457142?text=Ol%C3%A1!%20Gostaria%20de%20falar%20sobre%20um%20projeto%20sob%20medida." target="_blank" rel="noopener" style="font-size:13px;font-weight:400;color:#c1bbb0;">Para arquitetos</a>
+          <a class="foot-link" href="https://wa.me/5511926457142?text=Ol%C3%A1!%20Gostaria%20de%20falar%20sobre%20um%20projeto%20sob%20medida." target="_blank" rel="noopener" style="font-size:13px;font-weight:400;color:#c1bbb0;">Para marcenarias</a>
+          <a class="foot-link" href="https://wa.me/5511926457142?text=Ol%C3%A1!%20Gostaria%20de%20falar%20sobre%20um%20projeto%20sob%20medida." target="_blank" rel="noopener" style="font-size:13px;font-weight:400;color:#c1bbb0;">WhatsApp corporativo</a>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div style="font-size:10px;font-weight:600;letter-spacing:2px;color:var(--patina);text-transform:uppercase;">Redes &amp; pagamento</div>
+          <a class="foot-link" href="https://www.instagram.com/dilinostudio" target="_blank" rel="noopener" style="font-size:13px;font-weight:400;color:#c1bbb0;">Instagram</a>
+          <a class="foot-link" href="https://wa.me/5511926457142?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Dilino%20Studio." target="_blank" rel="noopener" style="font-size:13px;font-weight:400;color:#c1bbb0;">WhatsApp</a>
+        </div>
+      </div>
+      <div style="border-top:1px solid #2a2724;margin-top:56px;padding-top:24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;">
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <div style="font-size:10.5px;font-weight:500;letter-spacing:1px;color:#8d877d;">Dilino Studio · EDSON LINO DA SILVA 30172566851 · CNPJ 34.872.803/0001-58</div>
+          <div style="font-size:10.5px;font-weight:400;letter-spacing:.4px;color:#7d776e;">Rua Antonieta, 243, Apto 22, Picanço, Guarulhos – SP, CEP 07080-120 · <a href="mailto:comercial@dilinostudio.com.br" style="color:#7d776e;">comercial@dilinostudio.com.br</a></div>
+          <div style="font-size:9.5px;font-weight:400;line-height:1.6;letter-spacing:.2px;color:#6e6961;max-width:66ch;">Sede administrativa, sem atendimento ao público. Nossas peças são feitas na oficina própria em Arujá – SP. Atendimento por WhatsApp e e-mail.</div>
+        </div>
+        <div style="display:flex;gap:20px;font-size:12px;font-weight:400;color:#938c81;">
+          <a href="https://www.instagram.com/dilinostudio" target="_blank" rel="noopener" style="color:#938c81;">Instagram</a>
+          <a href="https://wa.me/5511926457142?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Dilino%20Studio." target="_blank" rel="noopener" style="color:#938c81;">WhatsApp</a>
+          <span>Pix · Cartão · até 10x</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<script>
+  (function(){
+    var header = document.getElementById('siteHeader');
+    var drawer = document.getElementById('navDrawer');
+    var burger = document.querySelector('.nav-burger');
+    var scrolled = null;
+    function onScroll(){
+      var s = window.scrollY > 24;
+      if (s === scrolled) return;
+      scrolled = s;
+      header.style.background = s ? 'var(--ink)' : 'transparent';
+      header.style.boxShadow = s ? '0 10px 34px rgba(0,0,0,.4)' : 'none';
+      header.style.borderBottomColor = s ? '#2a2724' : 'transparent';
+    }
+    window.addEventListener('scroll', onScroll, { passive:true });
+    onScroll();
+    function setMenu(open){
+      drawer.classList.toggle('open', open);
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+    burger.addEventListener('click', function(){ setMenu(!drawer.classList.contains('open')); });
+    drawer.querySelectorAll('[data-close-menu], .panel a').forEach(function(el){
+      el.addEventListener('click', function(){ setMenu(false); });
+    });
+    window.addEventListener('keydown', function(e){ if (e.key === 'Escape') setMenu(false); });
+  })();
+</script>
+<script src="assets/motion.js" defer></script>
+<script src="cookies.js"></script>
+</body>
+</html>

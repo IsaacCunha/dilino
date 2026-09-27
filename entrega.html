@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google Consent Mode v2 — default (roda ANTES do gtag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'analytics_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'wait_for_update': 500
+  });
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18409994256"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-18409994256');
+</script>
+<!-- End Google tag -->
+<title>Política de Entrega e Frete — Dilino Studio</title>
+<meta name="description" content="Prazo de produção e entrega, frete grátis até 40 km de Arujá e valores até 80 km, montagem inclusa na Grande São Paulo, agendamento e avaria no transporte.">
+<link rel="canonical" href="https://dilinostudio.com.br/entrega.html">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<style>
+  /* ===== DESIGN TOKENS (idênticos a index.html) ===== */
+  :root{
+    --ink:#1C1917;
+    --iron:#2E2B28;
+    --bone:#F4F1EC;
+    --brass:#B8874A;
+    --patina:#899BA7;
+    --tile:#ECE7DB;
+    --line:#e0dacd;
+    --radius-md:18px;
+    --radius-lg:20px;
+    --radius-xl:28px;
+    --radius-pill:999px;
+    --gutter:48px;
+    --maxw:1240px;
+  }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; }
+  a{ color:var(--brass); text-decoration:none; }
+  a:hover{ color:#cf9d5f; }
+  ::selection{ background:rgba(184,135,74,.35); color:var(--bone); }
+  a:focus-visible,button:focus-visible{ outline:2px solid var(--brass); outline-offset:3px; }
+
+  /* ===== HEADER / MENU MOBILE ===== */
+  .nav-burger{ display:none; }
+  .nav-drawer{ position:fixed; inset:0; z-index:60; display:none; overflow:hidden; }
+  .nav-drawer.open{ display:block; }
+  .nav-drawer .backdrop{ position:absolute; inset:0; background:rgba(20,18,16,.55); }
+  .nav-drawer .panel{ position:absolute; top:0; right:0; height:100%; width:min(82vw,320px); background:var(--ink); box-shadow:-24px 0 60px rgba(0,0,0,.5); padding:92px 26px 32px; display:flex; flex-direction:column; gap:6px; transform:translateX(100%); transition:transform .32s ease; }
+  .nav-drawer.open .panel{ transform:translateX(0); }
+  .nav-links a:hover{ color:var(--bone); }
+  .nav-cta:hover{ border-color:var(--bone); background:rgba(244,241,236,.08); }
+  .foot-link:hover{ color:var(--brass); }
+
+  /* ===== PÁGINA DE CONTEÚDO ===== */
+  .doc-hero{ padding:150px var(--gutter) 56px; background:var(--ink); }
+  .doc-title{ font-weight:800; font-size:clamp(32px,5.6vw,52px); line-height:1.06; letter-spacing:-0.01em; margin:0; color:var(--bone); }
+  .doc-kicker{ font-size:10px; font-weight:600; letter-spacing:2.5px; color:var(--patina); text-transform:uppercase; margin:0 0 18px; }
+  .doc-lead{ font-size:clamp(15px,1.6vw,17px); font-weight:400; line-height:1.75; color:#cdc7bc; margin:20px 0 0; max-width:62ch; }
+  .doc-body{ background:var(--bone); color:var(--ink); border-radius:var(--radius-xl) var(--radius-xl) 0 0; padding:64px var(--gutter) 72px; }
+  .doc-wrap{ max-width:820px; margin:0 auto; }
+  .doc-body h2{ font-weight:700; font-size:clamp(20px,2.6vw,25px); line-height:1.25; letter-spacing:-0.01em; margin:52px 0 14px; color:var(--ink); }
+  .doc-body h2:first-child{ margin-top:0; }
+  .doc-body h3{ font-weight:700; font-size:16px; margin:28px 0 8px; color:var(--ink); }
+  .doc-body p{ font-size:15.5px; font-weight:400; line-height:1.8; color:#3d3833; margin:0 0 16px; }
+  .doc-body ul,.doc-body ol{ margin:0 0 18px; padding-left:20px; }
+  .doc-body li{ font-size:15.5px; font-weight:400; line-height:1.8; color:#3d3833; margin-bottom:9px; }
+  .doc-body strong{ font-weight:600; color:var(--ink); }
+  .doc-body a{ color:#9a6f34; text-decoration:underline; text-underline-offset:2px; }
+  .doc-body a:hover{ color:var(--brass); }
+  .doc-num{ display:inline-block; font-size:11px; font-weight:700; letter-spacing:1.5px; color:var(--brass); margin-right:8px; vertical-align:2px; }
+  .doc-note{ background:#efeae0; border-left:3px solid var(--brass); border-radius:0 var(--radius-md) var(--radius-md) 0; padding:20px 24px; margin:26px 0; }
+  .doc-note p:last-child{ margin-bottom:0; }
+  .doc-note h3{ margin-top:0; }
+  .doc-alert{ background:#f3ece1; border:1px solid #dfd2ba; border-left:3px solid var(--ink); border-radius:0 var(--radius-md) var(--radius-md) 0; padding:22px 26px; margin:26px 0; }
+  .doc-alert p:last-child{ margin-bottom:0; }
+  .doc-alert h3{ margin-top:0; font-size:17px; }
+  .doc-table{ width:100%; border-collapse:collapse; margin:8px 0 24px; font-size:14.5px; }
+  .doc-table th{ text-align:left; font-weight:600; font-size:11px; letter-spacing:1.2px; text-transform:uppercase; color:#7a736a; border-bottom:1px solid var(--line); padding:0 14px 10px 0; }
+  .doc-table td{ vertical-align:top; line-height:1.7; color:#3d3833; border-bottom:1px solid var(--line); padding:13px 14px 13px 0; }
+  .doc-table td:first-child{ font-weight:600; color:var(--ink); }
+  .doc-updated{ margin-top:56px; padding-top:22px; border-top:1px solid var(--line); font-size:12.5px; font-weight:500; color:#7a736a; }
+  .doc-cta{ display:inline-flex; align-items:center; gap:10px; background:var(--ink); color:var(--bone); font-weight:600; font-size:15px; padding:15px 30px; border-radius:var(--radius-pill); margin-top:8px; text-decoration:none; }
+  .doc-cta:hover{ background:#2a2622; color:var(--bone); }
+  .doc-steps{ counter-reset:step; list-style:none; padding:0; margin:0 0 24px; }
+  .doc-steps li{ position:relative; padding-left:44px; margin-bottom:18px; }
+  .doc-steps li::before{ counter-increment:step; content:counter(step); position:absolute; left:0; top:2px; width:28px; height:28px; border-radius:var(--radius-pill); background:var(--ink); color:var(--bone); font-size:13px; font-weight:700; display:flex; align-items:center; justify-content:center; }
+
+  /* ===== RESPONSIVO ===== */
+  @media (max-width:1024px){
+    .grid-footer{ grid-template-columns:repeat(2,1fr)!important; gap:32px 40px!important; }
+  }
+  @media (max-width:768px){
+    :root{ --gutter:22px; }
+    .nav-links{ display:none!important; }
+    .nav-cta{ display:none!important; }
+    .nav-burger{ display:inline-flex!important; }
+    .doc-hero{ padding-top:118px!important; padding-bottom:44px!important; }
+    .doc-body{ padding-top:44px!important; padding-bottom:56px!important; }
+    .doc-table thead{ display:none; }
+    .doc-table tr{ display:block; border-bottom:1px solid var(--line); padding:14px 0; }
+    .doc-table td{ display:block; border:0; padding:0 0 6px; }
+    .doc-table td:first-child{ font-size:13.5px; letter-spacing:.2px; }
+  }
+  @media (max-width:600px){
+    .grid-footer{ grid-template-columns:1fr!important; }
+  }
+  @media (max-width:480px){
+    .nav-row img{ height:32px!important; width:32px!important; }
+  }
+</style>
+<link rel="stylesheet" href="assets/motion.css">
+</head>
+<body>
+<div style="background:var(--ink);font-family:'Montserrat',sans-serif;color:var(--bone);min-height:100vh;overflow-x:hidden;font-weight:400;">
+
+  <!-- HEADER -->
+  <div id="siteHeader" style="position:fixed;top:0;left:0;right:0;z-index:50;background:transparent;border-bottom:1px solid transparent;transition:background .35s ease, box-shadow .35s ease, border-color .35s ease;">
+    <div class="nav-row" style="max-width:var(--maxw);margin:0 auto;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:18px var(--gutter);">
+      <a href="index.html" style="justify-self:start;display:flex;align-items:center;gap:12px;">
+        <img src="assets/dilino-mark-64.webp" srcset="assets/dilino-mark-64.webp 2x, assets/dilino-mark-128.webp 3x" alt="Dilino Studio" decoding="async" style="height:38px;width:38px;object-fit:contain;display:block;">
+        <span style="display:flex;flex-direction:column;line-height:1;">
+          <span style="font-weight:800;font-size:17px;letter-spacing:1px;color:var(--bone);">DILINO</span>
+          <span style="font-weight:600;font-size:9px;letter-spacing:5px;color:var(--patina);margin-top:4px;">STUDIO</span>
+        </span>
+      </a>
+      <div class="nav-links" style="justify-self:center;display:flex;align-items:center;gap:44px;font-size:13.5px;font-weight:500;color:#d9d3c8;">
+        <a href="Catálogo.dc.html" style="color:#d9d3c8;">Peças</a>
+        <a href="index.html#categorias" style="color:#d9d3c8;">Ambientes</a>
+        <a href="https://wa.me/5511926457142?text=Ol%C3%A1!%20Gostaria%20de%20falar%20sobre%20um%20projeto%20sob%20medida." target="_blank" rel="noopener" style="color:#d9d3c8;">Sob Medida</a>
+        <a href="contato.html" style="color:#d9d3c8;">Contato</a>
+      </div>
+      <div style="justify-self:end;display:flex;align-items:center;gap:12px;">
+        <a href="https://wa.me/5511926457142?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Dilino%20Studio." target="_blank" rel="noopener" class="nav-cta" style="white-space:nowrap;border:1px solid rgba(244,241,236,.45);color:var(--bone);font-size:13px;font-weight:500;padding:10px 22px;border-radius:var(--radius-pill);">Fale no WhatsApp</a>
+        <button class="nav-burger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="navDrawer" style="appearance:none;background:transparent;border:0;padding:0;cursor:pointer;width:44px;height:44px;align-items:center;justify-content:center;color:var(--bone);">
+          <svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"></path></svg>
+        </button>
+      </div>
+    </div>
+    <div class="nav-drawer" id="navDrawer">
+      <div class="backdrop" data-close-menu></div>
+      <nav class="panel" aria-label="Menu principal">
+        <a href="Catálogo.dc.html" style="color:var(--bone);font-size:18px;font-weight:600;padding:14px 4px;border-bottom:1px solid rgba(244,241,236,.1);">Peças</a>
+        <a href="index.html#categorias" style="color:var(--bone);font-size:18px;font-weight:600;padding:14px 4px;border-bottom:1px solid rgba(244,241,236,.1);">Ambientes</a>
+        <a href="https://wa.me/5511926457142?text=Ol%C3%A1!%20Gostaria%20de%20falar%20sobre%20um%20projeto%20sob%20medida." target="_blank" rel="noopener" style="color:var(--bone);font-size:18px;font-weight:600;padding:14px 4px;border-bottom:1px solid rgba(244,241,236,.1);">Sob Medida</a>
+        <a href="contato.html" style="color:var(--bone);font-size:18px;font-weight:600;padding:14px 4px;border-bottom:1px solid rgba(244,241,236,.1);">Contato</a>
+        <a href="https://wa.me/5511926457142?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Dilino%20Studio." target="_blank" rel="noopener" data-close-menu style="margin-top:18px;display:inline-flex;align-items:center;justify-content:center;background:var(--bone);color:var(--ink);font-weight:600;font-size:15px;padding:15px 22px;border-radius:var(--radius-pill);">Fale no WhatsApp</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- CABEÇALHO DA PÁGINA -->
+  <div class="doc-hero">
+    <div style="max-width:820px;margin:0 auto;">
+      <p class="doc-kicker">Dilino Studio</p>
+      <h1 class="doc-title">Entrega e Frete</h1>
+      <p class="doc-lead">Quanto tempo leva, para onde entregamos, como o frete é calculado, quando a montagem está inclusa e o que acontece se algo der errado no caminho.</p>
+    </div>
+  </div>
+
+  <!-- CONTEÚDO -->
+  <div class="doc-body">
+    <div class="doc-wrap">
+      <div class="doc-alert">
+        <h3>Resumo</h3>
+        <p><strong>Prazo total:</strong> de 9 a 15 dias úteis entre a confirmação do pagamento e a peça na sua casa — 7 a 10 dias úteis de produção mais 2 a 5 dias úteis de entrega.</p>
+        <p><strong>Onde entregamos:</strong> até 80 km da nossa oficina em Arujá. Mais longe, consulte pelo WhatsApp.</p>
+        <p><strong>Frete:</strong> grátis até 40 km da oficina; R$ 69,00 de 40 a 60 km; R$ 119,00 de 60 a 80 km. O valor aparece no checkout, antes de você pagar.</p>
+      </div>
+      <h2><span class="doc-num">01</span>Prazo de produção e de entrega</h2>
+      <p>Nossas peças não ficam paradas em estoque: cada uma é cortada, soldada, tratada e acabada depois que o pedido entra. Por isso o prazo tem duas partes que se somam.</p>
+      <table class="doc-table">
+        <thead><tr><th>Etapa</th><th>Prazo</th><th>O que acontece</th></tr></thead>
+        <tbody>
+          <tr><td>Produção</td><td>7 a 10 dias úteis</td><td>Corte, solda, tratamento do ferro, preparo da madeira e acabamento final</td></tr>
+          <tr><td>Entrega</td><td>2 a 5 dias úteis</td><td>Saída da oficina em Arujá, transporte e entrega no endereço</td></tr>
+          <tr><td><strong>Total</strong></td><td><strong>9 a 15 dias úteis</strong></td><td>Contados a partir da confirmação do pagamento</td></tr>
+        </tbody>
+      </table>
+      <h3>Quando o prazo começa a contar</h3>
+      <ul>
+        <li><strong>Pix:</strong> na hora, assim que o pagamento é confirmado — normalmente em minutos.</li>
+        <li><strong>Cartão de crédito:</strong> quando a operadora aprova a transação, em geral no mesmo dia.</li>
+        <li><strong>Peça sob medida:</strong> a partir do dia em que <strong>você aprova o projeto por escrito</strong>, e não da data do pedido. Enquanto o desenho estiver em ajuste, o relógio não corre.</li>
+      </ul>
+      <p>Dias úteis são de segunda a sexta, sem contar sábados, domingos e feriados nacionais ou municipais de Arujá e do município de destino.</p>
+      <h2><span class="doc-num">02</span>Regiões atendidas e valor do frete</h2>
+      <p>Fazemos a entrega com equipe própria, a partir da oficina em Arujá. O frete depende só da distância entre a oficina e a cidade de entrega, medida em linha reta até o centro da cidade:</p>
+      <table class="doc-table">
+        <thead><tr><th>Distância da oficina</th><th>Frete</th><th>Cidades</th></tr></thead>
+        <tbody>
+          <tr><td>Até 40 km</td><td><strong>Grátis</strong></td><td>Arujá, Atibaia, Biritiba-Mirim, Bom Jesus dos Perdões, Ferraz de Vasconcelos, Guararema, Guarulhos, Igaratá, Itaquaquecetuba, Jacareí, Mairiporã, Mauá, Mogi das Cruzes, Nazaré Paulista, Piracaia, Poá, Ribeirão Pires, Rio Grande da Serra, Santa Isabel, Santo André, São Paulo – centro, norte e leste, São Paulo – zona leste, Suzano, São Caetano do Sul</td></tr>
+          <tr><td>De 40 a 60 km</td><td><strong>R$ 69,00</strong></td><td>Barueri, Bragança Paulista, Caieiras, Cajamar, Campo Limpo Paulista, Carapicuíba, Diadema, Francisco Morato, Franco da Rocha, Jarinu, Joanópolis, Osasco, Salesópolis, Santa Branca, São Paulo – zona sul e oeste, São Bernardo do Campo, São José dos Campos, Taboão da Serra, Vargem, Várzea Paulista</td></tr>
+          <tr><td>De 60 a 80 km</td><td><strong>R$ 119,00</strong></td><td>Araçariguama, Caçapava, Cotia, Embu das Artes, Embu-Guaçu, Itapecerica da Serra, Itapevi, Itatiba, Jambeiro, Jandira, Jundiaí, Louveira, Monteiro Lobato, Morungaba, Paraibuna, Pedra Bela, Pinhalzinho, Pirapora do Bom Jesus, Santana de Parnaíba, Tuiuti, Vargem Grande Paulista, Vinhedo</td></tr>
+        </tbody>
+      </table>
+      <p>Na página de cada peça você pode consultar o frete e o prazo pelo CEP. O valor final aparece no checkout, antes do pagamento — <strong>nunca há cobrança de frete depois</strong>. Comprou mais de uma peça? Entregamos tudo junto, com um frete só.</p>
+      <h3>Mais de 80 km, litoral ou outro estado</h3>
+      <p>Não vendemos pelo site para esses endereços, porque o transporte de peças grandes precisa ser planejado caso a caso. Fale com a gente pelo WhatsApp <a href="https://wa.me/5511926457142?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Dilino%20Studio." target="_blank" rel="noopener">(11) 92645-7142</a> com a peça de interesse e o CEP, e retornamos com prazo e valor. <strong>Fora da Grande São Paulo, a montagem não está inclusa.</strong></p>
+      <h2><span class="doc-num">04</span>Montagem</h2>
+      <p>A montagem depende do tipo de peça:</p>
+      <table class="doc-table">
+        <thead><tr><th>Tipo de peça</th><th>Montagem</th></tr></thead>
+        <tbody>
+          <tr><td>Peças de chão — estantes, mesas, escrivaninhas, racks, aparadores, cômodas, criados-mudos, banquetas e sofás</td><td><strong>Inclusa</strong> na Grande São Paulo, sem custo adicional. Nossa equipe entrega montada e posiciona no lugar.</td></tr>
+          <tr><td>Peças de parede — nichos, prateleiras, suportes, adegas, cabideiros e toalheiros de parede</td><td>Entregues <strong>prontas</strong>, com as buchas e os parafusos indicados. A fixação na parede não está inclusa.</td></tr>
+        </tbody>
+      </table>
+      <p>Na dúvida sobre a sua peça, a página do produto informa se a montagem está inclusa — ou pergunte no WhatsApp antes de comprar.</p>
+      <h3>O que a montagem inclui e o que não inclui</h3>
+      <ul>
+        <li><strong>Inclui:</strong> desembalar, montar a peça, nivelar, posicionar no cômodo indicado e levar o material de embalagem embora.</li>
+        <li><strong>Não inclui:</strong> furar parede ou teto para fixação estrutural, remover móveis antigos, serviços elétricos ou hidráulicos, nem reparos na alvenaria.</li>
+      </ul>
+      <p>A fixação de peças de parede em drywall, gesso ou alvenaria frágil exige uma avaliação do local. Se for o seu caso, avise antes para levarmos o material adequado.</p>
+      <h2><span class="doc-num">05</span>Agendamento da entrega</h2>
+      <p>Quando a peça fica pronta, entramos em contato pelo WhatsApp para <strong>combinar o dia e o turno</strong> da entrega — manhã (das 8h às 12h) ou tarde (das 13h às 18h). Não deixamos ninguém esperando o dia inteiro.</p>
+      <p>Entregamos de <strong>segunda a sexta</strong>. Sábado, apenas mediante combinação prévia e sujeito à disponibilidade da equipe.</p>
+      <p>No dia anterior, mandamos uma confirmação. No dia, avisamos quando a equipe sai para a entrega.</p>
+      <h3>Antes da entrega, confira o acesso</h3>
+      <p>Peças grandes precisam passar por portas, corredores, escadas e elevadores. <strong>Confira as medidas do produto e o caminho até o cômodo antes de comprar.</strong> Se o acesso for apertado, avise com antecedência para planejarmos junto.</p>
+      <p>Em prédio, verifique se é preciso reservar o elevador de serviço ou avisar a portaria — muitos condomínios exigem agendamento e têm horário restrito para mudanças e entregas de móveis.</p>
+      <h2><span class="doc-num">06</span>Se não houver ninguém no local</h2>
+      <p>A entrega precisa ser recebida por <strong>você ou por alguém maior de 18 anos autorizado</strong>, no endereço e no turno combinados.</p>
+      <ol class="doc-steps">
+        <li><strong>Primeira tentativa sem sucesso.</strong> A equipe aguarda 20 minutos no local e tenta contato pelo telefone do pedido. Não conseguindo entregar, a peça volta para a oficina.</li>
+        <li><strong>Reagendamento.</strong> Entramos em contato no mesmo dia ou no dia útil seguinte para marcar uma nova data. <strong>A segunda tentativa é gratuita.</strong></li>
+        <li><strong>A partir da terceira tentativa.</strong> Uma nova viagem tem custo, cobrado no valor do frete original e informado antes de agendar.</li>
+        <li><strong>Sem contato por 30 dias.</strong> Se não conseguirmos falar com você nesse período, o pedido é cancelado e reembolsamos o valor da peça, descontando as viagens já realizadas.</li>
+      </ol>
+      <p>Vai precisar remarcar? Basta avisar pelo WhatsApp <strong>com pelo menos 24 horas de antecedência</strong>. Remarcação avisada nesse prazo não tem custo nenhum, sempre.</p>
+      <p>Guardamos a peça sem cobrar armazenagem por até 30 dias.</p>
+      <h2><span class="doc-num">07</span>Avaria no transporte</h2>
+      <div class="doc-alert">
+        <h3>A responsabilidade pela avaria no transporte é nossa</h3>
+        <p>Se a peça for danificada no caminho, o problema é nosso e resolvemos por nossa conta. Você não paga frete, conserto nem nova entrega.</p>
+      </div>
+      <h3>Confira na hora da entrega</h3>
+      <p>Antes de a equipe ir embora, dê uma olhada na peça — amassados, riscos fundos, solda quebrada, madeira lascada ou trincada.</p>
+      <ul>
+        <li><strong>Avaria visível na hora:</strong> você pode <strong>recusar a entrega</strong> na mesma hora. Anote o motivo no comprovante e devolva a peça à equipe. Produzimos uma nova sem nenhum custo, com prioridade na fila.</li>
+        <li><strong>Avaria percebida depois:</strong> avise em até <strong>72 horas</strong> pelo WhatsApp ou pelo e-mail, com fotos da peça e, se possível, da embalagem. Avaliamos e resolvemos com conserto no local, troca ou reembolso, conforme o caso.</li>
+      </ul>
+      <p>Passadas as 72 horas, o caso deixa de ser tratado como avaria de transporte, mas <strong>a garantia contra defeitos de fabricação continua valendo normalmente</strong> — veja a <a href="trocas.html">Política de Trocas e Devoluções</a>.</p>
+      <h3>Se a montagem for feita por terceiros</h3>
+      <p>Quando a peça é entregue sem montagem e você contrata outra pessoa para montar, danos causados durante essa montagem não são cobertos. Nesse caso, siga as instruções que acompanham o produto — ou fale com a gente antes.</p>
+      <h2><span class="doc-num">08</span>Acompanhar o pedido</h2>
+      <p>Avisamos você em cada etapa pelo WhatsApp: pagamento confirmado, produção iniciada, peça pronta, entrega agendada e equipe a caminho. Quer saber como está o seu pedido a qualquer momento? É só mandar o número dele no WhatsApp.</p>
+      <h2><span class="doc-num">09</span>Fale com a gente</h2>
+      <ul>
+        <li><strong>WhatsApp:</strong> <a href="https://wa.me/5511926457142?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Dilino%20Studio." target="_blank" rel="noopener">(11) 92645-7142</a></li>
+        <li><strong>E-mail:</strong> <a href="mailto:comercial@dilinostudio.com.br">comercial@dilinostudio.com.br</a></li>
+        <li><strong>Atendimento:</strong> Segunda a sexta, das 9h às 18h</li>
+      </ul>
+      <p><a class="doc-cta" href="https://wa.me/5511926457142?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Dilino%20Studio." target="_blank" rel="noopener">Falar com a gente no WhatsApp <span style="color:var(--brass);">&#8250;</span></a></p>
+
+      <p class="doc-updated">Última atualização: 24 de setembro de 2026.</p>
+    </div>
+  </div>
+
+  <!-- RODAPÉ -->
+  <div id="contato" style="background:var(--ink);border-top:1px solid #2a2724;padding:80px var(--gutter) 32px;">
+    <div style="max-width:var(--maxw);margin:0 auto;">
+      <div class="grid-footer" style="display:grid;grid-template-columns:1.4fr repeat(4,1fr);gap:40px;">
+        <div style="display:flex;flex-direction:column;gap:14px;">
+          <div style="display:flex;align-items:center;gap:11px;">
+            <img src="assets/dilino-mark-64.webp" srcset="assets/dilino-mark-64.webp 2x, assets/dilino-mark-128.webp 3x" alt="Dilino Studio" loading="lazy" decoding="async" style="height:32px;width:32px;object-fit:contain;display:block;">
+            <span style="display:flex;flex-direction:column;line-height:1;">
+              <span style="font-weight:800;font-size:15px;letter-spacing:1px;color:var(--bone);">DILINO</span>
+              <span style="font-weight:600;font-size:8px;letter-spacing:4.5px;color:var(--patina);margin-top:3px;">STUDIO</span>
+            </span>
+          </div>
+          <div style="font-size:10px;font-weight:600;letter-spacing:2.5px;color:#8d877d;text-transform:uppercase;margin-top:2px;">Serralheria de autoria</div>
+          <p style="font-size:13px;font-weight:400;line-height:1.7;color:#a49d92;margin:6px 0 0;max-width:34ch;">Ferro galvanizado e madeira maciça, fabricação própria em Arujá – SP. Entrega e montagem na Grande São Paulo.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div style="font-size:10px;font-weight:600;letter-spacing:2px;color:var(--patina);text-transform:uppercase;">Atendimento</div>
+          <a class="foot-link" href="contato.html" style="font-size:13px;font-weight:400;color:#c1bbb0;">Seg–Sex 9h–18h</a>
+          <a class="foot-link" href="https://wa.me/5511926457142?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Dilino%20Studio." target="_blank" rel="noopener" style="font-size:13px;font-weight:400;color:#c1bbb0;">(11) 92645-7142</a>
+          <a class="foot-link" href="mailto:comercial@dilinostudio.com.br" style="font-size:13px;font-weight:400;color:#c1bbb0;">comercial@dilinostudio.com.br</a>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div style="font-size:10px;font-weight:600;letter-spacing:2px;color:var(--patina);text-transform:uppercase;">Institucional</div>
+          <a class="foot-link" href="privacidade.html" style="font-size:13px;font-weight:400;color:#c1bbb0;">Política de Privacidade</a>
+          <a class="foot-link" href="trocas.html" style="font-size:13px;font-weight:400;color:#c1bbb0;">Trocas e Devoluções</a>
+          <a class="foot-link" href="entrega.html" style="font-size:13px;font-weight:400;color:#c1bbb0;">Entrega e Frete</a>
+          <a class="foot-link" href="termos.html" style="font-size:13px;font-weight:400;color:#c1bbb0;">Termos de Uso</a>
+          <a class="foot-link" href="contato.html" style="font-size:13px;font-weight:400;color:#c1bbb0;">Contato</a>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div style="font-size:10px;font-weight:600;letter-spacing:2px;color:var(--patina);text-transform:uppercase;">Sob medida</div>
+          <a class="foot-link" href="https://wa.me/5511926457142?text=Ol%C3%A1!%20Gostaria%20de%20falar%20sobre%20um%20projeto%20sob%20medida." target="_blank" rel="noopener" style="font-size:13px;font-weight:400;color:#c1bbb0;">Para arquitetos</a>
+          <a class="foot-link" href="https://wa.me/5511926457142?text=Ol%C3%A1!%20Gostaria%20de%20falar%20sobre%20um%20projeto%20sob%20medida." target="_blank" rel="noopener" style="font-size:13px;font-weight:400;color:#c1bbb0;">Para marcenarias</a>
+          <a class="foot-link" href="https://wa.me/5511926457142?text=Ol%C3%A1!%20Gostaria%20de%20falar%20sobre%20um%20projeto%20sob%20medida." target="_blank" rel="noopener" style="font-size:13px;font-weight:400;color:#c1bbb0;">WhatsApp corporativo</a>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div style="font-size:10px;font-weight:600;letter-spacing:2px;color:var(--patina);text-transform:uppercase;">Redes &amp; pagamento</div>
+          <a class="foot-link" href="https://www.instagram.com/dilinostudio" target="_blank" rel="noopener" style="font-size:13px;font-weight:400;color:#c1bbb0;">Instagram</a>
+          <a class="foot-link" href="https://wa.me/5511926457142?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Dilino%20Studio." target="_blank" rel="noopener" style="font-size:13px;font-weight:400;color:#c1bbb0;">WhatsApp</a>
+        </div>
+      </div>
+      <div style="border-top:1px solid #2a2724;margin-top:56px;padding-top:24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;">
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <div style="font-size:10.5px;font-weight:500;letter-spacing:1px;color:#8d877d;">Dilino Studio · EDSON LINO DA SILVA 30172566851 · CNPJ 34.872.803/0001-58</div>
+          <div style="font-size:10.5px;font-weight:400;letter-spacing:.4px;color:#7d776e;">Rua Antonieta, 243, Apto 22, Picanço, Guarulhos – SP, CEP 07080-120 · <a href="mailto:comercial@dilinostudio.com.br" style="color:#7d776e;">comercial@dilinostudio.com.br</a></div>
+          <div style="font-size:9.5px;font-weight:400;line-height:1.6;letter-spacing:.2px;color:#6e6961;max-width:66ch;">Sede administrativa, sem atendimento ao público. Nossas peças são feitas na oficina própria em Arujá – SP. Atendimento por WhatsApp e e-mail.</div>
+        </div>
+        <div style="display:flex;gap:20px;font-size:12px;font-weight:400;color:#938c81;">
+          <a href="https://www.instagram.com/dilinostudio" target="_blank" rel="noopener" style="color:#938c81;">Instagram</a>
+          <a href="https://wa.me/5511926457142?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Dilino%20Studio." target="_blank" rel="noopener" style="color:#938c81;">WhatsApp</a>
+          <span>Pix · Cartão · até 10x</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<script>
+  (function(){
+    var header = document.getElementById('siteHeader');
+    var drawer = document.getElementById('navDrawer');
+    var burger = document.querySelector('.nav-burger');
+    var scrolled = null;
+    function onScroll(){
+      var s = window.scrollY > 24;
+      if (s === scrolled) return;
+      scrolled = s;
+      header.style.background = s ? 'var(--ink)' : 'transparent';
+      header.style.boxShadow = s ? '0 10px 34px rgba(0,0,0,.4)' : 'none';
+      header.style.borderBottomColor = s ? '#2a2724' : 'transparent';
+    }
+    window.addEventListener('scroll', onScroll, { passive:true });
+    onScroll();
+    function setMenu(open){
+      drawer.classList.toggle('open', open);
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+    burger.addEventListener('click', function(){ setMenu(!drawer.classList.contains('open')); });
+    drawer.querySelectorAll('[data-close-menu], .panel a').forEach(function(el){
+      el.addEventListener('click', function(){ setMenu(false); });
+    });
+    window.addEventListener('keydown', function(e){ if (e.key === 'Escape') setMenu(false); });
+  })();
+</script>
+<script src="assets/motion.js" defer></script>
+<script src="cookies.js"></script>
+</body>
+</html>
