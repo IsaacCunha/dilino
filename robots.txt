@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /gerador/
+
+Sitemap: https://dilinostudio.com.br/sitemap.xml
